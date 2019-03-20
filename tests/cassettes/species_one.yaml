@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/species/182512
+  response:
+    body:
+      string: '{"year":null,"type":"species","synonym":false,"status":"Unknown","specifications":{"toxicity":null,"shape_and_orientation":null,"regrowth_rate":null,"nitrogen_fixation":null,"max_height_at_base_age":{"ft":null,"cm":null},"mature_height":{"ft":null,"cm":null},"low_growing_grass":null,"lifespan":null,"leaf_retention":null,"known_allelopath":null,"growth_rate":null,"growth_period":null,"growth_habit":null,"growth_form":null,"fire_resistance":null,"fall_conspicuous":null,"coppice_potential":null,"c_n_ratio":null,"bloat":null},"sources":[{"species_id":182512,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T12:01:26.358727"}],"soils_adaptation":{"medium":null,"fine":null,"coarse":null},"slug":"solanum-lycopersicum","seed":{"vegetative_spread_rate":null,"small_grain":null,"seeds_per_pound":null,"seedling_vigor":null,"seed_spread_rate":null,"commercial_availability":null,"bloom_period":null},"scientific_name":"Solanum
+        lycopersicum","propagation":{"tubers":null,"sprigs":null,"sod":null,"seed":null,"cuttings":null,"corms":null,"container":null,"bulbs":null,"bare_root":null},"products":{"veneer":null,"pulpwood":null,"protein_potential":null,"post":null,"palatable_human":null,"palatable_graze_animal":null,"palatable_browse_animal":null,"nursery_stock":null,"naval_store":null,"lumber":null,"fuelwood":null,"fodder":null,"christmas_tree":null,"berry_nut_seed":null},"native_status":"L48(I)AK(I)HI(I)PR(I)VI(I)CAN(W)","main_species_id":null,"is_main_species":true,"images":[],"id":182512,"growth":{"temperature_minimum":{"deg_f":null,"deg_c":null},"shade_tolerance":null,"salinity_tolerance":null,"root_depth_minimum":{"inches":null,"cm":null},"resprout_ability":null,"precipitation_minimum":{"inches":null,"cm":null},"precipitation_maximum":{"inches":null,"cm":null},"planting_density_minimum":{"sqm":null,"acre":null},"planting_density_maximum":{"sqm":null,"acre":null},"ph_minimum":null,"ph_maximum":null,"moisture_use":null,"hedge_tolerance":null,"frost_free_days_minimum":null,"fire_tolerance":null,"fertility_requirement":null,"drought_tolerance":null,"cold_stratification_required":null,"caco_3_tolerance":null,"anaerobic_tolerance":null},"fruit_or_seed":{"seed_persistence":null,"seed_period_end":null,"seed_period_begin":null,"seed_abundance":null,"conspicuous":null,"color":null},"foliage":{"texture":null,"porosity_winter":null,"porosity_summer":null,"color":null},"flower":{"conspicuous":null,"color":null},"family_common_name":"Potato
+        family","duration":"Annual, Perennial","complete_data":false,"common_name":"garden
+        tomato","bibliography":null,"author":null}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2609'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 22 Mar 2019 09:17:06 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 2m73qdm2u8lddr908g0000t1
+    status:
+      code: 200
+      message: OK
+version: 1

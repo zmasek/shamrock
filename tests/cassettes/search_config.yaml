@@ -1,0 +1,222 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/species?page_size=30&q=tomato
+  response:
+    body:
+      string: "[{\"year\":null,\"type\":\"species\",\"synonym\":true,\"status\":\"\
+        Synonym\",\"sources\":[{\"species_id\":211693,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T21:49:36.201112\"}],\"\
+        slug\":\"astomatopsis-galiocarpa\",\"scientific_name\":\"Astomatopsis galiocarpa\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/211693\"\
+        ,\"is_main_species\":true,\"id\":211693,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"Korovin\"},{\"\
+        year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":239001,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T04:05:51.760998\"}],\"\
+        slug\":\"stomatostemma-pendulina\",\"scientific_name\":\"Stomatostemma pendulina\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/239001\"\
+        ,\"is_main_species\":true,\"id\":239001,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Botanical Journal of the Linnean\
+        \ Society 99: 398\u2013400, f. 1\u20132. 1989. (Bot. J. Linn. Soc.) \",\"\
+        author\":\"Venter & D.V. Field\"},{\"year\":null,\"type\":\"species\",\"synonym\"\
+        :false,\"status\":\"Accepted\",\"sources\":[{\"species_id\":235283,\"source_url\"\
+        :\"http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T03:25:11.673250\"\
+        }],\"slug\":\"stomatostemma-monteiroae\",\"scientific_name\":\"Stomatostemma\
+        \ monteiroae\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/235283\"\
+        ,\"is_main_species\":true,\"id\":235283,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"N.E. Br.\"\
+        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":271394,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T09:05:21.789603\"}],\"\
+        slug\":\"stomatochaeta-condensata\",\"scientific_name\":\"Stomatochaeta condensata\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/271394\"\
+        ,\"is_main_species\":true,\"id\":271394,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Memoirs of The New York Botanical\
+        \ Garden 9: 389. 1957. (Mem. New York Bot. Gard.) \",\"author\":\"Maguire\
+        \ & Wurdack\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\"\
+        :\"Accepted\",\"sources\":[{\"species_id\":271736,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T09:08:25.847730\"}],\"\
+        slug\":\"stomatochaeta-steyermarkii\",\"scientific_name\":\"Stomatochaeta\
+        \ steyermarkii\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/271736\"\
+        ,\"is_main_species\":true,\"id\":271736,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Acta Botanica Venezuelica 3:\
+        \ 39. 1968. (Acta Bot. Venez.) \",\"author\":\"Aristeg.\"},{\"year\":null,\"\
+        type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
+        species_id\":271402,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
+        Tropicos\",\"last_update\":\"2019-01-12T09:05:22.874060\"}],\"slug\":\"stomatochaeta-crassifolia\"\
+        ,\"scientific_name\":\"Stomatochaeta crassifolia\",\"main_species_id\":null,\"\
+        link\":\"http://trefle.io/api/plants/271402\",\"is_main_species\":true,\"\
+        id\":271402,\"family_common_name\":null,\"complete_data\":false,\"common_name\"\
+        :null,\"bibliography\":\"Memoirs of The New York Botanical Garden 9: 389.\
+        \ 1957. (Mem. New York Bot. Gard.) \",\"author\":\"Maguire & Wurdack\"},{\"\
+        year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":271735,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T09:08:25.073606\"}],\"\
+        slug\":\"stomatochaeta-cylindrica\",\"scientific_name\":\"Stomatochaeta cylindrica\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/271735\"\
+        ,\"is_main_species\":true,\"id\":271735,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Memoirs of The New York Botanical\
+        \ Garden 9: 389. 1957. (Mem. New York Bot. Gard.) \",\"author\":\"Maguire\
+        \ & Wurdack\"},{\"year\":null,\"type\":\"species\",\"synonym\":true,\"status\"\
+        :\"Synonym\",\"sources\":[{\"species_id\":271724,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T09:08:18.704087\"}],\"\
+        slug\":\"stomatochaeta-colveei\",\"scientific_name\":\"Stomatochaeta colveei\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/271724\"\
+        ,\"is_main_species\":true,\"id\":271724,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"Steyerm.\"\
+        },{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":166460,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T11:14:38.999013\"}],\"slug\"\
+        :\"physalis-pubescens-var-pubescens\",\"scientific_name\":\"Physalis pubescens\
+        \ var. pubescens\",\"main_species_id\":172091,\"link\":\"http://trefle.io/api/plants/166460\"\
+        ,\"is_main_species\":false,\"id\":166460,\"family_common_name\":\"Potato family\"\
+        ,\"complete_data\":false,\"common_name\":\"husk tomato\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
+        status\":\"Accepted\",\"sources\":[{\"species_id\":271734,\"source_url\":\"\
+        http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T09:08:24.099545\"\
+        }],\"slug\":\"stomatochaeta-acuminata\",\"scientific_name\":\"Stomatochaeta\
+        \ acuminata\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/271734\"\
+        ,\"is_main_species\":true,\"id\":271734,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Brittonia 41(1): 35\u201338,\
+        \ f, 1. 1989. (Brittonia) \",\"author\":\"Pruski\"},{\"year\":null,\"type\"\
+        :\"species\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :182557,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T12:02:32.660052\"}],\"slug\":\"solanum-pimpinellifolium\",\"\
+        scientific_name\":\"Solanum pimpinellifolium\",\"main_species_id\":null,\"\
+        link\":\"http://trefle.io/api/plants/182557\",\"is_main_species\":true,\"\
+        id\":182557,\"family_common_name\":\"Potato family\",\"complete_data\":false,\"\
+        common_name\":\"currant tomato\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":271510,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T09:06:18.570779\"}],\"\
+        slug\":\"stomatochaeta-cymbifolia\",\"scientific_name\":\"Stomatochaeta cymbifolia\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/271510\"\
+        ,\"is_main_species\":true,\"id\":271510,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Memoirs of The New York Botanical\
+        \ Garden 9: 389. 1957. (Mem. New York Bot. Gard.) \",\"author\":\"Maguire\
+        \ & Wurdack\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\"\
+        :\"Unknown\",\"sources\":[{\"species_id\":151410,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:39:36.601797\"}],\"slug\"\
+        :\"lonchitis-hirsuta\",\"scientific_name\":\"Lonchitis hirsuta\",\"main_species_id\"\
+        :null,\"link\":\"http://trefle.io/api/plants/151410\",\"is_main_species\"\
+        :true,\"id\":151410,\"family_common_name\":\"Bracken Fern family\",\"complete_data\"\
+        :false,\"common_name\":\"tomato fern\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":166402,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T11:14:30.046076\"}],\"slug\"\
+        :\"physalis-grisea\",\"scientific_name\":\"Physalis grisea\",\"main_species_id\"\
+        :null,\"link\":\"http://trefle.io/api/plants/166402\",\"is_main_species\"\
+        :true,\"id\":166402,\"family_common_name\":\"Potato family\",\"complete_data\"\
+        :false,\"common_name\":\"strawberry-tomato\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"\
+        Unknown\",\"sources\":[{\"species_id\":166458,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T11:14:38.610879\"}],\"slug\"\
+        :\"physalis-pubescens\",\"scientific_name\":\"Physalis pubescens\",\"main_species_id\"\
+        :null,\"link\":\"http://trefle.io/api/plants/166458\",\"is_main_species\"\
+        :true,\"id\":166458,\"family_common_name\":\"Potato family\",\"complete_data\"\
+        :false,\"common_name\":\"husk tomato\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":182512,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T12:01:26.358727\"}],\"slug\"\
+        :\"solanum-lycopersicum\",\"scientific_name\":\"Solanum lycopersicum\",\"\
+        main_species_id\":null,\"link\":\"http://trefle.io/api/plants/182512\",\"\
+        is_main_species\":true,\"id\":182512,\"family_common_name\":\"Potato family\"\
+        ,\"complete_data\":false,\"common_name\":\"garden tomato\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":166447,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T11:14:36.985534\"\
+        }],\"slug\":\"physalis-pubescens-var-missouriensis\",\"scientific_name\":\"\
+        Physalis pubescens var. missouriensis\",\"main_species_id\":172091,\"link\"\
+        :\"http://trefle.io/api/plants/166447\",\"is_main_species\":false,\"id\":166447,\"\
+        family_common_name\":\"Potato family\",\"complete_data\":false,\"common_name\"\
+        :\"husk tomato\",\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"species\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"\
+        species_id\":126569,\"source_url\":\"https://plants.usda.gov\",\"name\":\"\
+        USDA\",\"last_update\":\"2019-01-11T09:59:59.022245\"}],\"slug\":\"cyphomandra-betacea\"\
+        ,\"scientific_name\":\"Cyphomandra betacea\",\"main_species_id\":null,\"link\"\
+        :\"http://trefle.io/api/plants/126569\",\"is_main_species\":true,\"id\":126569,\"\
+        family_common_name\":\"Potato family\",\"complete_data\":false,\"common_name\"\
+        :\"tree tomato\",\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :182519,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T12:01:39.457128\"}],\"slug\":\"solanum-lycopersicum-var-lycopersicum\"\
+        ,\"scientific_name\":\"Solanum lycopersicum var. lycopersicum\",\"main_species_id\"\
+        :182512,\"link\":\"http://trefle.io/api/plants/182519\",\"is_main_species\"\
+        :false,\"id\":182519,\"family_common_name\":\"Potato family\",\"complete_data\"\
+        :true,\"common_name\":\"garden tomato\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":166395,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T11:14:28.963293\"}],\"slug\":\"physalis-pubescens-var-glabra\"\
+        ,\"scientific_name\":\"Physalis pubescens var. glabra\",\"main_species_id\"\
+        :172091,\"link\":\"http://trefle.io/api/plants/166395\",\"is_main_species\"\
+        :false,\"id\":166395,\"family_common_name\":\"Potato family\",\"complete_data\"\
+        :false,\"common_name\":\"husk tomato\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":166459,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T11:14:38.775506\"}],\"slug\":\"physalis-pubescens-var-integrifolia\"\
+        ,\"scientific_name\":\"Physalis pubescens var. integrifolia\",\"main_species_id\"\
+        :172091,\"link\":\"http://trefle.io/api/plants/166459\",\"is_main_species\"\
+        :false,\"id\":166459,\"family_common_name\":\"Potato family\",\"complete_data\"\
+        :false,\"common_name\":\"husk tomato\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":182513,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T12:01:28.300147\"}],\"slug\":\"solanum-lycopersicum-var-cerasiforme\"\
+        ,\"scientific_name\":\"Solanum lycopersicum var. cerasiforme\",\"main_species_id\"\
+        :182512,\"link\":\"http://trefle.io/api/plants/182513\",\"is_main_species\"\
+        :false,\"id\":182513,\"family_common_name\":\"Potato family\",\"complete_data\"\
+        :false,\"common_name\":\"garden tomato\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":166404,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T11:14:30.348910\"}],\"slug\"\
+        :\"physalis-pubescens-var-grisea\",\"scientific_name\":\"Physalis pubescens\
+        \ var. grisea\",\"main_species_id\":172091,\"link\":\"http://trefle.io/api/plants/166404\"\
+        ,\"is_main_species\":false,\"id\":166404,\"family_common_name\":\"Potato family\"\
+        ,\"complete_data\":false,\"common_name\":\"husk tomato\",\"bibliography\"\
+        :null,\"author\":null}]"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '12004'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 24 Mar 2019 12:16:58 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <http://trefle.io/api/species?page=1&page_size=30&q=tomato>; rel="first",
+        <http://trefle.io/api/species?page=1&page_size=30&q=tomato>; rel="last"
+      page-number:
+      - '1'
+      per-page:
+      - '30'
+      total:
+      - '23'
+      total-pages:
+      - '1'
+      x-request-id:
+      - 2m7e8c476k6fov19fc0000b7
+    status:
+      code: 200
+      message: OK
+version: 1

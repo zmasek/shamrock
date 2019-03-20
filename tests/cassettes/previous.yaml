@@ -1,0 +1,314 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: http://trefle.io/api/species?page=1
+  response:
+    body:
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body\
+        \ bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n\
+        <hr><center>nginx/1.14.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '194'
+      Content-Type:
+      - text/html
+      Date:
+      - Fri, 22 Mar 2019 09:17:05 GMT
+      Location:
+      - https://trefle.io/api/species?page=1
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/species?page=1
+  response:
+    body:
+      string: "[{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"\
+        Accepted\",\"sources\":[{\"species_id\":197482,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:25:49.210526\"}],\"\
+        slug\":\"ruttya-tricolor\",\"scientific_name\":\"Ruttya tricolor\",\"main_species_id\"\
+        :null,\"link\":\"http://trefle.io/api/plants/197482\",\"is_main_species\"\
+        :true,\"id\":197482,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":\"Notulae Systematicae. Herbier du Museum\
+        \ de Paris 13: 12. 1947. (Notul. Syst. (Paris)) \",\"author\":\"Benoist\"\
+        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":197492,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:25:56.277250\"}],\"\
+        slug\":\"hypoestes-humbertii\",\"scientific_name\":\"Hypoestes humbertii\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197492\"\
+        ,\"is_main_species\":true,\"id\":197492,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Bulletin du Mus\xE9um National\
+        \ d'Histoire Naturelle 33: 389. 1927. (Bull. Mus. Natl. Hist. Nat.) \",\"\
+        author\":\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
+        status\":\"Accepted\",\"sources\":[{\"species_id\":197502,\"source_url\":\"\
+        http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:02.312424\"\
+        }],\"slug\":\"hypoestes-hastata\",\"scientific_name\":\"Hypoestes hastata\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197502\"\
+        ,\"is_main_species\":true,\"id\":197502,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Bulletin du Mus\xE9um National\
+        \ d'Histoire Naturelle 33: 532. 1927. (Bull. Mus. Natl. Hist. Nat.) \",\"\
+        author\":\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
+        status\":\"Accepted\",\"sources\":[{\"species_id\":197521,\"source_url\":\"\
+        http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:14.711871\"\
+        }],\"slug\":\"hypoestes-fascicularis\",\"scientific_name\":\"Hypoestes fascicularis\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197521\"\
+        ,\"is_main_species\":true,\"id\":197521,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Prodromus Systematis Naturalis\
+        \ Regni Vegetabilis 11: 504. 1847. (Prodr.) \",\"author\":\"Nees\"},{\"year\"\
+        :null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\"\
+        :[{\"species_id\":197529,\"source_url\":\"http://www.tropicos.org\",\"name\"\
+        :\"Tropicos\",\"last_update\":\"2019-01-11T15:26:19.982274\"}],\"slug\":\"\
+        hypoestes-flexibilis\",\"scientific_name\":\"Hypoestes flexibilis\",\"main_species_id\"\
+        :null,\"link\":\"http://trefle.io/api/plants/197529\",\"is_main_species\"\
+        :true,\"id\":197529,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":\"Prodromus Systematis Naturalis Regni\
+        \ Vegetabilis 11: 505. 1847. (Prodr.) \",\"author\":\"Nees\"},{\"year\":null,\"\
+        type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
+        species_id\":197558,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
+        Tropicos\",\"last_update\":\"2019-01-11T15:26:38.862957\"}],\"slug\":\"anisostachya-paucinervis\"\
+        ,\"scientific_name\":\"Anisostachya paucinervis\",\"main_species_id\":null,\"\
+        link\":\"http://trefle.io/api/plants/197558\",\"is_main_species\":true,\"\
+        id\":197558,\"family_common_name\":null,\"complete_data\":false,\"common_name\"\
+        :null,\"bibliography\":\"Bulletin de la Soci\xE9t\xE9 Botanique de France\
+        \ 111: 422\u2013423. 1964. (Bull. Soc. Bot. France) \",\"author\":\"Benoist\"\
+        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":197568,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:45.114701\"}],\"\
+        slug\":\"ecbolium-ligustrinum\",\"scientific_name\":\"Ecbolium ligustrinum\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197568\"\
+        ,\"is_main_species\":true,\"id\":197568,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Kew Bulletin 44: 651. 1989.\
+        \ (Kew Bull.) \",\"author\":\"Vollesen\"},{\"year\":null,\"type\":\"species\"\
+        ,\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"species_id\":197575,\"\
+        source_url\":\"http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\"\
+        :\"2019-01-11T15:26:49.342281\"}],\"slug\":\"justicia-dejecta\",\"scientific_name\"\
+        :\"Justicia dejecta\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197575\"\
+        ,\"is_main_species\":true,\"id\":197575,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Notulae Systematicae. Herbier\
+        \ du Museum de Paris 13: 127. 1947. (Notul. Syst. (Paris)) \",\"author\":\"\
+        Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\"\
+        :\"Accepted\",\"sources\":[{\"species_id\":197585,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:56.837501\"}],\"\
+        slug\":\"anisostachya-oblonga\",\"scientific_name\":\"Anisostachya oblonga\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197585\"\
+        ,\"is_main_species\":true,\"id\":197585,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Bulletin de la Soci\xE9t\xE9\
+        \ Botanique de France 113: 535. 1966. (Bull. Soc. Bot. France) \",\"author\"\
+        :\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\"\
+        :\"Accepted\",\"sources\":[{\"species_id\":197595,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:27:08.041035\"}],\"\
+        slug\":\"anisostachya-bosseri\",\"scientific_name\":\"Anisostachya bosseri\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197595\"\
+        ,\"is_main_species\":true,\"id\":197595,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Bulletin de la Soci\xE9t\xE9\
+        \ Botanique de France 111: 428. 1964. (Bull. Soc. Bot. France) \",\"author\"\
+        :\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":true,\"status\"\
+        :\"Synonym\",\"sources\":[{\"species_id\":284893,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T11:27:35.853925\"}],\"\
+        slug\":\"cardamine-amphibia\",\"scientific_name\":\"Cardamine amphibia\",\"\
+        main_species_id\":175550,\"link\":\"http://trefle.io/api/plants/284893\",\"\
+        is_main_species\":false,\"id\":284893,\"family_common_name\":\"Mustard family\"\
+        ,\"complete_data\":false,\"common_name\":\"great yellowcress\",\"bibliography\"\
+        :null,\"author\":\"(L.) Kuntze\"},{\"year\":null,\"type\":\"var\",\"synonym\"\
+        :false,\"status\":\"Accepted\",\"sources\":[{\"species_id\":197511,\"source_url\"\
+        :\"http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:07.717826\"\
+        }],\"slug\":\"hypoestes-chlorotricha-var-elongata\",\"scientific_name\":\"\
+        Hypoestes chlorotricha var. elongata\",\"main_species_id\":197509,\"link\"\
+        :\"http://trefle.io/api/plants/197511\",\"is_main_species\":false,\"id\":197511,\"\
+        family_common_name\":null,\"complete_data\":false,\"common_name\":null,\"\
+        bibliography\":\"Bulletin de la Soci\xE9t\xE9 Botanique de France 84: 485.\
+        \ 1937. (Bull. Soc. Bot. France) \",\"author\":\"Benoist\"},{\"year\":null,\"\
+        type\":\"var\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
+        species_id\":197548,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
+        Tropicos\",\"last_update\":\"2019-01-11T15:26:31.698142\"}],\"slug\":\"justicia-congestiflora-var-elongata\"\
+        ,\"scientific_name\":\"Justicia congestiflora var. elongata\",\"main_species_id\"\
+        :197418,\"link\":\"http://trefle.io/api/plants/197548\",\"is_main_species\"\
+        :false,\"id\":197548,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":\"Notulae Systematicae. Herbier du Museum\
+        \ de Paris 14: 99. 1951. (Notul. Syst. (Paris)) \",\"author\":\"Benoist\"\
+        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":200312,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T16:23:32.116065\"}],\"\
+        slug\":\"glottiphyllum-cruciatum\",\"scientific_name\":\"Glottiphyllum cruciatum\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/200312\"\
+        ,\"is_main_species\":true,\"id\":200312,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"N.E. Br.\"\
+        },{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":143758,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:14.570705\"}],\"slug\"\
+        :\"hydrocotyle-verticillata-var-verticillata\",\"scientific_name\":\"Hydrocotyle\
+        \ verticillata var. verticillata\",\"main_species_id\":143756,\"link\":\"\
+        http://trefle.io/api/plants/143758\",\"is_main_species\":false,\"id\":143758,\"\
+        family_common_name\":\"Carrot family\",\"complete_data\":false,\"common_name\"\
+        :\"whorled marshpennywort\",\"bibliography\":null,\"author\":null},{\"year\"\
+        :null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144005,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:40.722306\"}],\"slug\":\"hymenopappus-artemisiifolius-var-artemisiifolius\"\
+        ,\"scientific_name\":\"Hymenopappus artemisiifolius var. artemisiifolius\"\
+        ,\"main_species_id\":144004,\"link\":\"http://trefle.io/api/plants/144005\"\
+        ,\"is_main_species\":false,\"id\":144005,\"family_common_name\":\"Aster family\"\
+        ,\"complete_data\":false,\"common_name\":\"oldplainsman\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"ssp\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":143728,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:11.444632\"\
+        }],\"slug\":\"hydrangea-arborescens-ssp-radiata\",\"scientific_name\":\"Hydrangea\
+        \ arborescens ssp. radiata\",\"main_species_id\":143716,\"link\":\"http://trefle.io/api/plants/143728\"\
+        ,\"is_main_species\":false,\"id\":143728,\"family_common_name\":\"Hydrangea\
+        \ family\",\"complete_data\":false,\"common_name\":\"wild hydrangea\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":143744,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:13.061876\"\
+        }],\"slug\":\"hydrocotyle-sibthorpioides-var-oedipoda\",\"scientific_name\"\
+        :\"Hydrocotyle sibthorpioides var. oedipoda\",\"main_species_id\":143753,\"\
+        link\":\"http://trefle.io/api/plants/143744\",\"is_main_species\":false,\"\
+        id\":143744,\"family_common_name\":\"Carrot family\",\"complete_data\":false,\"\
+        common_name\":\"lawn marshpennywort\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":143750,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:13.691707\"}],\"slug\":\"hydrocotyle-verticillata-var-triradiata\"\
+        ,\"scientific_name\":\"Hydrocotyle verticillata var. triradiata\",\"main_species_id\"\
+        :143756,\"link\":\"http://trefle.io/api/plants/143750\",\"is_main_species\"\
+        :false,\"id\":143750,\"family_common_name\":\"Carrot family\",\"complete_data\"\
+        :false,\"common_name\":\"whorled marshpennywort\",\"bibliography\":null,\"\
+        author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
+        :\"Unknown\",\"sources\":[{\"species_id\":144028,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:43.324954\"}],\"slug\"\
+        :\"hymenopappus-filifolius-var-parvulus\",\"scientific_name\":\"Hymenopappus\
+        \ filifolius var. parvulus\",\"main_species_id\":144011,\"link\":\"http://trefle.io/api/plants/144028\"\
+        ,\"is_main_species\":false,\"id\":144028,\"family_common_name\":\"Aster family\"\
+        ,\"complete_data\":false,\"common_name\":\"fineleaf hymenopappus\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":143769,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:15.645010\"\
+        }],\"slug\":\"hydrolea-affinis\",\"scientific_name\":\"Hydrolea affinis\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/143769\"\
+        ,\"is_main_species\":true,\"id\":143769,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":null},{\"year\"\
+        :null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\"\
+        :[{\"species_id\":197351,\"source_url\":\"http://www.tropicos.org\",\"name\"\
+        :\"Tropicos\",\"last_update\":\"2019-01-11T15:24:05.175011\"}],\"slug\":\"\
+        duvernoia-asystasioides\",\"scientific_name\":\"Duvernoia asystasioides\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197351\"\
+        ,\"is_main_species\":true,\"id\":197351,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Botanische Jahrb\xFCcher f\xFC\
+        r Systematik, Pflanzengeschichte und Pflanzengeographie 38: 72. 1905. (Bot.\
+        \ Jahrb. Syst.) \",\"author\":\"Lindau\"},{\"year\":null,\"type\":\"ssp\"\
+        ,\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\":163720,\"\
+        source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T11:07:17.176449\"}],\"slug\":\"penstemon-clevelandii-ssp-mohavensis\"\
+        ,\"scientific_name\":\"Penstemon clevelandii ssp. mohavensis\",\"main_species_id\"\
+        :163715,\"link\":\"http://trefle.io/api/plants/163720\",\"is_main_species\"\
+        :false,\"id\":163720,\"family_common_name\":\"Figwort family\",\"complete_data\"\
+        :false,\"common_name\":\"Cleveland's beardtongue\",\"bibliography\":null,\"\
+        author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
+        :\"Unknown\",\"sources\":[{\"species_id\":144134,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:54.800446\"}],\"slug\"\
+        :\"hymenoxys-richardsonii-var-floribunda\",\"scientific_name\":\"Hymenoxys\
+        \ richardsonii var. floribunda\",\"main_species_id\":144133,\"link\":\"http://trefle.io/api/plants/144134\"\
+        ,\"is_main_species\":false,\"id\":144134,\"family_common_name\":\"Aster family\"\
+        ,\"complete_data\":false,\"common_name\":\"pingue rubberweed\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":null,\"synonym\":true,\"status\"\
+        :\"Synonym\",\"sources\":[{\"species_id\":195586,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T17:33:46.633776\"}],\"\
+        slug\":\"blepharis-hildebrandii\",\"scientific_name\":\"Blepharis hildebrandii\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/195586\"\
+        ,\"is_main_species\":true,\"id\":195586,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"Lindau\"},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":143952,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:35.008398\"}],\"slug\":\"hymenocallis-henryae-var-henryae\"\
+        ,\"scientific_name\":\"Hymenocallis henryae var. henryae\",\"main_species_id\"\
+        :149583,\"link\":\"http://trefle.io/api/plants/143952\",\"is_main_species\"\
+        :false,\"id\":143952,\"family_common_name\":\"Lily family\",\"complete_data\"\
+        :false,\"common_name\":\"Henry's spiderlily\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"\
+        Unknown\",\"sources\":[{\"species_id\":143771,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:15.835794\"}],\"slug\"\
+        :\"hydrophylax\",\"scientific_name\":\"Hydrophylax\",\"main_species_id\":null,\"\
+        link\":\"http://trefle.io/api/plants/143771\",\"is_main_species\":true,\"\
+        id\":143771,\"family_common_name\":\"Madder family\",\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :171118,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T11:27:21.757622\"}],\"slug\":\"disporum-trachycarpum-var-subglabrum\"\
+        ,\"scientific_name\":\"Disporum trachycarpum var. subglabrum\",\"main_species_id\"\
+        :171117,\"link\":\"http://trefle.io/api/plants/171118\",\"is_main_species\"\
+        :false,\"id\":171118,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
+        species_id\":197352,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
+        Tropicos\",\"last_update\":\"2019-01-11T15:24:05.867223\"}],\"slug\":\"thamnojusticia-grandiflora\"\
+        ,\"scientific_name\":\"Thamnojusticia grandiflora\",\"main_species_id\":null,\"\
+        link\":\"http://trefle.io/api/plants/197352\",\"is_main_species\":true,\"\
+        id\":197352,\"family_common_name\":null,\"complete_data\":false,\"common_name\"\
+        :null,\"bibliography\":\"Notizblatt des Botanischen Gartens und Museums zu\
+        \ Berlin-Dahlem 12: 100. 1934. (Notizbl. Bot. Gart. Berlin-Dahlem) \",\"author\"\
+        :\"Mildbr.\"},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
+        :\"Unknown\",\"sources\":[{\"species_id\":143835,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:22.797569\"}],\"slug\"\
+        :\"hygrohypnum-palustre-var-subsphaericarpon\",\"scientific_name\":\"Hygrohypnum\
+        \ palustre var. subsphaericarpon\",\"main_species_id\":143832,\"link\":\"\
+        http://trefle.io/api/plants/143835\",\"is_main_species\":false,\"id\":143835,\"\
+        family_common_name\":null,\"complete_data\":false,\"common_name\":null,\"\
+        bibliography\":null,\"author\":null}]"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '16176'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 22 Mar 2019 09:17:06 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <http://trefle.io/api/species?page=2>; rel="next", <http://trefle.io/api/species?page=1>;
+        rel="first", <http://trefle.io/api/species?page=6484>; rel="last"
+      page-number:
+      - '1'
+      per-page:
+      - '30'
+      total:
+      - '194507'
+      total-pages:
+      - '6484'
+      x-request-id:
+      - 2m73qdkgnqkfchtj8c0000p1
+    status:
+      code: 200
+      message: OK
+version: 1

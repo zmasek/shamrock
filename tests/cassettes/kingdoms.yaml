@@ -1,0 +1,53 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/kingdoms
+  response:
+    body:
+      string: '[{"subkingdoms":[{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1}],"slug":null,"name":"Plantae","id":1}]'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '154'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 22 Mar 2019 09:17:07 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <http://trefle.io/api/kingdoms?page=1>; rel="first", <http://trefle.io/api/kingdoms?page=1>;
+        rel="last"
+      page-number:
+      - '1'
+      per-page:
+      - '30'
+      total:
+      - '1'
+      total-pages:
+      - '1'
+      x-request-id:
+      - 2m73qdmfinrnkj53f80000u1
+    status:
+      code: 200
+      message: OK
+version: 1

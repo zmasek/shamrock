@@ -1,0 +1,304 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: http://trefle.io/api/species?page=2
+  response:
+    body:
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body\
+        \ bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n\
+        <hr><center>nginx/1.14.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '194'
+      Content-Type:
+      - text/html
+      Date:
+      - Fri, 22 Mar 2019 09:17:05 GMT
+      Location:
+      - https://trefle.io/api/species?page=2
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/species?page=2
+  response:
+    body:
+      string: "[{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":144187,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:26:00.158437\"}],\"slug\"\
+        :\"hypericum-patulum-var-henryi\",\"scientific_name\":\"Hypericum patulum\
+        \ var. henryi\",\"main_species_id\":144277,\"link\":\"http://trefle.io/api/plants/144187\"\
+        ,\"is_main_species\":false,\"id\":144187,\"family_common_name\":\"Mangosteen\
+        \ family\",\"complete_data\":false,\"common_name\":null,\"bibliography\":null,\"\
+        author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
+        :\"Unknown\",\"sources\":[{\"species_id\":171194,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T11:27:34.115597\"}],\"slug\"\
+        :\"prosthechea-cochleata-var-triandra\",\"scientific_name\":\"Prosthechea\
+        \ cochleata var. triandra\",\"main_species_id\":171189,\"link\":\"http://trefle.io/api/plants/171194\"\
+        ,\"is_main_species\":false,\"id\":171194,\"family_common_name\":\"Orchid family\"\
+        ,\"complete_data\":false,\"common_name\":\"clamshell orchid\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":144139,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:55.381948\"\
+        }],\"slug\":\"hymenoxys-richardsonii-var-richardsonii\",\"scientific_name\"\
+        :\"Hymenoxys richardsonii var. richardsonii\",\"main_species_id\":144133,\"\
+        link\":\"http://trefle.io/api/plants/144139\",\"is_main_species\":false,\"\
+        id\":144139,\"family_common_name\":\"Aster family\",\"complete_data\":false,\"\
+        common_name\":\"pingue rubberweed\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
+        ,\"sources\":[{\"species_id\":197359,\"source_url\":\"http://www.tropicos.org\"\
+        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:24:26.382829\"}],\"\
+        slug\":\"justicia-arborescens\",\"scientific_name\":\"Justicia arborescens\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197359\"\
+        ,\"is_main_species\":true,\"id\":197359,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Novon 6(1): 13\u201316, f.\
+        \ 1A\u2013N, 4A. 1996. (Novon) \",\"author\":\"Durkee & McDade\"},{\"year\"\
+        :null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144095,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:50.659750\"}],\"slug\":\"gymnostomum-recurvirostre-var-latifolium\"\
+        ,\"scientific_name\":\"Gymnostomum recurvirostre var. latifolium\",\"main_species_id\"\
+        :144093,\"link\":\"http://trefle.io/api/plants/144095\",\"is_main_species\"\
+        :false,\"id\":144095,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :144012,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T10:25:41.522073\"}],\"slug\":\"hymenopappus-filifolius-var-cinereus\"\
+        ,\"scientific_name\":\"Hymenopappus filifolius var. cinereus\",\"main_species_id\"\
+        :144011,\"link\":\"http://trefle.io/api/plants/144012\",\"is_main_species\"\
+        :false,\"id\":144012,\"family_common_name\":\"Aster family\",\"complete_data\"\
+        :false,\"common_name\":\"fineleaf hymenopappus\",\"bibliography\":null,\"\
+        author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
+        :\"Unknown\",\"sources\":[{\"species_id\":144031,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:43.669369\"}],\"slug\"\
+        :\"hymenopappus-filifolius-var-polycephalus\",\"scientific_name\":\"Hymenopappus\
+        \ filifolius var. polycephalus\",\"main_species_id\":144011,\"link\":\"http://trefle.io/api/plants/144031\"\
+        ,\"is_main_species\":false,\"id\":144031,\"family_common_name\":\"Aster family\"\
+        ,\"complete_data\":false,\"common_name\":\"fineleaf hymenopappus\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":144035,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:44.127279\"\
+        }],\"slug\":\"hymenopappus-flavescens-var-canotomentosus\",\"scientific_name\"\
+        :\"Hymenopappus flavescens var. canotomentosus\",\"main_species_id\":144034,\"\
+        link\":\"http://trefle.io/api/plants/144035\",\"is_main_species\":false,\"\
+        id\":144035,\"family_common_name\":\"Aster family\",\"complete_data\":false,\"\
+        common_name\":\"collegeflower\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144044,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:45.105923\"}],\"slug\":\"hymenopappus-scabiosaeus-var-corymbosus\"\
+        ,\"scientific_name\":\"Hymenopappus scabiosaeus var. corymbosus\",\"main_species_id\"\
+        :144043,\"link\":\"http://trefle.io/api/plants/144044\",\"is_main_species\"\
+        :false,\"id\":144044,\"family_common_name\":\"Aster family\",\"complete_data\"\
+        :false,\"common_name\":\"Carolina woollywhite\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"\
+        Unknown\",\"sources\":[{\"species_id\":136830,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:14:07.217976\"}],\"slug\"\
+        :\"fellhanera-floridana\",\"scientific_name\":\"Fellhanera floridana\",\"\
+        main_species_id\":null,\"link\":\"http://trefle.io/api/plants/136830\",\"\
+        is_main_species\":true,\"id\":136830,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":null},{\"year\"\
+        :null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\"\
+        :[{\"species_id\":197360,\"source_url\":\"http://www.tropicos.org\",\"name\"\
+        :\"Tropicos\",\"last_update\":\"2019-01-11T15:24:27.189415\"}],\"slug\":\"\
+        pseudocalyx-heterochondros\",\"scientific_name\":\"Pseudocalyx heterochondros\"\
+        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197360\"\
+        ,\"is_main_species\":true,\"id\":197360,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"Notizblatt des Botanischen\
+        \ Gartens und Museums zu Berlin-Dahlem 11: 409. 1932. (Notizbl. Bot. Gart.\
+        \ Berlin-Dahlem) \",\"author\":\"Mildbr.\"},{\"year\":null,\"type\":\"var\"\
+        ,\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\":143992,\"\
+        source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T10:25:39.303980\"}],\"slug\":\"ambrosia-salsola-var-fasciculata\"\
+        ,\"scientific_name\":\"Ambrosia salsola var. fasciculata\",\"main_species_id\"\
+        :143999,\"link\":\"http://trefle.io/api/plants/143992\",\"is_main_species\"\
+        :false,\"id\":143992,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :143851,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T10:25:24.530389\"}],\"slug\":\"hygrohypnum-ochraceum-var-flaccidum\"\
+        ,\"scientific_name\":\"Hygrohypnum ochraceum var. flaccidum\",\"main_species_id\"\
+        :143849,\"link\":\"http://trefle.io/api/plants/143851\",\"is_main_species\"\
+        :false,\"id\":143851,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":\"hygrohypnum moss\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144054,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:46.194780\"}],\"slug\":\"hymenophyllum-polyanthos-var-protrusum\"\
+        ,\"scientific_name\":\"Hymenophyllum polyanthos var. protrusum\",\"main_species_id\"\
+        :144068,\"link\":\"http://trefle.io/api/plants/144054\",\"is_main_species\"\
+        :false,\"id\":144054,\"family_common_name\":\"Filmy Fern family\",\"complete_data\"\
+        :false,\"common_name\":\"smooth filmy fern\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":144137,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:55.139513\"}],\"slug\"\
+        :\"hymenoxys-richardsonii-var-utahensis\",\"scientific_name\":\"Hymenoxys\
+        \ richardsonii var. utahensis\",\"main_species_id\":144133,\"link\":\"http://trefle.io/api/plants/144137\"\
+        ,\"is_main_species\":false,\"id\":144137,\"family_common_name\":\"Aster family\"\
+        ,\"complete_data\":false,\"common_name\":\"pingue rubberweed\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":144098,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:51.010957\"\
+        }],\"slug\":\"hymenostylium-recurvirostre-var-latifolium\",\"scientific_name\"\
+        :\"Hymenostylium recurvirostre var. latifolium\",\"main_species_id\":144090,\"\
+        link\":\"http://trefle.io/api/plants/144098\",\"is_main_species\":false,\"\
+        id\":144098,\"family_common_name\":null,\"complete_data\":false,\"common_name\"\
+        :\"hymenostylium moss\",\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :143845,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T10:25:23.880225\"}],\"slug\":\"hygrohypnum-smithii-var-goulardii\"\
+        ,\"scientific_name\":\"Hygrohypnum smithii var. goulardii\",\"main_species_id\"\
+        :143855,\"link\":\"http://trefle.io/api/plants/143845\",\"is_main_species\"\
+        :false,\"id\":143845,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":\"Smith's hygrohypnum moss\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"ssp\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":143978,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:37.857979\"}],\"slug\"\
+        :\"hymenocallis-floridana-ssp-amplifolia\",\"scientific_name\":\"Hymenocallis\
+        \ floridana ssp. amplifolia\",\"main_species_id\":149610,\"link\":\"http://trefle.io/api/plants/143978\"\
+        ,\"is_main_species\":false,\"id\":143978,\"family_common_name\":\"Lily family\"\
+        ,\"complete_data\":false,\"common_name\":\"spring snowflake\",\"bibliography\"\
+        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":144033,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:43.899039\"\
+        }],\"slug\":\"hymenopappus-filifolius-var-tomentosus\",\"scientific_name\"\
+        :\"Hymenopappus filifolius var. tomentosus\",\"main_species_id\":144011,\"\
+        link\":\"http://trefle.io/api/plants/144033\",\"is_main_species\":false,\"\
+        id\":144033,\"family_common_name\":\"Aster family\",\"complete_data\":false,\"\
+        common_name\":\"fineleaf hymenopappus\",\"bibliography\":null,\"author\":null},{\"\
+        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144037,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:44.349168\"}],\"slug\":\"hymenopappus-flavescens-var-flavescens\"\
+        ,\"scientific_name\":\"Hymenopappus flavescens var. flavescens\",\"main_species_id\"\
+        :144034,\"link\":\"http://trefle.io/api/plants/144037\",\"is_main_species\"\
+        :false,\"id\":144037,\"family_common_name\":\"Aster family\",\"complete_data\"\
+        :false,\"common_name\":\"collegeflower\",\"bibliography\":null,\"author\"\
+        :null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":144111,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:52.395631\"}],\"slug\"\
+        :\"hymenoxys-ambigens-var-neomexicana\",\"scientific_name\":\"Hymenoxys ambigens\
+        \ var. neomexicana\",\"main_species_id\":144105,\"link\":\"http://trefle.io/api/plants/144111\"\
+        ,\"is_main_species\":false,\"id\":144111,\"family_common_name\":\"Aster family\"\
+        ,\"complete_data\":false,\"common_name\":\"Pinaleno Mountain rubberweed\"\
+        ,\"bibliography\":null,\"author\":null},{\"year\":null,\"type\":\"species\"\
+        ,\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\":143876,\"\
+        source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T10:25:27.091641\"}],\"slug\":\"cereus-undatus\",\"scientific_name\"\
+        :\"Cereus undatus\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/143876\"\
+        ,\"is_main_species\":true,\"id\":143876,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":null},{\"year\"\
+        :null,\"type\":null,\"synonym\":true,\"status\":\"Synonym\",\"sources\":[{\"\
+        species_id\":197364,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
+        Tropicos\",\"last_update\":\"2019-01-11T17:45:29.166761\"}],\"slug\":\"lasiocladus-anthospermifolius-var-mollis\"\
+        ,\"scientific_name\":\"Lasiocladus anthospermifolius var. mollis\",\"main_species_id\"\
+        :null,\"link\":\"http://trefle.io/api/plants/197364\",\"is_main_species\"\
+        :true,\"id\":197364,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":\"(Benoist) Benoist\"\
+        },{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
+        ,\"sources\":[{\"species_id\":143809,\"source_url\":\"https://plants.usda.gov\"\
+        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:19.990111\"}],\"slug\"\
+        :\"hygroamblystegium-irriguum-var-spinifolium\",\"scientific_name\":\"Hygroamblystegium\
+        \ irriguum var. spinifolium\",\"main_species_id\":143815,\"link\":\"http://trefle.io/api/plants/143809\"\
+        ,\"is_main_species\":false,\"id\":143809,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":null},{\"year\"\
+        :null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144094,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:50.536529\"}],\"slug\":\"gymnostomum-recurvirostre-var-commutatum\"\
+        ,\"scientific_name\":\"Gymnostomum recurvirostre var. commutatum\",\"main_species_id\"\
+        :144093,\"link\":\"http://trefle.io/api/plants/144094\",\"is_main_species\"\
+        :false,\"id\":144094,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"species\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"\
+        species_id\":136835,\"source_url\":\"https://plants.usda.gov\",\"name\":\"\
+        USDA\",\"last_update\":\"2019-01-11T10:14:07.528301\"}],\"slug\":\"fendlera-linearis\"\
+        ,\"scientific_name\":\"Fendlera linearis\",\"main_species_id\":null,\"link\"\
+        :\"http://trefle.io/api/plants/136835\",\"is_main_species\":true,\"id\":136835,\"\
+        family_common_name\":null,\"complete_data\":false,\"common_name\":null,\"\
+        bibliography\":null,\"author\":null},{\"year\":null,\"type\":\"species\",\"\
+        synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"species_id\":197368,\"\
+        source_url\":\"http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\"\
+        :\"2019-01-11T15:24:33.250647\"}],\"slug\":\"justicia-lobata\",\"scientific_name\"\
+        :\"Justicia lobata\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197368\"\
+        ,\"is_main_species\":true,\"id\":197368,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":\"M\xE9moires de la Soci\xE9\
+        t\xE9 Botanique de France 31: 95\u201396. 1949. (M\xE9m. Soc. Bot. France)\
+        \ \",\"author\":\"Benoist\"},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
+        status\":\"Unknown\",\"sources\":[{\"species_id\":144000,\"source_url\":\"\
+        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:40.172668\"\
+        }],\"slug\":\"ambrosia-salsola-var-salsola\",\"scientific_name\":\"Ambrosia\
+        \ salsola var. salsola\",\"main_species_id\":143999,\"link\":\"http://trefle.io/api/plants/144000\"\
+        ,\"is_main_species\":false,\"id\":144000,\"family_common_name\":null,\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":null},{\"year\"\
+        :null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
+        :[{\"species_id\":144096,\"source_url\":\"https://plants.usda.gov\",\"name\"\
+        :\"USDA\",\"last_update\":\"2019-01-11T10:25:50.780850\"}],\"slug\":\"gymnostomum-recurvirostre-var-scabrum\"\
+        ,\"scientific_name\":\"Gymnostomum recurvirostre var. scabrum\",\"main_species_id\"\
+        :144093,\"link\":\"http://trefle.io/api/plants/144096\",\"is_main_species\"\
+        :false,\"id\":144096,\"family_common_name\":null,\"complete_data\":false,\"\
+        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
+        type\":\"ssp\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
+        :144180,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
+        :\"2019-01-11T10:25:59.431699\"}],\"slug\":\"hypericum-aegypticum-ssp-webbii\"\
+        ,\"scientific_name\":\"Hypericum aegypticum ssp. webbii\",\"main_species_id\"\
+        :144179,\"link\":\"http://trefle.io/api/plants/144180\",\"is_main_species\"\
+        :false,\"id\":144180,\"family_common_name\":\"Mangosteen family\",\"complete_data\"\
+        :false,\"common_name\":null,\"bibliography\":null,\"author\":null}]"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '15587'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 22 Mar 2019 09:17:05 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <http://trefle.io/api/species?page=3>; rel="next", <http://trefle.io/api/species?page=1>;
+        rel="prev", <http://trefle.io/api/species?page=1>; rel="first", <http://trefle.io/api/species?page=6484>;
+        rel="last"
+      page-number:
+      - '2'
+      per-page:
+      - '30'
+      total:
+      - '194507'
+      total-pages:
+      - '6484'
+      x-request-id:
+      - 2m73qdjh2r8nrsea7k0000o1
+    status:
+      code: 200
+      message: OK
+version: 1

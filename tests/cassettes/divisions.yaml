@@ -1,0 +1,53 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/divisions
+  response:
+    body:
+      string: '[{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"magnoliophyta","name":"Magnoliophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":1,"division_classes":[{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1},{"slug":"liliopsida","name":"Liliopsida","link":"http://trefle.io/api/division_classes/4","id":4}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"coniferophyta","name":"Coniferophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":2,"division_classes":[{"slug":"pinopsida","name":"Pinopsida","link":"http://trefle.io/api/division_classes/2","id":2}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"pteridophyta","name":"Pteridophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":3,"division_classes":[{"slug":"filicopsida","name":"Filicopsida","link":"http://trefle.io/api/division_classes/8","id":8}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"cycadophyta","name":"Cycadophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":4,"division_classes":[{"slug":"cycadopsida","name":"Cycadopsida","link":"http://trefle.io/api/division_classes/14","id":14}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"gnetophyta","name":"Gnetophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":5,"division_classes":[{"slug":"gnetopsida","name":"Gnetopsida","link":"http://trefle.io/api/division_classes/16","id":16}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"equisetophyta","name":"Equisetophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":6,"division_classes":[{"slug":"equisetopsida","name":"Equisetopsida","link":"http://trefle.io/api/division_classes/17","id":17}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"ginkgophyta","name":"Ginkgophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":7,"division_classes":[{"slug":"ginkgoopsida","name":"Ginkgoopsida","link":"http://trefle.io/api/division_classes/18","id":18}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"lycopodiophyta","name":"Lycopodiophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":8,"division_classes":[{"slug":"lycopodiopsida","name":"Lycopodiopsida","link":"http://trefle.io/api/division_classes/20","id":20}]},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"psilophyta","name":"Psilophyta","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":9,"division_classes":[{"slug":"psilopsida","name":"Psilopsida","link":"http://trefle.io/api/division_classes/21","id":21}]}]'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3492'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 22 Mar 2019 09:17:07 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <http://trefle.io/api/divisions?page=1>; rel="first", <http://trefle.io/api/divisions?page=1>;
+        rel="last"
+      page-number:
+      - '1'
+      per-page:
+      - '30'
+      total:
+      - '9'
+      total-pages:
+      - '1'
+      x-request-id:
+      - 2m73qdn5a1ce3aa48c000161
+    status:
+      code: 200
+      message: OK
+version: 1

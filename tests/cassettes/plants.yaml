@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/plants
+  response:
+    body:
+      string: '[{"slug":"ruttya-tricolor","scientific_name":"Ruttya tricolor","link":"http://trefle.io/api/plants/197482","id":197482,"complete_data":false,"common_name":null},{"slug":"hypoestes-humbertii","scientific_name":"Hypoestes
+        humbertii","link":"http://trefle.io/api/plants/197492","id":197492,"complete_data":false,"common_name":null},{"slug":"hypoestes-hastata","scientific_name":"Hypoestes
+        hastata","link":"http://trefle.io/api/plants/197502","id":197502,"complete_data":false,"common_name":null},{"slug":"hypoestes-fascicularis","scientific_name":"Hypoestes
+        fascicularis","link":"http://trefle.io/api/plants/197521","id":197521,"complete_data":false,"common_name":null},{"slug":"hypoestes-flexibilis","scientific_name":"Hypoestes
+        flexibilis","link":"http://trefle.io/api/plants/197529","id":197529,"complete_data":false,"common_name":null},{"slug":"anisostachya-paucinervis","scientific_name":"Anisostachya
+        paucinervis","link":"http://trefle.io/api/plants/197558","id":197558,"complete_data":false,"common_name":null},{"slug":"ecbolium-ligustrinum","scientific_name":"Ecbolium
+        ligustrinum","link":"http://trefle.io/api/plants/197568","id":197568,"complete_data":false,"common_name":null},{"slug":"justicia-dejecta","scientific_name":"Justicia
+        dejecta","link":"http://trefle.io/api/plants/197575","id":197575,"complete_data":false,"common_name":null},{"slug":"anisostachya-oblonga","scientific_name":"Anisostachya
+        oblonga","link":"http://trefle.io/api/plants/197585","id":197585,"complete_data":false,"common_name":null},{"slug":"anisostachya-bosseri","scientific_name":"Anisostachya
+        bosseri","link":"http://trefle.io/api/plants/197595","id":197595,"complete_data":false,"common_name":null},{"slug":"glottiphyllum-cruciatum","scientific_name":"Glottiphyllum
+        cruciatum","link":"http://trefle.io/api/plants/200312","id":200312,"complete_data":false,"common_name":null},{"slug":"hydrolea-affinis","scientific_name":"Hydrolea
+        affinis","link":"http://trefle.io/api/plants/143769","id":143769,"complete_data":false,"common_name":null},{"slug":"duvernoia-asystasioides","scientific_name":"Duvernoia
+        asystasioides","link":"http://trefle.io/api/plants/197351","id":197351,"complete_data":false,"common_name":null},{"slug":"blepharis-hildebrandii","scientific_name":"Blepharis
+        hildebrandii","link":"http://trefle.io/api/plants/195586","id":195586,"complete_data":false,"common_name":null},{"slug":"hydrophylax","scientific_name":"Hydrophylax","link":"http://trefle.io/api/plants/143771","id":143771,"complete_data":false,"common_name":null},{"slug":"thamnojusticia-grandiflora","scientific_name":"Thamnojusticia
+        grandiflora","link":"http://trefle.io/api/plants/197352","id":197352,"complete_data":false,"common_name":null},{"slug":"justicia-arborescens","scientific_name":"Justicia
+        arborescens","link":"http://trefle.io/api/plants/197359","id":197359,"complete_data":false,"common_name":null},{"slug":"fellhanera-floridana","scientific_name":"Fellhanera
+        floridana","link":"http://trefle.io/api/plants/136830","id":136830,"complete_data":false,"common_name":null},{"slug":"pseudocalyx-heterochondros","scientific_name":"Pseudocalyx
+        heterochondros","link":"http://trefle.io/api/plants/197360","id":197360,"complete_data":false,"common_name":null},{"slug":"cereus-undatus","scientific_name":"Cereus
+        undatus","link":"http://trefle.io/api/plants/143876","id":143876,"complete_data":false,"common_name":null},{"slug":"lasiocladus-anthospermifolius-var-mollis","scientific_name":"Lasiocladus
+        anthospermifolius var. mollis","link":"http://trefle.io/api/plants/197364","id":197364,"complete_data":false,"common_name":null},{"slug":"fendlera-linearis","scientific_name":"Fendlera
+        linearis","link":"http://trefle.io/api/plants/136835","id":136835,"complete_data":false,"common_name":null},{"slug":"justicia-lobata","scientific_name":"Justicia
+        lobata","link":"http://trefle.io/api/plants/197368","id":197368,"complete_data":false,"common_name":null},{"slug":"ferotrefle-lecontei","scientific_name":"Ferotrefle
+        lecontei","link":"http://trefle.io/api/plants/136856","id":136856,"complete_data":false,"common_name":null},{"slug":"actinella-richardsonii-var-floribunda","scientific_name":"Actinella
+        richardsonii var. floribunda","link":"http://trefle.io/api/plants/144135","id":144135,"complete_data":false,"common_name":null},{"slug":"hyparrhenia-pilgeriana","scientific_name":"Hyparrhenia
+        pilgeriana","link":"http://trefle.io/api/plants/144162","id":144162,"complete_data":false,"common_name":null},{"slug":"hypnum-ravaudii-ssp-fastigiatum","scientific_name":"Hypnum
+        ravaudii ssp. fastigiatum","link":"http://trefle.io/api/plants/144388","id":144388,"complete_data":false,"common_name":null},{"slug":"sicydium-lindheimeri-var-tenuisectum","scientific_name":"Sicydium
+        lindheimeri var. tenuisectum","link":"http://trefle.io/api/plants/144588","id":144588,"complete_data":false,"common_name":null},{"slug":"justicia-ankazobensis","scientific_name":"Justicia
+        ankazobensis","link":"http://trefle.io/api/plants/197374","id":197374,"complete_data":false,"common_name":null},{"slug":"justicia-brevispica","scientific_name":"Justicia
+        brevispica","link":"http://trefle.io/api/plants/197378","id":197378,"complete_data":false,"common_name":null}]'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5207'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 22 Mar 2019 09:17:09 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <http://trefle.io/api/plants?page=2>; rel="next", <http://trefle.io/api/plants?page=1>;
+        rel="first", <http://trefle.io/api/plants?page=4906>; rel="last"
+      page-number:
+      - '1'
+      per-page:
+      - '30'
+      total:
+      - '147176'
+      total-pages:
+      - '4906'
+      x-request-id:
+      - 2m73qdra453odur97k0001g1
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -6,7 +6,7 @@ from shamrock import Shamrock, ENDPOINTS
 
 TOKEN = os.environ.get('TREFLE_TOKEN')
 
-vcr = main_vcr.VCR(cassette_library_dir='tests/cassettes')
+vcr = main_vcr.VCR(cassette_library_dir='tests/cassettes', filter_headers=[('Authorization', None)])
 
 
 class BasicTests(unittest.TestCase):
@@ -46,19 +46,19 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(result, kwargs['url'])
         kwargs['params'] = {'q': 'tomato'}
         result = self.api._get_parametrized_url(kwargs)
-        self.assertEqual(result, '{}?q=tomato'.format(kwargs['url']) )
+        self.assertEqual(result, '{}?q=tomato'.format(kwargs['url']))
 
     def test__get_result(self):
         self.api.result = None
         kwargs = self.api._kwargs('species')
-        with vcr.use_cassette('species.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('species.yaml') as response:
             result = self.api._get_result(kwargs)
             self.assertCommon(response, result, 'species')
-        with vcr.use_cassette('species.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('species.yaml') as response:
             result = self.api._get_result(kwargs)
             self.assertCommon(response, result, 'species')
         kwargs = self.api._kwargs('plants')
-        with vcr.use_cassette('plants.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('plants.yaml') as response:
             result = self.api._get_result(kwargs)
             self.assertCommon(response, result, 'plants')
 
@@ -81,12 +81,12 @@ class BasicTests(unittest.TestCase):
 
     def test_valid_endpoints(self):
         for endpoint in ENDPOINTS:
-            with vcr.use_cassette('{}.yaml'.format(endpoint), filter_headers=['Authorization']) as response:
+            with vcr.use_cassette('{}.yaml'.format(endpoint)) as response:
                 result = getattr(self.api, endpoint)()
                 self.assertCommon(response, result, endpoint)
 
     def test_valid_endpoint_one(self):
-        with vcr.use_cassette('species_one.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('species_one.yaml') as response:
             result = self.api.species(182512)
             self.assertEqual(len(response), 1)
             self.assertEqual(response.requests[0].uri, 'https://trefle.io/api/species/182512')
@@ -94,7 +94,7 @@ class BasicTests(unittest.TestCase):
             self.assertEqual(result, json.loads(response.responses[0]['body']['string']))
 
     def test_search(self):
-        with vcr.use_cassette('search.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('search.yaml') as response:
             result = self.api.search('tomato')
             self.assertEqual(len(response), 1)
             self.assertEqual(response.requests[0].uri, 'https://trefle.io/api/species?q=tomato')
@@ -102,49 +102,49 @@ class BasicTests(unittest.TestCase):
             self.assertEqual(result, json.loads(response.responses[0]['body']['string']))
 
     def test_next(self):
-        with vcr.use_cassette('species.yaml', filter_headers=['Authorization']):
+        with vcr.use_cassette('species.yaml'):
             self.api.species()
             self.assertIsNone(self.api.previous())
-        with vcr.use_cassette('next.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('next.yaml') as response:
             result = self.api.next()
             self.assertTrue(isinstance(result, list))
             self.assertEqual(response.requests[0].uri, 'http://trefle.io/api/species?page=2')
 
     def test_previous(self):
-        with vcr.use_cassette('species.yaml', filter_headers=['Authorization']):
+        with vcr.use_cassette('species.yaml'):
             self.api.species()
-        with vcr.use_cassette('next.yaml', filter_headers=['Authorization']):
+        with vcr.use_cassette('next.yaml'):
             self.api.next()
-        with vcr.use_cassette('previous.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('previous.yaml') as response:
             result = self.api.previous()
             self.assertTrue(isinstance(result, list))
             self.assertEqual(response.requests[0].uri, 'http://trefle.io/api/species?page=1')
-        with vcr.use_cassette('last.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('last.yaml') as response:
             self.api.last()
             self.assertIsNone(self.api.next())
 
     def test_first(self):
-        with vcr.use_cassette('species.yaml', filter_headers=['Authorization']):
+        with vcr.use_cassette('species.yaml'):
             self.api.species()
-        with vcr.use_cassette('first.yaml', filter_headers=['Authorization']) as response:
-            self.api.first()
+        with vcr.use_cassette('first.yaml'):
+            self.assertIsNotNone(self.api.first())
 
     def test_last(self):
-        with vcr.use_cassette('species.yaml', filter_headers=['Authorization']):
+        with vcr.use_cassette('species.yaml'):
             self.api.species()
-        with vcr.use_cassette('last.yaml', filter_headers=['Authorization']):
-            self.api.last()
+        with vcr.use_cassette('last.yaml'):
+            self.assertIsNotNone(self.api.last())
             self.assertIsNone(self.api.next())
 
     def test_config(self):
         self.api = Shamrock(TOKEN, page_size=30)
-        with vcr.use_cassette('species_config.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('species_config.yaml') as response:
             result = self.api.species()
             self.assertEqual(len(response), 1)
             self.assertEqual(response.requests[0].uri, 'https://trefle.io/api/species?page_size=30')
             self.assertTrue(isinstance(result, list))
             self.assertEqual(result, json.loads(response.responses[0]['body']['string']))
-        with vcr.use_cassette('search_config.yaml', filter_headers=['Authorization']) as response:
+        with vcr.use_cassette('search_config.yaml') as response:
             result = self.api.search('tomato')
             self.assertEqual(len(response), 1)
             self.assertEqual(response.requests[0].uri, 'https://trefle.io/api/species?page_size=30&q=tomato')

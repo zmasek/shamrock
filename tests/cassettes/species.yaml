@@ -14,243 +14,67 @@ interactions:
     uri: https://trefle.io/api/species
   response:
     body:
-      string: "[{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"\
-        Accepted\",\"sources\":[{\"species_id\":197482,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:25:49.210526\"}],\"\
-        slug\":\"ruttya-tricolor\",\"scientific_name\":\"Ruttya tricolor\",\"main_species_id\"\
-        :null,\"link\":\"http://trefle.io/api/plants/197482\",\"is_main_species\"\
-        :true,\"id\":197482,\"family_common_name\":null,\"complete_data\":false,\"\
-        common_name\":null,\"bibliography\":\"Notulae Systematicae. Herbier du Museum\
-        \ de Paris 13: 12. 1947. (Notul. Syst. (Paris)) \",\"author\":\"Benoist\"\
-        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
-        ,\"sources\":[{\"species_id\":197492,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:25:56.277250\"}],\"\
-        slug\":\"hypoestes-humbertii\",\"scientific_name\":\"Hypoestes humbertii\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197492\"\
-        ,\"is_main_species\":true,\"id\":197492,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Bulletin du Mus\xE9um National\
-        \ d'Histoire Naturelle 33: 389. 1927. (Bull. Mus. Natl. Hist. Nat.) \",\"\
-        author\":\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
-        status\":\"Accepted\",\"sources\":[{\"species_id\":197502,\"source_url\":\"\
-        http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:02.312424\"\
-        }],\"slug\":\"hypoestes-hastata\",\"scientific_name\":\"Hypoestes hastata\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197502\"\
-        ,\"is_main_species\":true,\"id\":197502,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Bulletin du Mus\xE9um National\
-        \ d'Histoire Naturelle 33: 532. 1927. (Bull. Mus. Natl. Hist. Nat.) \",\"\
-        author\":\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
-        status\":\"Accepted\",\"sources\":[{\"species_id\":197521,\"source_url\":\"\
-        http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:14.711871\"\
-        }],\"slug\":\"hypoestes-fascicularis\",\"scientific_name\":\"Hypoestes fascicularis\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197521\"\
-        ,\"is_main_species\":true,\"id\":197521,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Prodromus Systematis Naturalis\
-        \ Regni Vegetabilis 11: 504. 1847. (Prodr.) \",\"author\":\"Nees\"},{\"year\"\
-        :null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\"\
-        :[{\"species_id\":197529,\"source_url\":\"http://www.tropicos.org\",\"name\"\
-        :\"Tropicos\",\"last_update\":\"2019-01-11T15:26:19.982274\"}],\"slug\":\"\
-        hypoestes-flexibilis\",\"scientific_name\":\"Hypoestes flexibilis\",\"main_species_id\"\
-        :null,\"link\":\"http://trefle.io/api/plants/197529\",\"is_main_species\"\
-        :true,\"id\":197529,\"family_common_name\":null,\"complete_data\":false,\"\
-        common_name\":null,\"bibliography\":\"Prodromus Systematis Naturalis Regni\
-        \ Vegetabilis 11: 505. 1847. (Prodr.) \",\"author\":\"Nees\"},{\"year\":null,\"\
-        type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
-        species_id\":197558,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
-        Tropicos\",\"last_update\":\"2019-01-11T15:26:38.862957\"}],\"slug\":\"anisostachya-paucinervis\"\
-        ,\"scientific_name\":\"Anisostachya paucinervis\",\"main_species_id\":null,\"\
-        link\":\"http://trefle.io/api/plants/197558\",\"is_main_species\":true,\"\
-        id\":197558,\"family_common_name\":null,\"complete_data\":false,\"common_name\"\
-        :null,\"bibliography\":\"Bulletin de la Soci\xE9t\xE9 Botanique de France\
-        \ 111: 422\u2013423. 1964. (Bull. Soc. Bot. France) \",\"author\":\"Benoist\"\
-        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
-        ,\"sources\":[{\"species_id\":197568,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:45.114701\"}],\"\
-        slug\":\"ecbolium-ligustrinum\",\"scientific_name\":\"Ecbolium ligustrinum\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197568\"\
-        ,\"is_main_species\":true,\"id\":197568,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Kew Bulletin 44: 651. 1989.\
-        \ (Kew Bull.) \",\"author\":\"Vollesen\"},{\"year\":null,\"type\":\"species\"\
-        ,\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"species_id\":197575,\"\
-        source_url\":\"http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\"\
-        :\"2019-01-11T15:26:49.342281\"}],\"slug\":\"justicia-dejecta\",\"scientific_name\"\
-        :\"Justicia dejecta\",\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197575\"\
-        ,\"is_main_species\":true,\"id\":197575,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Notulae Systematicae. Herbier\
-        \ du Museum de Paris 13: 127. 1947. (Notul. Syst. (Paris)) \",\"author\":\"\
-        Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\"\
-        :\"Accepted\",\"sources\":[{\"species_id\":197585,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:56.837501\"}],\"\
-        slug\":\"anisostachya-oblonga\",\"scientific_name\":\"Anisostachya oblonga\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197585\"\
-        ,\"is_main_species\":true,\"id\":197585,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Bulletin de la Soci\xE9t\xE9\
-        \ Botanique de France 113: 535. 1966. (Bull. Soc. Bot. France) \",\"author\"\
-        :\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\"\
-        :\"Accepted\",\"sources\":[{\"species_id\":197595,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:27:08.041035\"}],\"\
-        slug\":\"anisostachya-bosseri\",\"scientific_name\":\"Anisostachya bosseri\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197595\"\
-        ,\"is_main_species\":true,\"id\":197595,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Bulletin de la Soci\xE9t\xE9\
-        \ Botanique de France 111: 428. 1964. (Bull. Soc. Bot. France) \",\"author\"\
-        :\"Benoist\"},{\"year\":null,\"type\":\"species\",\"synonym\":true,\"status\"\
-        :\"Synonym\",\"sources\":[{\"species_id\":284893,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-12T11:27:35.853925\"}],\"\
-        slug\":\"cardamine-amphibia\",\"scientific_name\":\"Cardamine amphibia\",\"\
-        main_species_id\":175550,\"link\":\"http://trefle.io/api/plants/284893\",\"\
-        is_main_species\":false,\"id\":284893,\"family_common_name\":\"Mustard family\"\
-        ,\"complete_data\":false,\"common_name\":\"great yellowcress\",\"bibliography\"\
-        :null,\"author\":\"(L.) Kuntze\"},{\"year\":null,\"type\":\"var\",\"synonym\"\
-        :false,\"status\":\"Accepted\",\"sources\":[{\"species_id\":197511,\"source_url\"\
-        :\"http://www.tropicos.org\",\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T15:26:07.717826\"\
-        }],\"slug\":\"hypoestes-chlorotricha-var-elongata\",\"scientific_name\":\"\
-        Hypoestes chlorotricha var. elongata\",\"main_species_id\":197509,\"link\"\
-        :\"http://trefle.io/api/plants/197511\",\"is_main_species\":false,\"id\":197511,\"\
-        family_common_name\":null,\"complete_data\":false,\"common_name\":null,\"\
-        bibliography\":\"Bulletin de la Soci\xE9t\xE9 Botanique de France 84: 485.\
-        \ 1937. (Bull. Soc. Bot. France) \",\"author\":\"Benoist\"},{\"year\":null,\"\
-        type\":\"var\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
-        species_id\":197548,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
-        Tropicos\",\"last_update\":\"2019-01-11T15:26:31.698142\"}],\"slug\":\"justicia-congestiflora-var-elongata\"\
-        ,\"scientific_name\":\"Justicia congestiflora var. elongata\",\"main_species_id\"\
-        :197418,\"link\":\"http://trefle.io/api/plants/197548\",\"is_main_species\"\
-        :false,\"id\":197548,\"family_common_name\":null,\"complete_data\":false,\"\
-        common_name\":null,\"bibliography\":\"Notulae Systematicae. Herbier du Museum\
-        \ de Paris 14: 99. 1951. (Notul. Syst. (Paris)) \",\"author\":\"Benoist\"\
-        },{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\"\
-        ,\"sources\":[{\"species_id\":200312,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T16:23:32.116065\"}],\"\
-        slug\":\"glottiphyllum-cruciatum\",\"scientific_name\":\"Glottiphyllum cruciatum\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/200312\"\
-        ,\"is_main_species\":true,\"id\":200312,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"N.E. Br.\"\
-        },{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\"\
-        ,\"sources\":[{\"species_id\":143758,\"source_url\":\"https://plants.usda.gov\"\
-        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:14.570705\"}],\"slug\"\
-        :\"hydrocotyle-verticillata-var-verticillata\",\"scientific_name\":\"Hydrocotyle\
-        \ verticillata var. verticillata\",\"main_species_id\":143756,\"link\":\"\
-        http://trefle.io/api/plants/143758\",\"is_main_species\":false,\"id\":143758,\"\
-        family_common_name\":\"Carrot family\",\"complete_data\":false,\"common_name\"\
-        :\"whorled marshpennywort\",\"bibliography\":null,\"author\":null},{\"year\"\
-        :null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
-        :[{\"species_id\":144005,\"source_url\":\"https://plants.usda.gov\",\"name\"\
-        :\"USDA\",\"last_update\":\"2019-01-11T10:25:40.722306\"}],\"slug\":\"hymenopappus-artemisiifolius-var-artemisiifolius\"\
-        ,\"scientific_name\":\"Hymenopappus artemisiifolius var. artemisiifolius\"\
-        ,\"main_species_id\":144004,\"link\":\"http://trefle.io/api/plants/144005\"\
-        ,\"is_main_species\":false,\"id\":144005,\"family_common_name\":\"Aster family\"\
-        ,\"complete_data\":false,\"common_name\":\"oldplainsman\",\"bibliography\"\
-        :null,\"author\":null},{\"year\":null,\"type\":\"ssp\",\"synonym\":false,\"\
-        status\":\"Unknown\",\"sources\":[{\"species_id\":143728,\"source_url\":\"\
-        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:11.444632\"\
-        }],\"slug\":\"hydrangea-arborescens-ssp-radiata\",\"scientific_name\":\"Hydrangea\
-        \ arborescens ssp. radiata\",\"main_species_id\":143716,\"link\":\"http://trefle.io/api/plants/143728\"\
-        ,\"is_main_species\":false,\"id\":143728,\"family_common_name\":\"Hydrangea\
-        \ family\",\"complete_data\":false,\"common_name\":\"wild hydrangea\",\"bibliography\"\
-        :null,\"author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"\
-        status\":\"Unknown\",\"sources\":[{\"species_id\":143744,\"source_url\":\"\
-        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:13.061876\"\
-        }],\"slug\":\"hydrocotyle-sibthorpioides-var-oedipoda\",\"scientific_name\"\
-        :\"Hydrocotyle sibthorpioides var. oedipoda\",\"main_species_id\":143753,\"\
-        link\":\"http://trefle.io/api/plants/143744\",\"is_main_species\":false,\"\
-        id\":143744,\"family_common_name\":\"Carrot family\",\"complete_data\":false,\"\
-        common_name\":\"lawn marshpennywort\",\"bibliography\":null,\"author\":null},{\"\
-        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
-        :[{\"species_id\":143750,\"source_url\":\"https://plants.usda.gov\",\"name\"\
-        :\"USDA\",\"last_update\":\"2019-01-11T10:25:13.691707\"}],\"slug\":\"hydrocotyle-verticillata-var-triradiata\"\
-        ,\"scientific_name\":\"Hydrocotyle verticillata var. triradiata\",\"main_species_id\"\
-        :143756,\"link\":\"http://trefle.io/api/plants/143750\",\"is_main_species\"\
-        :false,\"id\":143750,\"family_common_name\":\"Carrot family\",\"complete_data\"\
-        :false,\"common_name\":\"whorled marshpennywort\",\"bibliography\":null,\"\
-        author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
-        :\"Unknown\",\"sources\":[{\"species_id\":144028,\"source_url\":\"https://plants.usda.gov\"\
-        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:43.324954\"}],\"slug\"\
-        :\"hymenopappus-filifolius-var-parvulus\",\"scientific_name\":\"Hymenopappus\
-        \ filifolius var. parvulus\",\"main_species_id\":144011,\"link\":\"http://trefle.io/api/plants/144028\"\
-        ,\"is_main_species\":false,\"id\":144028,\"family_common_name\":\"Aster family\"\
-        ,\"complete_data\":false,\"common_name\":\"fineleaf hymenopappus\",\"bibliography\"\
-        :null,\"author\":null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"\
-        status\":\"Unknown\",\"sources\":[{\"species_id\":143769,\"source_url\":\"\
-        https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:15.645010\"\
-        }],\"slug\":\"hydrolea-affinis\",\"scientific_name\":\"Hydrolea affinis\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/143769\"\
-        ,\"is_main_species\":true,\"id\":143769,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":null,\"author\":null},{\"year\"\
-        :null,\"type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\"\
-        :[{\"species_id\":197351,\"source_url\":\"http://www.tropicos.org\",\"name\"\
-        :\"Tropicos\",\"last_update\":\"2019-01-11T15:24:05.175011\"}],\"slug\":\"\
-        duvernoia-asystasioides\",\"scientific_name\":\"Duvernoia asystasioides\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/197351\"\
-        ,\"is_main_species\":true,\"id\":197351,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":\"Botanische Jahrb\xFCcher f\xFC\
-        r Systematik, Pflanzengeschichte und Pflanzengeographie 38: 72. 1905. (Bot.\
-        \ Jahrb. Syst.) \",\"author\":\"Lindau\"},{\"year\":null,\"type\":\"ssp\"\
-        ,\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\":163720,\"\
-        source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
-        :\"2019-01-11T11:07:17.176449\"}],\"slug\":\"penstemon-clevelandii-ssp-mohavensis\"\
-        ,\"scientific_name\":\"Penstemon clevelandii ssp. mohavensis\",\"main_species_id\"\
-        :163715,\"link\":\"http://trefle.io/api/plants/163720\",\"is_main_species\"\
-        :false,\"id\":163720,\"family_common_name\":\"Figwort family\",\"complete_data\"\
-        :false,\"common_name\":\"Cleveland's beardtongue\",\"bibliography\":null,\"\
-        author\":null},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
-        :\"Unknown\",\"sources\":[{\"species_id\":144134,\"source_url\":\"https://plants.usda.gov\"\
-        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:54.800446\"}],\"slug\"\
-        :\"hymenoxys-richardsonii-var-floribunda\",\"scientific_name\":\"Hymenoxys\
-        \ richardsonii var. floribunda\",\"main_species_id\":144133,\"link\":\"http://trefle.io/api/plants/144134\"\
-        ,\"is_main_species\":false,\"id\":144134,\"family_common_name\":\"Aster family\"\
-        ,\"complete_data\":false,\"common_name\":\"pingue rubberweed\",\"bibliography\"\
-        :null,\"author\":null},{\"year\":null,\"type\":null,\"synonym\":true,\"status\"\
-        :\"Synonym\",\"sources\":[{\"species_id\":195586,\"source_url\":\"http://www.tropicos.org\"\
-        ,\"name\":\"Tropicos\",\"last_update\":\"2019-01-11T17:33:46.633776\"}],\"\
-        slug\":\"blepharis-hildebrandii\",\"scientific_name\":\"Blepharis hildebrandii\"\
-        ,\"main_species_id\":null,\"link\":\"http://trefle.io/api/plants/195586\"\
-        ,\"is_main_species\":true,\"id\":195586,\"family_common_name\":null,\"complete_data\"\
-        :false,\"common_name\":null,\"bibliography\":null,\"author\":\"Lindau\"},{\"\
-        year\":null,\"type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\"\
-        :[{\"species_id\":143952,\"source_url\":\"https://plants.usda.gov\",\"name\"\
-        :\"USDA\",\"last_update\":\"2019-01-11T10:25:35.008398\"}],\"slug\":\"hymenocallis-henryae-var-henryae\"\
-        ,\"scientific_name\":\"Hymenocallis henryae var. henryae\",\"main_species_id\"\
-        :149583,\"link\":\"http://trefle.io/api/plants/143952\",\"is_main_species\"\
-        :false,\"id\":143952,\"family_common_name\":\"Lily family\",\"complete_data\"\
-        :false,\"common_name\":\"Henry's spiderlily\",\"bibliography\":null,\"author\"\
-        :null},{\"year\":null,\"type\":\"species\",\"synonym\":false,\"status\":\"\
-        Unknown\",\"sources\":[{\"species_id\":143771,\"source_url\":\"https://plants.usda.gov\"\
-        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:15.835794\"}],\"slug\"\
-        :\"hydrophylax\",\"scientific_name\":\"Hydrophylax\",\"main_species_id\":null,\"\
-        link\":\"http://trefle.io/api/plants/143771\",\"is_main_species\":true,\"\
-        id\":143771,\"family_common_name\":\"Madder family\",\"complete_data\":false,\"\
-        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
-        type\":\"var\",\"synonym\":false,\"status\":\"Unknown\",\"sources\":[{\"species_id\"\
-        :171118,\"source_url\":\"https://plants.usda.gov\",\"name\":\"USDA\",\"last_update\"\
-        :\"2019-01-11T11:27:21.757622\"}],\"slug\":\"disporum-trachycarpum-var-subglabrum\"\
-        ,\"scientific_name\":\"Disporum trachycarpum var. subglabrum\",\"main_species_id\"\
-        :171117,\"link\":\"http://trefle.io/api/plants/171118\",\"is_main_species\"\
-        :false,\"id\":171118,\"family_common_name\":null,\"complete_data\":false,\"\
-        common_name\":null,\"bibliography\":null,\"author\":null},{\"year\":null,\"\
-        type\":\"species\",\"synonym\":false,\"status\":\"Accepted\",\"sources\":[{\"\
-        species_id\":197352,\"source_url\":\"http://www.tropicos.org\",\"name\":\"\
-        Tropicos\",\"last_update\":\"2019-01-11T15:24:05.867223\"}],\"slug\":\"thamnojusticia-grandiflora\"\
-        ,\"scientific_name\":\"Thamnojusticia grandiflora\",\"main_species_id\":null,\"\
-        link\":\"http://trefle.io/api/plants/197352\",\"is_main_species\":true,\"\
-        id\":197352,\"family_common_name\":null,\"complete_data\":false,\"common_name\"\
-        :null,\"bibliography\":\"Notizblatt des Botanischen Gartens und Museums zu\
-        \ Berlin-Dahlem 12: 100. 1934. (Notizbl. Bot. Gart. Berlin-Dahlem) \",\"author\"\
-        :\"Mildbr.\"},{\"year\":null,\"type\":\"var\",\"synonym\":false,\"status\"\
-        :\"Unknown\",\"sources\":[{\"species_id\":143835,\"source_url\":\"https://plants.usda.gov\"\
-        ,\"name\":\"USDA\",\"last_update\":\"2019-01-11T10:25:22.797569\"}],\"slug\"\
-        :\"hygrohypnum-palustre-var-subsphaericarpon\",\"scientific_name\":\"Hygrohypnum\
-        \ palustre var. subsphaericarpon\",\"main_species_id\":143832,\"link\":\"\
-        http://trefle.io/api/plants/143835\",\"is_main_species\":false,\"id\":143835,\"\
-        family_common_name\":null,\"complete_data\":false,\"common_name\":null,\"\
-        bibliography\":null,\"author\":null}]"
+      string: '[{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164033,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:07.732302"}],"slug":"penstemon-parryi","scientific_name":"Penstemon
+        parryi","main_species_id":null,"link":"http://trefle.io/api/plants/164033","is_main_species":true,"id":164033,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Parry''s beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164070,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:13.608803"}],"slug":"penstemon-pseudoparvus","scientific_name":"Penstemon
+        pseudoparvus","main_species_id":null,"link":"http://trefle.io/api/plants/164070","is_main_species":true,"id":164070,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Mt. Washington beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164119,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:21.607518"}],"slug":"penstemon-scapoides","scientific_name":"Penstemon
+        scapoides","main_species_id":null,"link":"http://trefle.io/api/plants/164119","is_main_species":true,"id":164119,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"pinyon beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164127,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:22.907618"}],"slug":"penstemon-secundiflorus","scientific_name":"Penstemon
+        secundiflorus","main_species_id":null,"link":"http://trefle.io/api/plants/164127","is_main_species":true,"id":164127,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"sidebells penstemon","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164153,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:26.998194"}],"slug":"penstemon-tenuis","scientific_name":"Penstemon
+        tenuis","main_species_id":null,"link":"http://trefle.io/api/plants/164153","is_main_species":true,"id":164153,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"sharpsepal beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164161,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:28.281163"}],"slug":"penstemon-tidestromii","scientific_name":"Penstemon
+        tidestromii","main_species_id":null,"link":"http://trefle.io/api/plants/164161","is_main_species":true,"id":164161,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Tidestrom''s beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164186,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:32.038343"}],"slug":"penstemon-virgatus","scientific_name":"Penstemon
+        virgatus","main_species_id":null,"link":"http://trefle.io/api/plants/164186","is_main_species":true,"id":164186,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"upright blue beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164200,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:34.121133"}],"slug":"chaetopappa-aurea","scientific_name":"Chaetopappa
+        aurea","main_species_id":null,"link":"http://trefle.io/api/plants/164200","is_main_species":true,"id":164200,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164284,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:48.000388"}],"slug":"peperomia-cogniauxii","scientific_name":"Peperomia
+        cogniauxii","main_species_id":null,"link":"http://trefle.io/api/plants/164284","is_main_species":true,"id":164284,"family_common_name":"Pepper
+        family","complete_data":false,"common_name":"yerba de guava falso","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164296,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:49.783984"}],"slug":"peperomia-mapulehuana","scientific_name":"Peperomia
+        mapulehuana","main_species_id":null,"link":"http://trefle.io/api/plants/164296","is_main_species":true,"id":164296,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164301,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:50.547149"}],"slug":"piper-emarginellum","scientific_name":"Piper
+        emarginellum","main_species_id":null,"link":"http://trefle.io/api/plants/164301","is_main_species":true,"id":164301,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164320,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:53.444376"}],"slug":"peperomia-hypoleuca","scientific_name":"Peperomia
+        hypoleuca","main_species_id":null,"link":"http://trefle.io/api/plants/164320","is_main_species":true,"id":164320,"family_common_name":"Pepper
+        family","complete_data":false,"common_name":"thickleaf peperomia","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":163907,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:07:46.970856"}],"slug":"penstemon-decurvus","scientific_name":"Penstemon
+        decurvus","main_species_id":null,"link":"http://trefle.io/api/plants/163907","is_main_species":true,"id":163907,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":163915,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:07:48.268323"}],"slug":"penstemon-inflatus","scientific_name":"Penstemon
+        inflatus","main_species_id":null,"link":"http://trefle.io/api/plants/163915","is_main_species":true,"id":163915,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"inflated beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":163990,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:00.121376"}],"slug":"penstemon-multiflorus","scientific_name":"Penstemon
+        multiflorus","main_species_id":null,"link":"http://trefle.io/api/plants/163990","is_main_species":true,"id":163990,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"manyflower beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":163995,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:00.855512"}],"slug":"penstemon-neotericus","scientific_name":"Penstemon
+        neotericus","main_species_id":null,"link":"http://trefle.io/api/plants/163995","is_main_species":true,"id":163995,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Plumas County beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164080,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:15.218308"}],"slug":"penstemon-putus","scientific_name":"Penstemon
+        putus","main_species_id":null,"link":"http://trefle.io/api/plants/164080","is_main_species":true,"id":164080,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Black River beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164100,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:18.430996"}],"slug":"penstemon-cinerascens","scientific_name":"Penstemon
+        cinerascens","main_species_id":null,"link":"http://trefle.io/api/plants/164100","is_main_species":true,"id":164100,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164129,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:23.261812"}],"slug":"penstemon-sepalulus","scientific_name":"Penstemon
+        sepalulus","main_species_id":null,"link":"http://trefle.io/api/plants/164129","is_main_species":true,"id":164129,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"littlecup beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164155,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:27.302964"}],"slug":"penstemon-thompsoniae","scientific_name":"Penstemon
+        thompsoniae","main_species_id":null,"link":"http://trefle.io/api/plants/164155","is_main_species":true,"id":164155,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Thompson''s beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164163,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:28.564602"}],"slug":"penstemon-tracyi","scientific_name":"Penstemon
+        tracyi","main_species_id":null,"link":"http://trefle.io/api/plants/164163","is_main_species":true,"id":164163,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Trinity penstemon","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164179,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:31.046863"}],"slug":"penstemon-unilateralis","scientific_name":"Penstemon
+        unilateralis","main_species_id":null,"link":"http://trefle.io/api/plants/164179","is_main_species":true,"id":164179,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"oneside penstemon","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164188,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:32.347575"}],"slug":"penstemon-washingtonensis","scientific_name":"Penstemon
+        washingtonensis","main_species_id":null,"link":"http://trefle.io/api/plants/164188","is_main_species":true,"id":164188,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"Washington beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164202,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:34.426597"}],"slug":"pentachaeta-paleacea","scientific_name":"Pentachaeta
+        paleacea","main_species_id":null,"link":"http://trefle.io/api/plants/164202","is_main_species":true,"id":164202,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164206,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:35.072409"}],"slug":"chaetopappa-bellidiflora","scientific_name":"Chaetopappa
+        bellidiflora","main_species_id":null,"link":"http://trefle.io/api/plants/164206","is_main_species":true,"id":164206,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164293,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:49.357819"}],"slug":"peperomia-degeneri","scientific_name":"Peperomia
+        degeneri","main_species_id":null,"link":"http://trefle.io/api/plants/164293","is_main_species":true,"id":164293,"family_common_name":"Pepper
+        family","complete_data":false,"common_name":"Kaluaaha Valley peperomia","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164298,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:50.082372"}],"slug":"peperomia-waikamoiana","scientific_name":"Peperomia
+        waikamoiana","main_species_id":null,"link":"http://trefle.io/api/plants/164298","is_main_species":true,"id":164298,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164317,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:53.005037"}],"slug":"peperomia-questeliana","scientific_name":"Peperomia
+        questeliana","main_species_id":null,"link":"http://trefle.io/api/plants/164317","is_main_species":true,"id":164317,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":163994,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:00.703411"}],"slug":"penstemon-neomexicanus","scientific_name":"Penstemon
+        neomexicanus","main_species_id":null,"link":"http://trefle.io/api/plants/163994","is_main_species":true,"id":163994,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"New Mexico beardtongue","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":164022,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:08:05.967722"}],"slug":"penstemon-pallidus","scientific_name":"Penstemon
+        pallidus","main_species_id":null,"link":"http://trefle.io/api/plants/164022","is_main_species":true,"id":164022,"family_common_name":"Figwort
+        family","complete_data":false,"common_name":"pale beardtongue","bibliography":null,"author":null}]'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '16176'
+      - '14730'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 22 Mar 2019 09:17:05 GMT
+      - Fri, 29 Mar 2019 21:54:34 GMT
       Server:
       - nginx/1.14.0 (Ubuntu)
       Strict-Transport-Security:
@@ -273,7 +97,7 @@ interactions:
       total-pages:
       - '6484'
       x-request-id:
-      - 2m73qdipquap0o2jkg0000k1
+      - 2m88p736la4t4uqebk0002j1
     status:
       code: 200
       message: OK

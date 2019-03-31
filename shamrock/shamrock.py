@@ -72,7 +72,7 @@ class Shamrock:
             return endpoint
         elif attr in NAVIGATION:
 
-            def navigate(*args, **kwargs) -> Callable[[Any, Any], Any]:
+            def navigate(*args: Any, **kwargs: Any) -> Callable[[Any, Any], Any]:
                 return self.NAVIGATE(attr, *args, **kwargs)
 
             return navigate
@@ -195,7 +195,7 @@ class Shamrock:
         """
 
         query_parameters = {"q": q}
-        query_parameters.update(dict(**kwargs))
+        query_parameters.update(**kwargs)
         kwargs = self._kwargs("species", **query_parameters)
         return self._get_result(kwargs)
 
@@ -216,11 +216,11 @@ class Shamrock:
         """
 
         requests_kwargs: Dict[str, Any] = self._kwargs(
-            f"{endpoint}/{pk:d}" if pk else endpoint
+            f"{endpoint}/{pk:d}" if pk else endpoint, **kwargs
         )
         return self._get_result(requests_kwargs)
 
-    def NAVIGATE(self, navigation: str, *args: Any, **kwargs: Any) -> Any:
+    def NAVIGATE(self, navigation: str, **kwargs: Any) -> Any:
         """Navigate the API if any navigation exists on the results once the first call is made and
         stored on the instance.
 
@@ -237,6 +237,6 @@ class Shamrock:
 
         if self.result is not None and navigation in self.result.links:
             requests_kwargs: Dict[str, Any] = self._kwargs(
-                self.result.links[navigation]["url"]
+                self.result.links[navigation]["url"], **kwargs
             )
             return self._get_result(requests_kwargs)

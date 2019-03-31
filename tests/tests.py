@@ -91,6 +91,10 @@ class BasicTests(unittest.TestCase):
             ),
         )
 
+    def test_NAVIGATION(self):
+        """Test NAVIGATION."""
+        self.assertEqual(NAVIGATION, ("next", "prev", "first", "last"))
+
     def test_invalid_endpoint(self):
         """Test invalid endpoint."""
         invalid_endpoint = "invalid_endpoint"

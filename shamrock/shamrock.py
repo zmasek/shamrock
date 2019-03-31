@@ -23,7 +23,7 @@ logger: logging.Logger = logging.getLogger(__name__)
 class Shamrock:
     def __init__(self, token: str, page_size: Optional[int] = None) -> None:
         self.url: str = "https://trefle.io/api/"
-        self.headers: Dict[str, str] = {"Authorization": "Bearer {}".format(token)}
+        self.headers: Dict[str, str] = {"Authorization": f"Bearer {token}"}
         self.page_size: Optional[int] = page_size
         self.result: Optional[requests.Response] = None
         self.session: requests.Session = requests.Session()
@@ -49,7 +49,7 @@ class Shamrock:
         raise AttributeError
 
     def _get_full_url(self, endpoint: str) -> str:
-        return "{}{}".format(self.url, endpoint)
+        return f"{self.url}{endpoint}"
 
     def _kwargs(self, endpoint: str, **query_parameters: Any) -> Dict[str, Any]:
         kwargs: Dict[str, Any] = {
@@ -70,7 +70,7 @@ class Shamrock:
     def _get_parametrized_url(self, kwargs: Dict[str, Any]) -> str:
         try:
             params: str = parse.urlencode(kwargs["params"], quote_via=parse.quote_plus)
-            return "{}?{}".format(kwargs["url"], params)
+            return f"{kwargs['url']}?{params}"
         except KeyError:
             return kwargs["url"]
 
@@ -107,7 +107,7 @@ class Shamrock:
 
     def ENDPOINT(self, endpoint: str, pk: Optional[int] = None, **kwargs: Any) -> Any:
         requests_kwargs: Dict[str, Any] = self._kwargs(
-            "{}/{:d}".format(endpoint, pk) if pk else endpoint
+            f"{endpoint}/{pk:d}" if pk else endpoint
         )
         return self._get_result(requests_kwargs)
 

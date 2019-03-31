@@ -21,9 +21,7 @@ class BasicTests(unittest.TestCase):
 
     def assertCommon(self, response, result, name):
         self.assertEqual(len(response), 1)
-        self.assertEqual(
-            response.requests[0].uri, "https://trefle.io/api/{}".format(name)
-        )
+        self.assertEqual(response.requests[0].uri, f"https://trefle.io/api/{name}")
         self.assertTrue(isinstance(result, list))
         self.assertEqual(result, json.loads(response.responses[0]["body"]["string"]))
 
@@ -35,13 +33,13 @@ class BasicTests(unittest.TestCase):
         kwargs = self.api._kwargs("species")
         expected = {
             "url": "https://trefle.io/api/species",
-            "headers": {"Authorization": "Bearer {}".format(TOKEN)},
+            "headers": {"Authorization": f"Bearer {TOKEN}"},
         }
         self.assertEqual(kwargs, expected)
         kwargs = self.api._kwargs("https://example.com")
         expected = {
             "url": "https://example.com",
-            "headers": {"Authorization": "Bearer {}".format(TOKEN)},
+            "headers": {"Authorization": f"Bearer {TOKEN}"},
         }
         self.assertEqual(kwargs, expected)
 
@@ -51,7 +49,7 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(result, kwargs["url"])
         kwargs["params"] = {"q": "tomato"}
         result = self.api._get_parametrized_url(kwargs)
-        self.assertEqual(result, "{}?q=tomato".format(kwargs["url"]))
+        self.assertEqual(result, f"{kwargs['url']}?q=tomato")
 
     def test__get_result(self):
         self.api.result = None
@@ -89,7 +87,7 @@ class BasicTests(unittest.TestCase):
 
     def test_valid_endpoints(self):
         for endpoint in ENDPOINTS:
-            with vcr.use_cassette("{}.yaml".format(endpoint)) as response:
+            with vcr.use_cassette(f"{endpoint}.yaml") as response:
                 result = getattr(self.api, endpoint)()
                 self.assertCommon(response, result, endpoint)
 

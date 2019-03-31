@@ -11,7 +11,41 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/species
+    uri: http://trefle.io/api/species?page=1
+  response:
+    body:
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body\
+        \ bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n\
+        <hr><center>nginx/1.14.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '194'
+      Content-Type:
+      - text/html
+      Date:
+      - Sun, 31 Mar 2019 14:11:19 GMT
+      Location:
+      - https://trefle.io/api/species?page=1
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/species?page=1
   response:
     body:
       string: '[{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":162791,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T11:05:00.795874"}],"slug":"paspalum-dilatatum","scientific_name":"Paspalum
@@ -82,7 +116,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 31 Mar 2019 14:11:16 GMT
+      - Sun, 31 Mar 2019 14:11:19 GMT
       Server:
       - nginx/1.14.0 (Ubuntu)
       Strict-Transport-Security:
@@ -105,7 +139,7 @@ interactions:
       total-pages:
       - '6484'
       x-request-id:
-      - 2m8h0v9kiho0v63nbk0000i1
+      - 2m8h0vf8m3eiq7s6900000v1
     status:
       code: 200
       message: OK

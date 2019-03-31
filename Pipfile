@@ -9,6 +9,7 @@ requests = "*"
 [dev-packages]
 coverage = "*"
 vcrpy = "*"
+sphinx = "*"
 
 [requires]
 python_version = "3.6"

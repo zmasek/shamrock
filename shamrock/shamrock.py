@@ -16,6 +16,7 @@ ENDPOINTS: Tuple[str, str, str, str, str, str, str] = (
     "plants",
     "species",
 )
+NAVIGATION: Tuple[str, str, str, str] = ("next", "prev", "first", "last")
 logger: logging.Logger = logging.getLogger(__name__)
 
 
@@ -27,18 +28,24 @@ class Shamrock:
         self.result: Optional[requests.Response] = None
         self.session: requests.Session = requests.Session()
         retries: Retry = Retry(
-            total=5,
-            backoff_factor=0.1,
-            status_forcelist=[500, 502, 503, 504])
-        self.session.mount('https://', HTTPAdapter(max_retries=retries))
+            total=5, backoff_factor=0.1, status_forcelist=[500, 502, 503, 504]
+        )
+        self.session.mount("https://", HTTPAdapter(max_retries=retries))
 
     def __getattr__(self, attr: str) -> Callable[[Any, Any], Any]:
         if attr in ENDPOINTS:
 
-            def wrapper(*args: Any, **kwargs: Any) -> Callable[[Any, Any], Any]:
+            def endpoint(*args: Any, **kwargs: Any) -> Callable[[Any, Any], Any]:
                 return self.ENDPOINT(attr, *args, **kwargs)
 
-            return wrapper
+            return endpoint
+        elif attr in NAVIGATION:
+
+            def navigate(*args, **kwargs) -> Callable[[Any, Any], Any]:
+                return self.NAVIGATE(attr, *args, **kwargs)
+
+            return navigate
+
         raise AttributeError
 
     def _get_full_url(self, endpoint: str) -> str:
@@ -75,22 +82,22 @@ class Shamrock:
         try:
             response: requests.Response = self.session.get(**kwargs)
         except Timeout:
-            logger.error('The request timed out.')
+            logger.error("The request timed out.")
         except TooManyRedirects:
-            logger.error('The request had too many redirects.')
+            logger.error("The request had too many redirects.")
 
         try:
             response.raise_for_status()
             try:
                 response_json: Any = response.json()
             except ValueError:
-                logger.error('Invalid JSON in response.')
+                logger.error("Invalid JSON in response.")
             else:
                 self.session.close()
                 self.result = response
                 return response_json
         except HTTPError as e:
-            logger.error('Unknown exception raised: ', e)
+            logger.error("Unknown exception raised: ", e)
 
     def search(self, q: str, **kwargs: Any) -> Any:
         query_parameters = {"q": q}
@@ -99,25 +106,14 @@ class Shamrock:
         return self._get_result(kwargs)
 
     def ENDPOINT(self, endpoint: str, pk: Optional[int] = None, **kwargs: Any) -> Any:
-        kwargs = self._kwargs("{}/{:d}".format(endpoint, pk) if pk else endpoint)
-        return self._get_result(kwargs)
+        requests_kwargs: Dict[str, Any] = self._kwargs(
+            "{}/{:d}".format(endpoint, pk) if pk else endpoint
+        )
+        return self._get_result(requests_kwargs)
 
-    def next(self) -> Any:
-        if self.result is not None and "next" in self.result.links:
-            kwargs: Dict[str, Any] = self._kwargs(self.result.links["next"]["url"])
-            return self._get_result(kwargs)
-
-    def previous(self) -> Any:
-        if self.result is not None and "prev" in self.result.links:
-            kwargs: Dict[str, Any] = self._kwargs(self.result.links["prev"]["url"])
-            return self._get_result(kwargs)
-
-    def first(self) -> Any:
-        if self.result is not None and "first" in self.result.links:
-            kwargs: Dict[str, Any] = self._kwargs(self.result.links["first"]["url"])
-            return self._get_result(kwargs)
-
-    def last(self) -> Any:
-        if self.result is not None and "last" in self.result.links:
-            kwargs: Dict[str, Any] = self._kwargs(self.result.links["last"]["url"])
-            return self._get_result(kwargs)
+    def NAVIGATE(self, navigation: str, *args: Any, **kwargs: Any) -> Any:
+        if self.result is not None and navigation in self.result.links:
+            requests_kwargs: Dict[str, Any] = self._kwargs(
+                self.result.links[navigation]["url"]
+            )
+            return self._get_result(requests_kwargs)

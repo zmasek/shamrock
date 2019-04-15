@@ -1,0 +1,10 @@
+image: python:3.6
+
+pipelines:
+  default:
+    - step:
+        script:
+          - pip install --no-cache-dir pipenv
+          - pipenv install --dev
+          - pipenv run coverage run --source shamrock/ tests
+          - pipenv run coveralls

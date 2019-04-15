@@ -10,6 +10,7 @@ requests = "*"
 coverage = "*"
 vcrpy = "*"
 sphinx = "*"
+coveralls = "*"
 
 [requires]
 python_version = "3.6"

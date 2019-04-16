@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "fb:31:59:13:e6:b6:b4:3d:c2:79:d2:46:31:e5:58:0c"
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+      - restore_cache:
+          key: deps-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install --dev
+      - save_cache:
+          key: deps-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.6/site-packages"
+      - run:
+          command: |
+            pipenv run coverage run --source shamrock/ tests
+            pipenv run coveralls
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
+          destination: test_results_artifacts

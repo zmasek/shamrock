@@ -2,26 +2,79 @@
 Shamrock - A Trefle API Library
 ===============================
 
-.. image:: https://coveralls.io/repos/bitbucket/zmasek/shamrock/badge.svg?branch=master
-   :target: https://coveralls.io/bitbucket/zmasek/shamrock?branch=master
+.. image:: https://coveralls.io/repos/github/zmasek/shamrock/badge.svg?branch=master
+   :target: https://coveralls.io/github/zmasek/shamrock?branch=master
    :alt: Coverage Status
 
-**Shamrock** is a Python shallow API library for `Trefle <https://trefle.io/>`_ integration.
+**Shamrock** is a Python shallow API library for `Trefle <https://trefle.io/>`_ integration. It
+enables interacting with the Trefle plants API in Python to get the information needed for various
+things you might want to use the API with such as research, gardening software, automation, etc. It
+is made for use with Python 3.7 and above.
 
-Simple usage example::
+Installation
+------------
+
+    pipenv install shamrock
+
+or
+
+    pip install shamrock
+
+Simple usage example
+--------------------
 
     from shamrock import Shamrock
     api = Shamrock('mytoken')
+    species = api.species()
+
+
+Advanced usage
+--------------
+
+You can configure the API initially like this:
+
+    api = Shamrock(TOKEN, page_size=10)
+
+Currently, page_size is the only available option.
+
+Methods that can be run with the API are:
+
+    #. api.kingdoms()
+    #. api.subkingdoms()
+    #. api.divisions()
+    #. api.families()
+    #. api.genuses()
+    #. api.plants()
+    #. api.species()
+
+They correspond to the Trefle API endpoints.
+
+You can also query a specific item from the database:
+
+    api.plants(103505)
+
+Searching is covered with a separate method:
+
+    api.search("tomato")
+
+Navigating the API is covered with these methods:
+
+    #. api.next()
+    #. api.prev()
+    #. api.first()
+    #. api.last()
+
+It will work only if you previously made a request. For example:
+
     api.species()
+    api.next()
 
--------------
-Contributing:
--------------
+By default, the API responds with the list of whatever number is set in the Trefle. You can
+manipulate it with previously mentioned page_size:
 
-1. Fork the repository
-2. Clone it locally
-3. cd into the repository
-4. pipenv install --dev (make sure that pipenv is installed on your system first)
-5. make modifications
-6. pipenv run coverage run --source . tests && pipenv run coverage report -m
-7. push back and submit a pull request
+    api.species(page_size=5)
+
+You can also use the varoius query string options described on Trefle API documentation as keyword
+arguments in methods:
+
+    api.species(common_name="blackwood")

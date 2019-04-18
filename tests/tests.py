@@ -135,6 +135,20 @@ class BasicTests(unittest.TestCase):
                 result, json.loads(response.responses[0]["body"]["string"])
             )
 
+    def test_query_parameters(self):
+        """Test query parameters."""
+        with vcr.use_cassette("query_parameter_example.yaml") as response:
+            result = self.api.species(common_name="blackwood")
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/species?common_name=blackwood",
+            )
+            self.assertTrue(isinstance(result, list))
+            self.assertEqual(
+                result, json.loads(response.responses[0]["body"]["string"])
+            )
+
     def test_next(self):
         """Test next in navigation."""
         with vcr.use_cassette("species.yaml"):
@@ -144,7 +158,7 @@ class BasicTests(unittest.TestCase):
             result = self.api.next()
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                response.requests[0].uri, "http://trefle.io/api/species?page=2"
+                response.requests[0].uri, "https://trefle.io/api/species?page=2"
             )
 
     def test_prev(self):
@@ -157,7 +171,7 @@ class BasicTests(unittest.TestCase):
             result = self.api.prev()
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                response.requests[0].uri, "http://trefle.io/api/species?page=1"
+                response.requests[0].uri, "https://trefle.io/api/species?page=1"
             )
         with vcr.use_cassette("last.yaml") as response:
             self.api.last()

@@ -56,7 +56,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 31 Mar 2019 14:11:16 GMT
+      - Thu, 18 Apr 2019 18:12:02 GMT
       Server:
       - nginx/1.14.0 (Ubuntu)
       Strict-Transport-Security:
@@ -68,8 +68,8 @@ interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       link:
-      - <http://trefle.io/api/plants?page=2>; rel="next", <http://trefle.io/api/plants?page=1>;
-        rel="first", <http://trefle.io/api/plants?page=4906>; rel="last"
+      - <https://trefle.io/api/plants?page=2>; rel="next", <https://trefle.io/api/plants?page=1>;
+        rel="first", <https://trefle.io/api/plants?page=4906>; rel="last"
       page-number:
       - '1'
       per-page:
@@ -79,7 +79,7 @@ interactions:
       total-pages:
       - '4906'
       x-request-id:
-      - 2m8h0vac2umcplal1c0000n1
+      - 2mba84ndg7bs14l2n4000183
     status:
       code: 200
       message: OK

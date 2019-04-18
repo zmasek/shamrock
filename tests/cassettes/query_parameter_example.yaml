@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/species?common_name=blackwood
+  response:
+    body:
+      string: '[{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":101452,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T09:40:21.316368"}],"slug":"acacia-penninervis","scientific_name":"Acacia
+        penninervis","main_species_id":null,"link":"http://trefle.io/api/plants/101452","is_main_species":true,"id":101452,"family_common_name":"Pea
+        family","complete_data":false,"common_name":"blackwood","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":101419,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T09:40:20.806241"}],"slug":"acacia-melanoxylon","scientific_name":"Acacia
+        melanoxylon","main_species_id":null,"link":"http://trefle.io/api/plants/101419","is_main_species":true,"id":101419,"family_common_name":"Pea
+        family","complete_data":true,"common_name":"blackwood","bibliography":null,"author":null}]'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '962'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 18 Apr 2019 18:20:38 GMT
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      cache-control:
+      - max-age=0, private, must-revalidate
+      link:
+      - <https://trefle.io/api/species?common_name=blackwood&page=1>; rel="first",
+        <https://trefle.io/api/species?common_name=blackwood&page=1>; rel="last"
+      page-number:
+      - '1'
+      per-page:
+      - '30'
+      total:
+      - '2'
+      total-pages:
+      - '1'
+      x-request-id:
+      - 2mba92p2ug47luj9cg002871
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -11,6 +11,7 @@ coverage = "*"
 vcrpy = "*"
 sphinx = "*"
 coveralls = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.6"

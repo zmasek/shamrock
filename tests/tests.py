@@ -6,6 +6,7 @@ import os
 import unittest
 
 import vcr as main_vcr
+
 from shamrock import ENDPOINTS, NAVIGATION, Shamrock
 
 TOKEN = os.environ.get("TREFLE_TOKEN")

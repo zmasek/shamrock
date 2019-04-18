@@ -2,13 +2,13 @@
 
 """Shamrock - A Trefle API Integration"""
 import logging
+from typing import Any, Callable, Dict, Optional, Tuple
 from urllib import parse
 
 import requests
 from requests.adapters import HTTPAdapter
 from requests.exceptions import HTTPError, Timeout, TooManyRedirects
 from requests.packages.urllib3.util.retry import Retry
-from typing import Any, Callable, Dict, Optional, Tuple
 
 ENDPOINTS: Tuple[str, str, str, str, str, str, str] = (
     "kingdoms",

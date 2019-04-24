@@ -10,6 +10,15 @@ Welcome to Shamrock's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   introduction
+   setting_up
+   usage
+   configuration
+   modules
+   contributing
+   history
+   resources
+
 
 
 Indices and tables

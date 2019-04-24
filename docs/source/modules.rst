@@ -1,5 +1,5 @@
-shamrock
-========
+Modules
+=======
 
 .. toctree::
    :maxdepth: 4

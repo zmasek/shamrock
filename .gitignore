@@ -3,3 +3,4 @@ __pycache__
 .coverage
 profile
 *.egg-info/
+docs/build/

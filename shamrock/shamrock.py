@@ -117,7 +117,7 @@ class Shamrock:
             kwargs["params"] = {"page_size": self.page_size}
         if query_parameters:
             if "params" in kwargs:
-                kwargs["params"].update(dict(**query_parameters))
+                kwargs["params"].update(**query_parameters)
             else:
                 kwargs["params"] = dict(**query_parameters)
         return kwargs

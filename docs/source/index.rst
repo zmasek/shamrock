@@ -15,6 +15,7 @@
    modules
    contributing
    history
+   credits
    resources
 
 

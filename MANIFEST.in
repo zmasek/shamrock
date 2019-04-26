@@ -8,6 +8,6 @@ recursive-exclude tests *
 recursive-exclude .circleci *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
+recursive-exclude docs *.rst conf.py Makefile *.jpg *.png *.gif
 
 recursive-include shamrock *
-recursive-include docs *.rst conf.py Makefile *.jpg *.png *.gif

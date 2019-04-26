@@ -12,6 +12,7 @@ vcrpy = "*"
 sphinx = "*"
 coveralls = "*"
 pre-commit = "*"
+twine = "*"
 
 [requires]
 python_version = "3.6"

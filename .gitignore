@@ -4,3 +4,5 @@ __pycache__
 profile
 *.egg-info/
 docs/build/
+build/
+dist/

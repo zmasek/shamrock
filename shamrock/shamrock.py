@@ -164,8 +164,12 @@ class Shamrock:
             response: requests.Response = self.session.get(**kwargs)
         except Timeout:
             logger.error("The request timed out.")
+            raise
         except TooManyRedirects:
             logger.error("The request had too many redirects.")
+            raise
+        finally:
+            self.session.close()
 
         try:
             response.raise_for_status()
@@ -173,12 +177,13 @@ class Shamrock:
                 response_json: Any = response.json()
             except ValueError:
                 logger.error("Invalid JSON in response.")
+                raise
             else:
-                self.session.close()
                 self.result = response
                 return response_json
         except HTTPError as e:
-            logger.error("Unknown exception raised: ", e)
+            logger.error(f"Unknown exception raised: {repr(e)}")
+            raise
 
     def search(self, q: str, **kwargs: Any) -> Any:
         """Search the species and return results of the API call.

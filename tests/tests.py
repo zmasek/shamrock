@@ -4,9 +4,12 @@
 import json
 import os
 import unittest
+from unittest.mock import patch
 
 import vcr as main_vcr
+from requests.exceptions import HTTPError, Timeout, TooManyRedirects
 
+import shamrock
 from shamrock import ENDPOINTS, NAVIGATION, Shamrock
 
 TOKEN = os.environ.get("TREFLE_TOKEN")
@@ -76,6 +79,25 @@ class BasicTests(unittest.TestCase):
         with vcr.use_cassette("plants.yaml") as response:
             result = self.api._get_result(kwargs)
             self.assertCommon(response, result, "plants")
+        with patch.object(self.api, "result", return_value=None):
+            with patch.object(self.api.session, "get", side_effect=Timeout):
+                with self.assertRaises(Timeout):
+                    result = self.api._get_result(kwargs)
+            with patch.object(self.api.session, "get", side_effect=TooManyRedirects):
+                with self.assertRaises(TooManyRedirects):
+                    result = self.api._get_result(kwargs)
+            with patch.object(
+                shamrock.shamrock.requests.Response, "json", side_effect=ValueError
+            ):
+                with self.assertRaises(ValueError):
+                    result = self.api._get_result(kwargs)
+            with patch.object(
+                shamrock.shamrock.requests.Response,
+                "raise_for_status",
+                side_effect=HTTPError,
+            ):
+                with self.assertRaises(HTTPError):
+                    result = self.api._get_result(kwargs)
 
     def test_ENDPOINTS(self):
         """Test ENDPOINTS."""

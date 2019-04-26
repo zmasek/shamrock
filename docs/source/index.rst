@@ -3,14 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Shamrock's documentation!
-====================================
+.. include:: ../../README.rst
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   introduction
    setting_up
    usage
    configuration

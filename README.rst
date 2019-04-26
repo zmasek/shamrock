@@ -11,6 +11,13 @@ enables interacting with the Trefle plants API in Python to get the information 
 things you might want to use the API with such as research, gardening software, automation, etc. It
 is made for use with Python 3.6 and above.
 
+For the full documentation refer to
+`Shamrock documentation <https://shamrock.readthedocs.io/en/latest/>`_.
+
+For more information what the Trefle service provides, refer to the
+`Trefle API documentation <https://trefle.io/reference>`_. It is also useful for checking out how to
+use the API with Shamrock library.
+
 Installation
 ------------
 ::

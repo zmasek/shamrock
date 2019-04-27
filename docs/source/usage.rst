@@ -40,7 +40,7 @@ Methods that can be run with the API are::
 
 They correspond to the Trefle API endpoints.
 
-Single item
+Single Item
 ~~~~~~~~~~~
 
 You can also query a specific item from the database::

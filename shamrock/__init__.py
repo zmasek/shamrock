@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Shamrock - A Trefle API Integration"""
+"""Shamrock - A Trefle API Integration."""
 from .shamrock import ENDPOINTS, NAVIGATION, Shamrock
 
 __author__ = "Zlatko Mašek"

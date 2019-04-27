@@ -6,6 +6,10 @@ Shamrock - A Trefle API Library
    :target: https://coveralls.io/github/zmasek/shamrock?branch=master
    :alt: Coverage Status
 
+.. image:: https://readthedocs.org/projects/shamrock/badge/?version=latest
+    :target: https://shamrock.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 ☘ **Shamrock** is a Python shallow API library for `Trefle <https://trefle.io/>`_ integration. It
 enables interacting with the Trefle plants API in Python to get the information needed for various
 things you might want to use the API with such as research, gardening software, automation, etc. It
@@ -28,7 +32,7 @@ or ::
 
     pip install shamrock
 
-Simple usage example
+Simple Usage Example
 --------------------
 ::
 
@@ -37,7 +41,7 @@ Simple usage example
     species = api.species()
 
 
-Advanced usage
+Advanced Usage
 --------------
 
 You can configure the API initially like this::

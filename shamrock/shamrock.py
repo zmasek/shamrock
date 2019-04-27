@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Shamrock - A Trefle API Integration"""
+"""Shamrock - A Trefle API Integration."""
 import logging
 from typing import Any, Callable, Dict, Optional, Tuple
 from urllib import parse
@@ -96,7 +96,7 @@ class Shamrock:
         """Get a dict with string of keys and values that will eventually be passed to a request.
 
         A dict is constructed that is passed to the request when calling it. It contains URL and
-        headers and params if any to pass as a query string.
+        headers, and params, if any, to pass as a query string.
 
         :param endpoint: An endpoint that will be added to the URL of the API.
         :type endpoint: str
@@ -130,7 +130,7 @@ class Shamrock:
 
         :param kwargs: A dict that holds URL key and any optional params for it.
         :type kwargs: dict
-        :returns: A str that holds a URL with query string parameters if any.
+        :returns: A str that holds a URL with query string parameters, if any.
         :rtype: str
         """
 
@@ -143,7 +143,7 @@ class Shamrock:
     def _get_result(self, kwargs: Dict[str, Any]) -> Any:
         """Get a response from a request object if it is not stored already in the class instance.
 
-        If response exists on the class instance and the URL is the same, it returns a JSON of the
+        If a response exists on the class instance and the URL is the same, it returns a JSON of the
         response. Otherwise it tries to get a response via a request call and logs any exceptions
         that may happen during the call. After the call is complete, it checks the status code and
         logs an error if it happens. Otherwise it will try to decode the response body as a JSON and
@@ -152,6 +152,10 @@ class Shamrock:
 
         :param kwargs: A dict that holds options for a request that will eventually be made.
         :type kwargs: dict
+        :raises Timeout if the request times out.
+        :raises TooManyRedirects if the request has too many redirects to follow.
+        :raises ValueError if the resulting JSON response is invalid.
+        :raises HTTPError if the response status code is bad.
         :returns: Any JSON that gets decoded from a successful response or None if it fails.
         :rtype: Any
         """

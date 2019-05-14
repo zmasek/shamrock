@@ -117,9 +117,9 @@ class Shamrock:
             kwargs["params"] = {"page_size": self.page_size}
         if query_parameters:
             if "params" in kwargs:
-                kwargs["params"].update(**query_parameters)
+                kwargs["params"].update(query_parameters)
             else:
-                kwargs["params"] = dict(**query_parameters)
+                kwargs["params"] = query_parameters
         return kwargs
 
     def _get_parametrized_url(self, kwargs: Dict[str, Any]) -> str:

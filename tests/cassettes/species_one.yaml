@@ -11,34 +11,86 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/species/182512
+    uri: https://v0.trefle.io/api/species/182512
   response:
     body:
-      string: '{"year":null,"type":"species","synonym":false,"status":"Unknown","specifications":{"toxicity":null,"shape_and_orientation":null,"regrowth_rate":null,"nitrogen_fixation":null,"max_height_at_base_age":{"ft":null,"cm":null},"mature_height":{"ft":null,"cm":null},"low_growing_grass":null,"lifespan":null,"leaf_retention":null,"known_allelopath":null,"growth_rate":null,"growth_period":null,"growth_habit":null,"growth_form":null,"fire_resistance":null,"fall_conspicuous":null,"coppice_potential":null,"c_n_ratio":null,"bloat":null},"sources":[{"species_id":182512,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T12:01:26.358727"}],"soils_adaptation":{"medium":null,"fine":null,"coarse":null},"slug":"solanum-lycopersicum","seed":{"vegetative_spread_rate":null,"small_grain":null,"seeds_per_pound":null,"seedling_vigor":null,"seed_spread_rate":null,"commercial_availability":null,"bloom_period":null},"scientific_name":"Solanum
-        lycopersicum","propagation":{"tubers":null,"sprigs":null,"sod":null,"seed":null,"cuttings":null,"corms":null,"container":null,"bulbs":null,"bare_root":null},"products":{"veneer":null,"pulpwood":null,"protein_potential":null,"post":null,"palatable_human":null,"palatable_graze_animal":null,"palatable_browse_animal":null,"nursery_stock":null,"naval_store":null,"lumber":null,"fuelwood":null,"fodder":null,"christmas_tree":null,"berry_nut_seed":null},"native_status":"L48(I)AK(I)HI(I)PR(I)VI(I)CAN(W)","main_species_id":null,"is_main_species":true,"images":[],"id":182512,"growth":{"temperature_minimum":{"deg_f":null,"deg_c":null},"shade_tolerance":null,"salinity_tolerance":null,"root_depth_minimum":{"inches":null,"cm":null},"resprout_ability":null,"precipitation_minimum":{"inches":null,"cm":null},"precipitation_maximum":{"inches":null,"cm":null},"planting_density_minimum":{"sqm":null,"acre":null},"planting_density_maximum":{"sqm":null,"acre":null},"ph_minimum":null,"ph_maximum":null,"moisture_use":null,"hedge_tolerance":null,"frost_free_days_minimum":null,"fire_tolerance":null,"fertility_requirement":null,"drought_tolerance":null,"cold_stratification_required":null,"caco_3_tolerance":null,"anaerobic_tolerance":null},"fruit_or_seed":{"seed_persistence":null,"seed_period_end":null,"seed_period_begin":null,"seed_abundance":null,"conspicuous":null,"color":null},"foliage":{"texture":null,"porosity_winter":null,"porosity_summer":null,"color":null},"flower":{"conspicuous":null,"color":null},"family_common_name":"Potato
-        family","duration":"Annual, Perennial","complete_data":false,"common_name":"garden
-        tomato","bibliography":null,"author":null}'
+      string: !!binary |
+        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
     headers:
       Connection:
       - keep-alive
-      Content-Length:
-      - '2609'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 18 Apr 2019 18:12:06 GMT
+      - Tue, 21 Jul 2020 08:48:04 GMT
       Server:
-      - nginx/1.14.0 (Ubuntu)
+      - nginx/1.17.7
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains; preload
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 2mba84ud2md1tr5d4c0001c3
+      - 9523db86559da4e02dd73b9dc3b33ee7
     status:
       code: 200
       message: OK

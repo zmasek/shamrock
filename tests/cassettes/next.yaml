@@ -11,86 +11,92 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/species?page=2
+    uri: https://v0.trefle.io/api/species?page=2
   response:
     body:
-      string: '[{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137321,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:40.839354"}],"slug":"fissidens-littlei","scientific_name":"Fissidens
-        littlei","main_species_id":null,"link":"http://trefle.io/api/plants/137321","is_main_species":true,"id":137321,"family_common_name":null,"complete_data":false,"common_name":"Little''s
-        fissidens moss","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137326,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:41.172189"}],"slug":"fissidens-neonii","scientific_name":"Fissidens
-        neonii","main_species_id":null,"link":"http://trefle.io/api/plants/137326","is_main_species":true,"id":137326,"family_common_name":null,"complete_data":false,"common_name":"neon
-        fissidens moss","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137334,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:41.746692"}],"slug":"fissidens-pallidinervis","scientific_name":"Fissidens
-        pallidinervis","main_species_id":null,"link":"http://trefle.io/api/plants/137334","is_main_species":true,"id":137334,"family_common_name":null,"complete_data":false,"common_name":"pale-nerve
-        fissidens moss","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137339,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:42.087747"}],"slug":"fissidens-subcrenatus","scientific_name":"Fissidens
-        subcrenatus","main_species_id":null,"link":"http://trefle.io/api/plants/137339","is_main_species":true,"id":137339,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137348,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:42.747630"}],"slug":"fissidens-ventricosus","scientific_name":"Fissidens
-        ventricosus","main_species_id":null,"link":"http://trefle.io/api/plants/137348","is_main_species":true,"id":137348,"family_common_name":null,"complete_data":false,"common_name":"fissidens
-        moss","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137353,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:43.071679"}],"slug":"fitchia-speciosa","scientific_name":"Fitchia
-        speciosa","main_species_id":null,"link":"http://trefle.io/api/plants/137353","is_main_species":true,"id":137353,"family_common_name":"Aster
-        family","complete_data":false,"common_name":"burr daisytree","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137358,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:43.393945"}],"slug":"flacourtia-ramontchi","scientific_name":"Flacourtia
-        ramontchi","main_species_id":null,"link":"http://trefle.io/api/plants/137358","is_main_species":true,"id":137358,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137363,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:43.729903"}],"slug":"flacourtia-euphlebia","scientific_name":"Flacourtia
-        euphlebia","main_species_id":null,"link":"http://trefle.io/api/plants/137363","is_main_species":true,"id":137363,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137402,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:46.364078"}],"slug":"xanthoparmelia-subconspersa","scientific_name":"Xanthoparmelia
-        subconspersa","main_species_id":null,"link":"http://trefle.io/api/plants/137402","is_main_species":true,"id":137402,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137412,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:47.041939"}],"slug":"flavopunctelia-praesignis","scientific_name":"Flavopunctelia
-        praesignis","main_species_id":null,"link":"http://trefle.io/api/plants/137412","is_main_species":true,"id":137412,"family_common_name":null,"complete_data":false,"common_name":"flavopunctelia
-        lichen","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137451,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:49.738490"}],"slug":"conami-portoricensis","scientific_name":"Conami
-        portoricensis","main_species_id":null,"link":"http://trefle.io/api/plants/137451","is_main_species":true,"id":137451,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137456,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:50.150117"}],"slug":"neowawraea-phyllanthoides","scientific_name":"Neowawraea
-        phyllanthoides","main_species_id":null,"link":"http://trefle.io/api/plants/137456","is_main_species":true,"id":137456,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137471,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:51.198928"}],"slug":"fontinalis","scientific_name":"Fontinalis","main_species_id":null,"link":"http://trefle.io/api/plants/137471","is_main_species":true,"id":137471,"family_common_name":null,"complete_data":false,"common_name":"fontinalis
-        moss","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137488,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:52.492885"}],"slug":"fontinalis-denticulata","scientific_name":"Fontinalis
-        denticulata","main_species_id":null,"link":"http://trefle.io/api/plants/137488","is_main_species":true,"id":137488,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137497,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:53.117204"}],"slug":"fontinalis-macmillanii","scientific_name":"Fontinalis
-        macmillanii","main_species_id":null,"link":"http://trefle.io/api/plants/137497","is_main_species":true,"id":137497,"family_common_name":null,"complete_data":false,"common_name":"Macmillan''s
-        fontinalis moss","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137527,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:55.248354"}],"slug":"forestiera-eggersiana","scientific_name":"Forestiera
-        eggersiana","main_species_id":null,"link":"http://trefle.io/api/plants/137527","is_main_species":true,"id":137527,"family_common_name":"Olive
-        family","complete_data":false,"common_name":"inkbush","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137553,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:57.077630"}],"slug":"leptodon-ohioensis","scientific_name":"Leptodon
-        ohioensis","main_species_id":null,"link":"http://trefle.io/api/plants/137553","is_main_species":true,"id":137553,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137557,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:57.375954"}],"slug":"leptodon-trichomitrius","scientific_name":"Leptodon
-        trichomitrius","main_species_id":null,"link":"http://trefle.io/api/plants/137557","is_main_species":true,"id":137557,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137561,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:57.661416"}],"slug":"forsteronia-corymbosa","scientific_name":"Forsteronia
-        corymbosa","main_species_id":null,"link":"http://trefle.io/api/plants/137561","is_main_species":true,"id":137561,"family_common_name":"Dogbane
-        family","complete_data":false,"common_name":"leche de perra","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137566,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:57.985489"}],"slug":"forsythia-ovata","scientific_name":"Forsythia
-        ovata","main_species_id":null,"link":"http://trefle.io/api/plants/137566","is_main_species":true,"id":137566,"family_common_name":"Olive
-        family","complete_data":false,"common_name":"early forsythia","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137571,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:58.321516"}],"slug":"fortunella-hindsii","scientific_name":"Fortunella
-        hindsii","main_species_id":null,"link":"http://trefle.io/api/plants/137571","is_main_species":true,"id":137571,"family_common_name":"Rue
-        family","complete_data":false,"common_name":"Hong Kong kumquat","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137581,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:59.005356"}],"slug":"fossombronia-longiseta","scientific_name":"Fossombronia
-        longiseta","main_species_id":null,"link":"http://trefle.io/api/plants/137581","is_main_species":true,"id":137581,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137586,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:59.348925"}],"slug":"fothergilla","scientific_name":"Fothergilla","main_species_id":null,"link":"http://trefle.io/api/plants/137586","is_main_species":true,"id":137586,"family_common_name":"Witch-hazel
-        family","complete_data":false,"common_name":"witchalder","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137603,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:15:00.525157"}],"slug":"fragaria-cuneifolia","scientific_name":"Fragaria
-        cuneifolia","main_species_id":null,"link":"http://trefle.io/api/plants/137603","is_main_species":true,"id":137603,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137235,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:34.905525"}],"slug":"fimbristylis-tainanensis","scientific_name":"Fimbristylis
-        tainanensis","main_species_id":null,"link":"http://trefle.io/api/plants/137235","is_main_species":true,"id":137235,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137244,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:35.533984"}],"slug":"fimbristylis-anomala","scientific_name":"Fimbristylis
-        anomala","main_species_id":null,"link":"http://trefle.io/api/plants/137244","is_main_species":true,"id":137244,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137248,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:35.821637"}],"slug":"scirpus-puberulus","scientific_name":"Scirpus
-        puberulus","main_species_id":null,"link":"http://trefle.io/api/plants/137248","is_main_species":true,"id":137248,"family_common_name":null,"complete_data":false,"common_name":null,"bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137259,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:36.619390"}],"slug":"fimbristylis-tristachya","scientific_name":"Fimbristylis
-        tristachya","main_species_id":null,"link":"http://trefle.io/api/plants/137259","is_main_species":true,"id":137259,"family_common_name":"Sedge
-        family","complete_data":false,"common_name":"fimbry","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137264,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:36.950359"}],"slug":"fingerhuthia-sesleriiformis","scientific_name":"Fingerhuthia
-        sesleriiformis","main_species_id":null,"link":"http://trefle.io/api/plants/137264","is_main_species":true,"id":137264,"family_common_name":"Grass
-        family","complete_data":false,"common_name":"thimble grass","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":137269,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T10:14:37.275217"}],"slug":"fioria","scientific_name":"Fioria","main_species_id":null,"link":"http://trefle.io/api/plants/137269","is_main_species":true,"id":137269,"family_common_name":"Mallow
-        family","complete_data":false,"common_name":"fanleaf","bibliography":null,"author":null}]'
+      string: !!binary |
+        H4sIAAAAAAAAA7TW0WrbMBQA0F8RfhgbxIplO7ajt6yj7SilpQvbwxhBtRVHVJaMJJNlZf+0b9iX
+        7XpJW4emJcEp5CHxvdbVjQ6Svt97rHELbTzqnTFunMLewLsVt1Lo0rB6sYLAqWlyh9EXXmF0LTEK
+        KRqP0XuSjoMPkJ3rqtJqpljFPaoaKf8/qiV3fFYwxzw6Z9LygTdnlZCr2Y58UXg0TuM4i+C7nVVM
+        qJmteS649agzDbwshbqDuSycq+lw6AyfS46FHrJaDGvJlLPD9Qgwo+77s3bsdRULv5UTc5Fvinsn
+        TDEjmgoVPG8qppoK3rayKSGWb2L+Vkw3Jm8n9f3ek8y6WVNDi+1QYRAGfpD6ZDwNAhrBJ4P8TZ2z
+        j59PH9+eNUZuOrHQynK5xOWtmGNtyjanM+11Q78Hu2slfhhNSUZHIzqKn2pdX3272lULSrG6tviO
+        L9tSw2Vu6931fsBTx1wDbXqTPOe140WbuVJararH5XSruq33sE4Db8UZOGpZtFN+dHWCP+FJwSr7
+        XFZGEQlbSuMk7k3Jm1jHDVqHvDWqMAmTNOiDaj3CQagMs1bD37ZgEmiVjVCcK8s7tLYy/K2MV4CR
+        sR8Qn4TTIKUjQoPgadGnRtci1/aFhW+NuU3KDmfrHl9ylvpBPA0jQEaDtLfpTa2exsDLvsYIRQr/
+        /YPIAIVpS230htSy3tSyHtScLvWr0roJB0Dr7C5HgJbtAS0mx4GW9YY22oZ2gy/xhVAleofO8Y2+
+        3XFcXi9WTktdCoaSMUVJ2KI7wlH5Aro0jHuigxEOQTcpuWFOKIaY5D+ZKrgRT+LYQ9Tfju7PLexs
+        Mr25QW8vcyPZlIQ0SCg5Cre2Vl9uz87OCb7kqx3KvnLzC65jc7iPnTBbY3TJucEUpQS4ZRF5K25Z
+        Mu7JDUY4hNsJM0XTWMSK2nBrG9vZ3dYhfyu0L7QQrjtHhAZd7QEtHh0DWlurJzQQsgXt/RU+1/N5
+        hT+gb0IWz71dCHMHO1oMG9obX9iyqLew6CBhEyWsruFyDMoWWlonuvvZU9DvBPdXdtTtDDp75fRM
+        poTQKKJxuK3sHwAAAP//zJndbtwgEIVfhctEqi3//90l7UWUVFWl9gUIITIKxZHtTbRv34G2AXat
+        rb1Dq9ytzBqMz7fnzLBnUpajKTss026G4Sl+XHCzW7CycWAx+SyUglYTPn4g1wN0nZVuEbSlVXhL
+        s82m3l5TYjFryi2Y3XApWD/uJ6jUoJ9ULmW9HYvs2HrIyiokZE2JFR7U8oS/k3Sej2W/0mJ/gWXG
+        XkwgNljQj90UkxpET0yQtVlY1dsEqzrMcLbqnPXDq/DPGTzp/S+s1T/vkjag/rDD0ybTdin0gnkI
+        k9FrYVlrM4+1Tx+XivJxeBgBrIv0EtjKE1MkNWi2liMsTyokZXqGLZR9FWwUkF47eA7hVEjP5nrk
+        XF/LVNHlTlGMZUrv5wRTpW77iqJLQwSXWQvLVN4cBxdZTC54PkUlGR7J3HOTX5wqnWCCz3sTYlTt
+        TYylMQFjzGJycXscdJcEy6Lnc3Va4wjUM2whEPoReLVQITJJR64YvARqOXz5PRodjL7RiNNLP9S7
+        b9ORlqBn2CKIbdMZzCOleOaOMdg23R9daw/Qpjvn21h70Htb0T0FsQezFg63ozb9VOTALz+r83+a
+        N1ldYA8eYYZNcCmqjxQhcmauuJTOT53+GYqcob/+bZIU35MMfLfLgpQVsJ0lng4QLgImnFkSidVB
+        6vx6+T5Vb8CEZ6hCJ0a1KTG+ASZsgF1JfXZ9v2P9K5UPQpBpd68PtOwVC9fk3hPZb0Tmnsi/5dxw
+        Mf+LLQfLf5akRktSa0l+AgAA//+8Wl1PwjAU/SsNL/JCAx378o0Yv2KIRk18LjB1UigOWPQX+UP8
+        Y96OjRbotKOb4am5dxvrObc9PXfGkKhOyARiYs4KOIqxWunSGimiORBqcgMwtNpXMSgKA6/Kbdir
+        6tma73CHYxFaCFVfBogSNN3TYf2ts9MDb2bgVbm1tBTFsyrS62BP3/OqqjiifsMsI9aOKDnaERX4
+        lRmiMmbOMVJn2xrey4BjfcUds+AYqd0PbV+tZ6MoWf1NMZ80TDFrBRlUVZCSYpStAOJdESlJpkbN
+        aeYoZwV7munl5B7NHIXZFjSz15H7NHuMtJ91MeG9LjjLvHdxVOkH4pjSszfay0jme7Yk870qJCt6
+        h2OefM5GXNs83I2ZE8ytdR3zPYPzb9/+k7L8WZYEA478gyreMbRCbVcwv9qMPKG+LSgipKejj/S0
+        KEs5HGxRSqFMipHkkrS38lAHEjtq3pEiGG7TKhXBA4zOXqNUU9rnHwvGhb/D5xsDMn5fR6DgETsZ
+        PCfZ4HY8jjOVziJ0kdD59xeNlxHCGCPHczDqhaSLUXtzJ7zpxSnX4vyiGnzLksUidHXSuhrgrlZb
+        Q8QLAx3gw3ic8BfGl0uAmrP1SLjmG9AZ/YifxaRK1Gcyu7PNzpDfSW4A+n8puEB3+Kw2/4H29En6
+        jtft/lpwC76cRtuCK0aagitC2bSreQ3Meqt9hp/gxRmQ/o6zNzrl6WHtZZUyhBUc/vhllIzy2rme
+        iwbnDZ/RhKcUDaZ0Irbf9RQ9YPG7F82BU0SC7OsK169zD/4BAAD//7Sby27iMBSGX8VLKjVRbiUk
+        u1J1RzuVqLpPwQKrIYmctCrzBn2uebH5jylVTBAktRG7HBPrxJ/s/1ys5RSMy97xwLK3qKAxtg1W
+        dZnJj6wWi9ZCrn+sjmbtfw57NoUefDsn9KKxpZg1Ni+zgxMN0Jmo6sX6yIHg+yMqNVGtHXCW9cK9
+        SlmowtYwuRhqiXH6KhmUvrqvBFYOoG2EzF71Sij/tjmabQBmNtt44NdZzOLUt4MZ5jLFbNd19IPZ
+        vOHV2mX8k80ryYvVEeDmW9ruXvgKciJFYKEii2B8KdQmnnGGxBuWIZEN3whiTb7DUOaiHb3ujY5m
+        7A+bb7MwAc96xBahlboLzWUIGyjRYHvcbrKiC1jKxqYs6XKHFIkRQYk37JoIie93ybFbZVJo6max
+        NzktU196QqymRXrgVQ96bqxk2GguM3o6ku1PLqAVqQ2ACgZdjCgJQt9IBTdqrwrU3bZJfDEFlvhG
+        t9x2bxhC2n1O9z+KpqRcW80LvkLQV9Ta6dga4hwO6U+e1foBvDzZMuRN0ghbpZWkG81lRh4R0yHv
+        yMH4jLC5brf/sFlZLBGnB8kooN40T/WmxeGF8As9ynWY4EdvGILflMu3Nd9mDIMPwrjXb5PTNvXF
+        LbKKG3l1Arfo2fcIt/ZdqF/jpuYyxi3UY9Np9sblFfv35T6UEqqM5NkD/9sl8NaduU/4LTm7y4Be
+        nnPsj7funf7sGnFCgX+57Ak7g8uoR8qPVU+uBRk3leWGQxctD/hM/GhsVolQbxjC54vECE63mZp2
+        hmH31Nk/7UMlzsIgSCN7VCpfTh+/EXg6V+D6DwAA//8iKlXitQu219jEwMoUqW1KwV5jqH2U5gJL
+        1MaihjMwlaUWFYM7J86JxcXEzN7SfI0ApSMuQBNISdAos7f5eeloK/+Q52+RZIlJ4NDeCdImJgoT
+        ONhvhLrCoFUCVNmgB7KLwgSHPrVGYOWfoaU5lVb+oXRWLCworMNBJpCSpJB3MaTnlOYmJqfi2sOA
+        Ik18ojJF6n9SnqgsKK9fjYGFEwAAAP//AwAFTq7CH0MAAA==
     headers:
       Connection:
       - keep-alive
-      Content-Length:
-      - '14391'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 18 Apr 2019 18:12:04 GMT
+      - Tue, 21 Jul 2020 08:47:59 GMT
       Server:
-      - nginx/1.14.0 (Ubuntu)
+      - nginx/1.17.7
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains; preload
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
       cache-control:
       - max-age=0, private, must-revalidate
       link:
-      - <https://trefle.io/api/species?page=3>; rel="next", <https://trefle.io/api/species?page=1>;
-        rel="prev", <https://trefle.io/api/species?page=1>; rel="first", <https://trefle.io/api/species?page=6484>;
+      - <https://v0.trefle.io/api/species?page=3>; rel="next", <https://v0.trefle.io/api/species?page=1>;
+        rel="prev", <https://v0.trefle.io/api/species?page=1>; rel="first", <https://v0.trefle.io/api/species?page=14026>;
         rel="last"
       page-number:
       - '2'
       per-page:
       - '30'
       total:
-      - '194507'
+      - '420767'
       total-pages:
-      - '6484'
+      - '14026'
       x-request-id:
-      - 2mba84rl7mviedag58002gm1
+      - 1ca37296fb32dec4bfdeda6483fe98fe
     status:
       code: 200
       message: OK

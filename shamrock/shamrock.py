@@ -41,7 +41,7 @@ class Shamrock:
         :type page_size: int
         """
 
-        self.url: str = "https://trefle.io/api/"
+        self.url: str = "https://v0.trefle.io/api/"
         self.headers: Dict[str, str] = {"Authorization": f"Bearer {token}"}
         self.page_size: Optional[int] = page_size
         self.result: Optional[requests.Response] = None

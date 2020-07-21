@@ -11,75 +11,61 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/plants
+    uri: https://v0.trefle.io/api/plants
   response:
     body:
-      string: '[{"slug":"paspalum-dilatatum","scientific_name":"Paspalum dilatatum","link":"http://trefle.io/api/plants/162791","id":162791,"complete_data":true,"common_name":"dallisgrass"},{"slug":"poa-eminens","scientific_name":"Poa
-        eminens","link":"http://trefle.io/api/plants/168621","id":168621,"complete_data":true,"common_name":"largeflower
-        speargrass"},{"slug":"gaillardia-pulchella","scientific_name":"Gaillardia
-        pulchella","link":"http://trefle.io/api/plants/138234","id":138234,"complete_data":true,"common_name":"Indian
-        blanket"},{"slug":"helenium-flexuosum","scientific_name":"Helenium flexuosum","link":"http://trefle.io/api/plants/141410","id":141410,"complete_data":true,"common_name":"purplehead
-        sneezeweed"},{"slug":"hypericum-galioides","scientific_name":"Hypericum galioides","link":"http://trefle.io/api/plants/144233","id":144233,"complete_data":true,"common_name":"bedstraw
-        St. Johnswort"},{"slug":"hypericum-prolificum","scientific_name":"Hypericum
-        prolificum","link":"http://trefle.io/api/plants/144280","id":144280,"complete_data":true,"common_name":"shrubby
-        St. Johnswort"},{"slug":"iris-virginica","scientific_name":"Iris virginica","link":"http://trefle.io/api/plants/145407","id":145407,"complete_data":true,"common_name":"Virginia
-        iris"},{"slug":"penstemon-albertinus","scientific_name":"Penstemon albertinus","link":"http://trefle.io/api/plants/163618","id":163618,"complete_data":true,"common_name":"Alberta
-        beardtongue"},{"slug":"penstemon-cyananthus","scientific_name":"Penstemon
-        cyananthus","link":"http://trefle.io/api/plants/163745","id":163745,"complete_data":true,"common_name":"Wasatch
-        beardtongue"},{"slug":"juncus-biflorus","scientific_name":"Juncus biflorus","link":"http://trefle.io/api/plants/146145","id":146145,"complete_data":true,"common_name":"bog
-        rush"},{"slug":"juniperus-chinensis","scientific_name":"Juniperus chinensis","link":"http://trefle.io/api/plants/146422","id":146422,"complete_data":true,"common_name":"Chinese
-        juniper"},{"slug":"juncus-castaneus","scientific_name":"Juncus castaneus","link":"http://trefle.io/api/plants/146173","id":146173,"complete_data":true,"common_name":"chestnut
-        rush"},{"slug":"juncus-marginatus","scientific_name":"Juncus marginatus","link":"http://trefle.io/api/plants/146278","id":146278,"complete_data":true,"common_name":"grassleaf
-        rush"},{"slug":"juncus-roemerianus","scientific_name":"Juncus roemerianus","link":"http://trefle.io/api/plants/146327","id":146327,"complete_data":true,"common_name":"needlegrass
-        rush"},{"slug":"juncus-subcaudatus","scientific_name":"Juncus subcaudatus","link":"http://trefle.io/api/plants/146343","id":146343,"complete_data":true,"common_name":"woodland
-        rush"},{"slug":"juncus-mexicanus","scientific_name":"Juncus mexicanus","link":"http://trefle.io/api/plants/146286","id":146286,"complete_data":true,"common_name":"Mexican
-        rush"},{"slug":"juncus-validus","scientific_name":"Juncus validus","link":"http://trefle.io/api/plants/146369","id":146369,"complete_data":true,"common_name":"roundhead
-        rush"},{"slug":"juniperus-osteosperma","scientific_name":"Juniperus osteosperma","link":"http://trefle.io/api/plants/146485","id":146485,"complete_data":true,"common_name":"Utah
-        juniper"},{"slug":"lemna-valdiviana","scientific_name":"Lemna valdiviana","link":"http://trefle.io/api/plants/148532","id":148532,"complete_data":true,"common_name":"valdivia
-        duckweed"},{"slug":"leymus-cinereus","scientific_name":"Leymus cinereus","link":"http://trefle.io/api/plants/149759","id":149759,"complete_data":true,"common_name":"basin
-        wildrye"},{"slug":"bidens-coronata","scientific_name":"Bidens coronata","link":"http://trefle.io/api/plants/111523","id":111523,"complete_data":true,"common_name":"crowned
-        beggarticks"},{"slug":"penstemon-speciosus","scientific_name":"Penstemon speciosus","link":"http://trefle.io/api/plants/164133","id":164133,"complete_data":true,"common_name":"royal
-        penstemon"},{"slug":"phyllostachys-aurea","scientific_name":"Phyllostachys
-        aurea","link":"http://trefle.io/api/plants/166244","id":166244,"complete_data":true,"common_name":"golden
-        bamboo"},{"slug":"magnolia-virginiana","scientific_name":"Magnolia virginiana","link":"http://trefle.io/api/plants/153966","id":153966,"complete_data":true,"common_name":"sweetbay"},{"slug":"muhlenbergia-rigens","scientific_name":"Muhlenbergia
-        rigens","link":"http://trefle.io/api/plants/157829","id":157829,"complete_data":true,"common_name":"deergrass"},{"slug":"muhlenbergia-uniflora","scientific_name":"Muhlenbergia
-        uniflora","link":"http://trefle.io/api/plants/157862","id":157862,"complete_data":true,"common_name":"bog
-        muhly"},{"slug":"osmorhiza-occidentalis","scientific_name":"Osmorhiza occidentalis","link":"http://trefle.io/api/plants/161150","id":161150,"complete_data":true,"common_name":"western
-        sweetroot"},{"slug":"picea-breweriana","scientific_name":"Picea breweriana","link":"http://trefle.io/api/plants/166755","id":166755,"complete_data":true,"common_name":"Brewer
-        spruce"},{"slug":"panicum-virgatum","scientific_name":"Panicum virgatum","link":"http://trefle.io/api/plants/162207","id":162207,"complete_data":true,"common_name":"switchgrass"},{"slug":"paspalum-nicorae","scientific_name":"Paspalum
-        nicorae","link":"http://trefle.io/api/plants/162847","id":162847,"complete_data":true,"common_name":"Brunswickgrass"}]'
+      string: !!binary |
+        H4sIAAAAAAAAA5yXS4/aMBSF/0qUNR5eAyTsqlGlLlqpi6qbLkYXY5KrcWzLj2mnVf97nQSImTEd
+        kx1wTpTP1+demx9/ciqbRopHAQ3Lt8JxPml/UpxZ9rgHC/n2ANywSY77fLtYL8pyOck5iqd8m9fW
+        qu10ajU7cHaHcgoKp4qDsGbaW/NJbigyYfGA9PiS/DvTQgqEbAfNDrnUTBg0rZW7yuvPR51c6n8n
+        N9MuZ4tFIm1rjdJ+pDUKqUxWaaDIQ1B2lMhZGsG42CzWiYytNcr4oWIaLArIaqa1/8wGSDhp5KyN
+        oVwvN6mU3hql/MJai6eAjHGOyiKFgbM5q2RQx5AW6QktriT0E+NIa/1iXJMB3+HBh9A1A2s96CTQ
+        x9CWy1UqrbfGd19b1qDpGkpXzqB41VBwMpBLwxvenNbMWOEsZ3DIrF+TYnbnTJ3/bxXzYr26T1tF
+        b42u4hvzb4CMgrEg8CA5BuGwnUguxFHVnqdx9tYo5wNqgz4Xe0adMWDDXNBeI4F2M+W8LGez+yTK
+        3nqlmlZD1U1Z4zdVPCGG1TyJ5CzezNk2+n1yp3nr+zOBVSCC2F5MhF4bQ7mZp8/XeXy+Pkjx8ttX
+        0u0MBSVNkEzaSSSQRjFuZsmMm1l8Cgg0UoFSzmQ7R+ufwPeIHbO6y1DupdV+aLlwLgyPkOGRbi2K
+        hE+MWVI5Sw6Ht8bL7r+D06zLsHRmJ1mQYnpSSaCOIV2XqZeE1hqPMVItKy590/vB4IdreyKEh9ug
+        k0AfQ1skX2la67tRMcCfsZuo15Jx4RhDvCnTG7CMN+BX8+LPW1kxK0UGPqpMB0lQgUpO6hjSIn2g
+        FVcGWljbJ9QXczes6lEbRbkqkylXZZTyM1TttTCTXCrLwqTyXiFn5WbC1bKcbdIOsN4a730Nxjju
+        LwS+axBEOHKPEjlLNzO2pSmSR663xhlB8/bS/cvXqT2oGol7FnQR7XXySh9Hm77nRXzPw0st9T9p
+        Kdt7YPBXIbzW9o5/AAAA//+cmMsKgzAQRb8oUKv42PYXuu4iVVFLNMFE6Kb/3rHaPEpSxqzvBQ8j
+        M3MnuyOGuDqhicHqJb6Knm6lg2ZSELS5sttJWjLRchRrgp6pYPWyXlgLOPMgRTuPUGEpBvgwl3Y8
+        vLseYnmiqKsETV0lXmp9ijcPyvjv3aAPcVs9TJoVWVbi5upmDfTaBJXbc/dIJyd27xox2mHKdbnj
+        Q1geCGGfqcXr9TczYO0WOLXcHqsdBzGOOOIST1xiiBXv+F9gbYjhLc64vbBZ/ftVP3VQ1j7p1DhJ
+        wDx2WGoMaZmjpxdYQ9uhWWBw0UbMLSwsdzGsEjFSFGOKZ0z9jHZa6TmTKhRXvuLr9gYAAP//AwBW
+        bd0cNBQAAA==
     headers:
       Connection:
       - keep-alive
-      Content-Length:
-      - '5302'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 18 Apr 2019 18:12:02 GMT
+      - Tue, 21 Jul 2020 08:49:19 GMT
       Server:
-      - nginx/1.14.0 (Ubuntu)
+      - nginx/1.17.7
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains; preload
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
       cache-control:
       - max-age=0, private, must-revalidate
       link:
-      - <https://trefle.io/api/plants?page=2>; rel="next", <https://trefle.io/api/plants?page=1>;
-        rel="first", <https://trefle.io/api/plants?page=4906>; rel="last"
+      - <https://v0.trefle.io/api/plants?page=2>; rel="next", <https://v0.trefle.io/api/plants?page=1>;
+        rel="first", <https://v0.trefle.io/api/plants?page=12047>; rel="last"
       page-number:
       - '1'
       per-page:
       - '30'
       total:
-      - '147176'
+      - '361398'
       total-pages:
-      - '4906'
+      - '12047'
       x-request-id:
-      - 2mba84ndg7bs14l2n4000183
+      - 052f901b7a72e9233674267bcbdbd0f8
     status:
       code: 200
       message: OK

@@ -11,58 +11,59 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/genuses
+    uri: https://v0.trefle.io/api/genuses
   response:
     body:
-      string: '[{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abelia","order":{"slug":"dipsacales","name":"Dipsacales","link":"http://trefle.io/api/division_orders/1","id":1},"name":"Abelia","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":1,"family":{"slug":"caprifoliaceae","name":"Caprifoliaceae","link":"http://trefle.io/api/families/1","id":1,"common_name":"Honeysuckle
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abelmoschus","order":{"slug":"malvales","name":"Malvales","link":"http://trefle.io/api/division_orders/2","id":2},"name":"Abelmoschus","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":2,"family":{"slug":"malvaceae","name":"Malvaceae","link":"http://trefle.io/api/families/2","id":2,"common_name":"Mallow
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"hibiscus","order":null,"name":"Hibiscus","kingdom":null,"id":3,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abies","order":{"slug":"pinales","name":"Pinales","link":"http://trefle.io/api/division_orders/3","id":3},"name":"Abies","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":4,"family":{"slug":"pinaceae","name":"Pinaceae","link":"http://trefle.io/api/families/3","id":3,"common_name":"Pine
-        family"},"division":{"slug":"coniferophyta","name":"Coniferophyta","link":"http://trefle.io/api/divisions/2","id":2},"class":{"slug":"pinopsida","name":"Pinopsida","link":"http://trefle.io/api/division_classes/2","id":2}},{"subkingdom":null,"slug":"pinus","order":null,"name":"Pinus","kingdom":null,"id":5,"family":null,"division":null,"class":null},{"subkingdom":null,"slug":"abietinella","order":{"slug":"hypnales","name":"Hypnales","link":"http://trefle.io/api/division_orders/4","id":4},"name":"Abietinella","kingdom":null,"id":6,"family":{"slug":"thuidiaceae","name":"Thuidiaceae","link":"http://trefle.io/api/families/4","id":4,"common_name":null},"division":null,"class":{"slug":"bryopsida","name":"Bryopsida","link":"http://trefle.io/api/division_classes/3","id":3}},{"subkingdom":null,"slug":"hypnum","order":null,"name":"Hypnum","kingdom":null,"id":7,"family":null,"division":null,"class":null},{"subkingdom":null,"slug":"thuidium","order":null,"name":"Thuidium","kingdom":null,"id":8,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abildgaardia","order":{"slug":"cyperales","name":"Cyperales","link":"http://trefle.io/api/division_orders/5","id":5},"name":"Abildgaardia","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":9,"family":{"slug":"cyperaceae","name":"Cyperaceae","link":"http://trefle.io/api/families/5","id":5,"common_name":"Sedge
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"liliopsida","name":"Liliopsida","link":"http://trefle.io/api/division_classes/4","id":4}},{"subkingdom":null,"slug":"cyperus","order":null,"name":"Cyperus","kingdom":null,"id":10,"family":null,"division":null,"class":null},{"subkingdom":null,"slug":"fimbristylis","order":null,"name":"Fimbristylis","kingdom":null,"id":11,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abroma","order":{"slug":"malvales","name":"Malvales","link":"http://trefle.io/api/division_orders/2","id":2},"name":"Abroma","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":12,"family":{"slug":"sterculiaceae","name":"Sterculiaceae","link":"http://trefle.io/api/families/6","id":6,"common_name":null},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"ambroma","order":null,"name":"Ambroma","kingdom":null,"id":13,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abronia","order":{"slug":"caryophyllales","name":"Caryophyllales","link":"http://trefle.io/api/division_orders/6","id":6},"name":"Abronia","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":14,"family":{"slug":"nyctaginaceae","name":"Nyctaginaceae","link":"http://trefle.io/api/families/7","id":7,"common_name":"Four
-        o''clock family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"abrothallus","order":{"slug":"uncertain-ascomycota-order","name":"Uncertain
-        Ascomycota Order","link":"http://trefle.io/api/division_orders/7","id":7},"name":"Abrothallus","kingdom":null,"id":15,"family":{"slug":"uncertain-ascomycota-family","name":"Uncertain
-        Ascomycota Family","link":"http://trefle.io/api/families/8","id":8,"common_name":null},"division":null,"class":{"slug":"uncertain-ascomycota-class","name":"Uncertain
-        Ascomycota Class","link":"http://trefle.io/api/division_classes/5","id":5}},{"subkingdom":null,"slug":"buelliella","order":null,"name":"Buelliella","kingdom":null,"id":16,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abrus","order":{"slug":"fabales","name":"Fabales","link":"http://trefle.io/api/division_orders/8","id":8},"name":"Abrus","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":17,"family":{"slug":"fabaceae","name":"Fabaceae","link":"http://trefle.io/api/families/9","id":9,"common_name":"Pea
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"absconditella","order":{"slug":"ostropales","name":"Ostropales","link":"http://trefle.io/api/division_orders/9","id":9},"name":"Absconditella","kingdom":null,"id":18,"family":{"slug":"stictidaceae","name":"Stictidaceae","link":"http://trefle.io/api/families/10","id":10,"common_name":null},"division":null,"class":{"slug":"ascomycetes","name":"Ascomycetes","link":"http://trefle.io/api/division_classes/6","id":6}},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"abutilon","order":{"slug":"malvales","name":"Malvales","link":"http://trefle.io/api/division_orders/2","id":2},"name":"Abutilon","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":19,"family":{"slug":"malvaceae","name":"Malvaceae","link":"http://trefle.io/api/families/2","id":2,"common_name":"Mallow
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"abortopetalum","order":null,"name":"Abortopetalum","kingdom":null,"id":20,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"acacia","order":{"slug":"fabales","name":"Fabales","link":"http://trefle.io/api/division_orders/8","id":8},"name":"Acacia","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":21,"family":{"slug":"fabaceae","name":"Fabaceae","link":"http://trefle.io/api/families/9","id":9,"common_name":"Pea
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"mimosa","order":null,"name":"Mimosa","kingdom":null,"id":22,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"acaciella","order":{"slug":"fabales","name":"Fabales","link":"http://trefle.io/api/division_orders/8","id":8},"name":"Acaciella","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":23,"family":{"slug":"fabaceae","name":"Fabaceae","link":"http://trefle.io/api/families/9","id":9,"common_name":"Pea
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"acaena","order":{"slug":"rosales","name":"Rosales","link":"http://trefle.io/api/division_orders/10","id":10},"name":"Acaena","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":24,"family":{"slug":"rosaceae","name":"Rosaceae","link":"http://trefle.io/api/families/11","id":11,"common_name":"Rose
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"acalypha","order":{"slug":"euphorbiales","name":"Euphorbiales","link":"http://trefle.io/api/division_orders/11","id":11},"name":"Acalypha","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":25,"family":{"slug":"euphorbiaceae","name":"Euphorbiaceae","link":"http://trefle.io/api/families/12","id":12,"common_name":"Spurge
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"acamptopappus","order":{"slug":"asterales","name":"Asterales","link":"http://trefle.io/api/division_orders/12","id":12},"name":"Acamptopappus","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":26,"family":{"slug":"asteraceae","name":"Asteraceae","link":"http://trefle.io/api/families/13","id":13,"common_name":"Aster
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"aplopappus","order":null,"name":"Aplopappus","kingdom":null,"id":27,"family":null,"division":null,"class":null},{"subkingdom":{"slug":"tracheobionta","name":"Tracheobionta","link":"http://trefle.io/api/subkingdoms/1","id":1},"slug":"acanthocereus","order":{"slug":"caryophyllales","name":"Caryophyllales","link":"http://trefle.io/api/division_orders/6","id":6},"name":"Acanthocereus","kingdom":{"slug":null,"name":"Plantae","link":"http://trefle.io/api/kingdoms/1","id":1},"id":28,"family":{"slug":"cactaceae","name":"Cactaceae","link":"http://trefle.io/api/families/14","id":14,"common_name":"Trefle
-        family"},"division":{"slug":"magnoliophyta","name":"Magnoliophyta","link":"http://trefle.io/api/divisions/1","id":1},"class":{"slug":"magnoliopsida","name":"Magnoliopsida","link":"http://trefle.io/api/division_classes/1","id":1}},{"subkingdom":null,"slug":"trefle","order":null,"name":"Trefle","kingdom":null,"id":29,"family":null,"division":null,"class":null},{"subkingdom":null,"slug":"cereus","order":null,"name":"Cereus","kingdom":null,"id":30,"family":null,"division":null,"class":null}]'
+      string: !!binary |
+        H4sIAAAAAAAAA+yST2vCQBDFv0rZc2hqK1pz8wMUCu2tBxl3VzM42Q37pyCS7941iYkRKXqJIrm+
+        zMx7b/P72TFOYC1LdgwFS0YRI1QblrDUuTyJY2fkiuQz6hhyjAX+okWtFuWStPGIRUxBJsPCB6yV
+        JtS5RQFBtuTXQc46chGxw40rLc97pVt3zquUg9cKMqTt3onrLAu56/05B+VSb5/qgahKMvk/SjmM
+        +9aTNkp1CrgE2QaBI7Goj09nr9OIbVCthc4uLF9Pd7p/Urh9ZKY8UXESRwtvw4A2QprGanzZQy/K
+        rWA5bj2/uAmP6gkMAknbFrUnH4qTJ6iDWL+8rni70On+bYCnUi9DzOP/7jpyUUQD1T1S/d4X1d7A
+        XUBd5RiYfmCmZ30wLQn57Yk+pBh4flye31564FmA0+LmPDcpBp4fmOdRHzxLArwDoJsYNyD6DwAA
+        //8aTdH0StFGdErRxSXApDwIkjTUHaNpehinaWP6pOnB0OqAuWI0PQ/j9GxCl/ScBx1lGPARPFSn
+        jKbsYZyyTemTsvOLS4CxXDkIimtkp4ym7GGaso0tTOnSrM4YHCMfGaNDH8M8QYOKajM6pOjU5Ixc
+        kOWpAAAAAP//GvgZF1SnjKbsYZyy6TE9ngpMSZk5qbkDn66RHDKaqodxqqbH9HjOYBnZyxkd2iNs
+        5XBI1fSYIM8pSyxKrcoc8KIayR2jaXr4pmkTekyS5yYC6/0BT9FwV4ym52Gcng3pkZ4LMoBOLEkd
+        8MFqZIeMpmpqpWoAAAAA//8ahKmaHiN6ecmVOYNlFgbNLaNpexinbXpMmIPSU356ZV7qYEjYMIeM
+        puphnKrpMW2el1KUn5yaV1JUmjvg6RrFKaMpe5imbBNLC3oMgoCtHSQtERSnjCbsYZqwQUU2PdaD
+        5A2WqZi80akYwlYOh1RNj6lzUGLKyRxERTaqa0hM3wAAAAD//xpN30MpfdNjAh1obz7Qs6mDYMgP
+        1SmjKXuYpmwjMwN6jPkVAOMlMWfgi2wkd4wm6WGapEGFNT3WhRRkJOaBxiMyB35UBNUpoyl7GKds
+        egyLFADbtaDklJqTM+D9RzS3jKbt4Zu2TemxRgSWnvIHvi2C7JLRdD2M07Uh9nQNAAAA//+icrou
+        SkzPHfj1fEjuGE3TwzhN06XXmJ+TCgzrgS+pEe4YTdPDOE3TY4VIQX5RKbAtOwgKaiSH0DlVxwIA
+        AAD//wMAmy4oUxpVAAA=
     headers:
       Connection:
       - keep-alive
-      Content-Length:
-      - '12922'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 18 Apr 2019 18:12:09 GMT
+      - Tue, 21 Jul 2020 08:59:50 GMT
       Server:
-      - nginx/1.14.0 (Ubuntu)
+      - nginx/1.17.7
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains; preload
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
       cache-control:
       - max-age=0, private, must-revalidate
       link:
-      - <https://trefle.io/api/genuses?page=2>; rel="next", <https://trefle.io/api/genuses?page=1>;
-        rel="first", <https://trefle.io/api/genuses?page=337>; rel="last"
+      - <https://v0.trefle.io/api/genuses?page=2>; rel="next", <https://v0.trefle.io/api/genuses?page=1>;
+        rel="first", <https://v0.trefle.io/api/genuses?page=1433>; rel="last"
       page-number:
       - '1'
       per-page:
       - '30'
       total:
-      - '10101'
+      - '42972'
       total-pages:
-      - '337'
+      - '1433'
       x-request-id:
-      - 2mba8542743mesn2vg002gq1
+      - 4e73e4efc32f0a3b37ea9a008eab973f
     status:
       code: 200
       message: OK

@@ -11,46 +11,56 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/species?common_name=blackwood
+    uri: https://v0.trefle.io/api/species?common_name=blackwood
   response:
     body:
-      string: '[{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":101452,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T09:40:21.316368"}],"slug":"acacia-penninervis","scientific_name":"Acacia
-        penninervis","main_species_id":null,"link":"http://trefle.io/api/plants/101452","is_main_species":true,"id":101452,"family_common_name":"Pea
-        family","complete_data":false,"common_name":"blackwood","bibliography":null,"author":null},{"year":null,"type":"species","synonym":false,"status":"Unknown","sources":[{"species_id":101419,"source_url":"https://plants.usda.gov","name":"USDA","last_update":"2019-01-11T09:40:20.806241"}],"slug":"acacia-melanoxylon","scientific_name":"Acacia
-        melanoxylon","main_species_id":null,"link":"http://trefle.io/api/plants/101419","is_main_species":true,"id":101419,"family_common_name":"Pea
-        family","complete_data":true,"common_name":"blackwood","bibliography":null,"author":null}]'
+      string: !!binary |
+        H4sIAAAAAAAAA7SVXVPiMBSG/0qmV+sMpE1okeYOdHbX/dJZ2fHCcTqhBMiaJpkmBRnH/74pFRCp
+        IuLeQc7JeZO+T865vvdoYScq94jXY9JOoNfwBnwguBrnVE/mbv2HkkMlwTcIespCgAhodTD4hDoh
+        PnLZqcoyJRNJM+aSB4KmtzOlhlVEC2ZZMqSWemREhWENb0QzLubJ5rYLRkEVcPv40CMoQGEQu98m
+        ySiXidEs5cysqggub92+ibWa+L7N2UgwyJVPNfe1oNIavyrh6j0tkCyLI1fcuBVp+Yiny3N0U5py
+        CgR1q0pw6nYbUYxdhC4izY2IKvK0PNP1vSeosUmh3U3LMjjAQTM4bgaoj0KCOgSHLv9R40vv7PNq
+        d1Lk4vEexl1kNpvB8YCPoMrHZc6zQwfxQ6Neq93EqI8DEoQkitdafy5Puy9pVZ8JFmZI4VhN95UL
+        +8ExiTokQmu5i/Or8zo5p0a1NvCWzcqb+bPU6Hq9G7dqqS3MwoyUactKlMxcKjnPVvbbuS71llQ0
+        vDmjjuGSyfLIK6Z/w15eg/QV7MMut0o2wFeVOzXw3Z0MRASE7QXaqLUX2jYv9iIb1ZFdFXkj2KgW
+        bFkI8QrWGXMF1N1cKLkF9rPYbrTDPood16TVXvt/0u3/PPvV7b/AgGa5UXBGJR0qBUe5rydccK0Z
+        /FuIKfNTajMuqYUTm9XggXbTH5Eg+Cj6X5Wr6A82HtuB9KPD6UetDfovORuwHLA7cHpS8woucjXM
+        IcAERAvocbQX9Hv38wgfSn2E30G9ZlJyyfIpN1vUP4utqD/UCBxtGHGqHNfbBvQWf93QrSYrxp86
+        8REBOAqdHTE+/n92tFGMWq2DxmtVos6PpddvcQRMqUPQNZ0xz2nKMmW2Z+6T9KZLb25l72xWKC6f
+        a9gm6Emzeuccru69qxNF2HWHj+hEO+WqTlSO4g/pRI96+z0A58oafgfuw80/AAAA//8DAEE9sLdZ
+        CgAA
     headers:
       Connection:
       - keep-alive
-      Content-Length:
-      - '962'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 18 Apr 2019 18:20:38 GMT
+      - Tue, 21 Jul 2020 08:48:01 GMT
       Server:
-      - nginx/1.14.0 (Ubuntu)
+      - nginx/1.17.7
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains; preload
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
       cache-control:
       - max-age=0, private, must-revalidate
       link:
-      - <https://trefle.io/api/species?common_name=blackwood&page=1>; rel="first",
-        <https://trefle.io/api/species?common_name=blackwood&page=1>; rel="last"
+      - <https://v0.trefle.io/api/species?common_name=blackwood&page=1>; rel="first",
+        <https://v0.trefle.io/api/species?common_name=blackwood&page=1>; rel="last"
       page-number:
       - '1'
       per-page:
       - '30'
       total:
-      - '2'
+      - '4'
       total-pages:
       - '1'
       x-request-id:
-      - 2mba92p2ug47luj9cg002871
+      - 6b8a0ef2fc562a3a325d618084ea24d3
     status:
       code: 200
       message: OK

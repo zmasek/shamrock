@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """Tests for `Shamrock` package."""
+import gzip
 import json
 import os
 import unittest
@@ -32,20 +33,28 @@ class BasicTests(unittest.TestCase):
     def assertCommon(self, response, result, name):
         """Assert common values."""
         self.assertEqual(len(response), 1)
-        self.assertEqual(response.requests[0].uri, f"https://trefle.io/api/{name}")
+        self.assertEqual(response.requests[0].uri, f"https://v0.trefle.io/api/{name}")
         self.assertTrue(isinstance(result, list))
-        self.assertEqual(result, json.loads(response.responses[0]["body"]["string"]))
+        if name not in ["kingdoms", "subkingdoms"]:
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+        else:
+            self.assertEqual(
+                result, json.loads(response.responses[0]["body"]["string"])
+            )
 
     def test__get_full_url(self):
         """Test _get_full_url."""
         url = self.api._get_full_url("species")
-        self.assertEqual(url, "https://trefle.io/api/species")
+        self.assertEqual(url, "https://v0.trefle.io/api/species")
 
     def test__kwargs(self):
         """Test _kwargs."""
         kwargs = self.api._kwargs("species")
         expected = {
-            "url": "https://trefle.io/api/species",
+            "url": "https://v0.trefle.io/api/species",
             "headers": {"Authorization": f"Bearer {TOKEN}"},
         }
         self.assertEqual(kwargs, expected)
@@ -138,11 +147,12 @@ class BasicTests(unittest.TestCase):
             result = self.api.species(182512)
             self.assertEqual(len(response), 1)
             self.assertEqual(
-                response.requests[0].uri, "https://trefle.io/api/species/182512"
+                response.requests[0].uri, "https://v0.trefle.io/api/species/182512"
             )
             self.assertTrue(isinstance(result, dict))
             self.assertEqual(
-                result, json.loads(response.responses[0]["body"]["string"])
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
             )
 
     def test_search(self):
@@ -151,11 +161,12 @@ class BasicTests(unittest.TestCase):
             result = self.api.search("tomato")
             self.assertEqual(len(response), 1)
             self.assertEqual(
-                response.requests[0].uri, "https://trefle.io/api/species?q=tomato"
+                response.requests[0].uri, "https://v0.trefle.io/api/species?q=tomato"
             )
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                result, json.loads(response.responses[0]["body"]["string"])
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
             )
 
     def test_query_parameters(self):
@@ -165,11 +176,12 @@ class BasicTests(unittest.TestCase):
             self.assertEqual(len(response), 1)
             self.assertEqual(
                 response.requests[0].uri,
-                "https://trefle.io/api/species?common_name=blackwood",
+                "https://v0.trefle.io/api/species?common_name=blackwood",
             )
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                result, json.loads(response.responses[0]["body"]["string"])
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
             )
 
     def test_next(self):
@@ -181,7 +193,7 @@ class BasicTests(unittest.TestCase):
             result = self.api.next()
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                response.requests[0].uri, "https://trefle.io/api/species?page=2"
+                response.requests[0].uri, "https://v0.trefle.io/api/species?page=2"
             )
 
     def test_prev(self):
@@ -194,7 +206,7 @@ class BasicTests(unittest.TestCase):
             result = self.api.prev()
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                response.requests[0].uri, "https://trefle.io/api/species?page=1"
+                response.requests[0].uri, "https://v0.trefle.io/api/species?page=1"
             )
         with vcr.use_cassette("last.yaml") as response:
             self.api.last()
@@ -222,20 +234,23 @@ class BasicTests(unittest.TestCase):
             result = self.api.species()
             self.assertEqual(len(response), 1)
             self.assertEqual(
-                response.requests[0].uri, "https://trefle.io/api/species?page_size=30"
+                response.requests[0].uri,
+                "https://v0.trefle.io/api/species?page_size=30",
             )
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                result, json.loads(response.responses[0]["body"]["string"])
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
             )
         with vcr.use_cassette("search_config.yaml") as response:
             result = self.api.search("tomato")
             self.assertEqual(len(response), 1)
             self.assertEqual(
                 response.requests[0].uri,
-                "https://trefle.io/api/species?page_size=30&q=tomato",
+                "https://v0.trefle.io/api/species?page_size=30&q=tomato",
             )
             self.assertTrue(isinstance(result, list))
             self.assertEqual(
-                result, json.loads(response.responses[0]["body"]["string"])
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
             )

@@ -55,8 +55,10 @@ Methods that can be run with the API are::
     api.kingdoms()
     api.subkingdoms()
     api.divisions()
+    api.division_classes()
+    api.division_orders()
     api.families()
-    api.genuses()
+    api.genus()
     api.plants()
     api.species()
 

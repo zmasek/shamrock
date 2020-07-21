@@ -11,38 +11,50 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://v0.trefle.io/api/kingdoms
+    uri: https://trefle.io/api/v1/kingdoms
   response:
     body:
-      string: '[{"id":1,"name":"Plantae","slug":null,"subkingdoms":[{"id":1,"link":"http://trefle.io/api/subkingdoms/1","name":"Tracheobionta","slug":"tracheobionta"}]}]'
+      string: !!binary |
+        H4sIAAAAAAAAA4TOsQoCMRCE4f4eY+pASBsQX8FeLBaSC8ttcoe7ZxPy7sZetJ6P4e9IZIR47+CE
+        GBwa1YyIm1AzynBQOQtiO0UchNumiB2aZZ3K08H+FfzGraS9qg8Y47H8h/N35afal+l6UMmXMIXQ
+        TzAcav7Ed9huJDN/jOUNAAD//wMAewBYztIAAAA=
     headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Connection:
       - keep-alive
-      Content-Length:
-      - '154'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 08:48:04 GMT
+      - Tue, 21 Jul 2020 10:20:23 GMT
+      ETag:
+      - W/"4e9903a1b30b559843eab0f10db2639c"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Server:
       - nginx/1.17.7
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
-      cache-control:
-      - max-age=0, private, must-revalidate
-      link:
-      - <https://v0.trefle.io/api/kingdoms?page=1>; rel="first", <https://v0.trefle.io/api/kingdoms?page=1>;
-        rel="last"
-      page-number:
-      - '1'
-      per-page:
-      - '30'
-      total:
-      - '1'
-      total-pages:
-      - '1'
-      x-request-id:
-      - 1a0cefdaf736bb07d22bb47b4955ee56
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - b1b6348ffcbe2396bfd0495b33166356
+      X-Runtime:
+      - '0.029617'
+      X-XSS-Protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

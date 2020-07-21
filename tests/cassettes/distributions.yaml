@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/v1/distributions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5TWwW6cMBAG4FeJfCYBAyYxt0Rpo6rtKlLSUw+Vd3EIivGusElVrfLuHapNagnk
+        Ga7o3zWffnvMkTXKK1b/PLKuYTUXPGFW9ZrV7PqpfVa2c15ZljBnxpbVdjQmYb753f7a7Zt/qc93
+        7PTE6FdtWF1A+KB3nXaQGa2HJ2WZMNPZF8fqI3PaPMEPU3Xo0leeNrDC0G1H3+2tS+EF4O8ORlnv
+        YqH0FPlYKxp+z7y9JSfn9EbvTqO2qlcx47dr1MizXJKRZUlAluUKJIRnyCIXIdK9RI0PX1GjyDiV
+        CGvjRAjRiVN4RpRFINzCbo3XeIMSy6uMSpQFLpQFHQjZhQqrEKgHHwXePKJAIQQVCIvjQgjRiVN4
+        Zsx5HhgbtR3iJd6iRvq4gbVxIoToxCk8r1GENWqIKnv2xV1EnT9QJy/p51FQuhRruhQLXfLiMoC2
+        ekAOJH53lBn5QMLiuBFCdOMUnpeZhUPHqz9RIX4ii/yKKoSlcSGE6MIpvLBdg4ujd14PjerPH/zF
+        vRoN7NvoNXKPgvOc7BWUW0SsuUXEwi1SZMHXQD8OMd93/Fjm+SUZmBG+BCC0ApgtfQnI/z4LXeLT
+        Z4NPWS7JHzyFJCjlCqScG4MKbbs30bmzwecOr8j3JKHCFQUu1VcFU9V6Nex8t4sD8bFDHquwOg6E
+        EJ04hReGTtig7w5AwffpI2Hc0LepIFQJoRVSsVAnr4LjOLQasFadbfaDf9bK+Rj37hPKFRXZCy+C
+        ev8CAAD//5TYPQ/CIBAG4L0/g9nBIw3oYJxd28HJgQG1UcFYjEbDf5dzUBMpd537htzT8nXFEN+L
+        4X+vhiHvzRLeNemtgX3bS4UwvHpMc6kzzaVUdcbb+mvYF60taZWKfXSmImhrCvGtGM7M5V9r9/Cu
+        uC81K9IIU34LBhwkjEFCDvk+0D/Ig3G9Kd6BGrqVVpr/JSVj/00hPhLDX+SmYlaSRt52l7RgB54v
+        z2ZnF7jEnL0TKWy7joYcay7iRJws/qF6iuCDwZepZjFWLwAAAP//AwCjkV4xuRIAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2020 10:20:25 GMT
+      ETag:
+      - W/"5286398d8171b669696ee78aab80c231"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx/1.17.7
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 93ac2a270ad624f22ee7a6b975624e1d
+      X-Runtime:
+      - '0.036375'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

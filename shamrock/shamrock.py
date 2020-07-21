@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """Shamrock - A Trefle API Integration."""
+import copy
 import logging
 from typing import Any, Callable, Dict, Optional, Tuple
 from urllib import parse
@@ -10,14 +11,19 @@ from requests.adapters import HTTPAdapter
 from requests.exceptions import HTTPError, Timeout, TooManyRedirects
 from requests.packages.urllib3.util.retry import Retry
 
+from .exceptions import ShamrockException
+
 ENDPOINTS: Tuple[str, str, str, str, str, str, str] = (
     "kingdoms",
     "subkingdoms",
     "divisions",
+    "division_classes",
+    "division_orders",
     "families",
-    "genuses",
+    "genus",
     "plants",
     "species",
+    "distributions",
 )
 NAVIGATION: Tuple[str, str, str, str] = ("next", "prev", "first", "last")
 logger: logging.Logger = logging.getLogger(__name__)
@@ -26,7 +32,9 @@ logger: logging.Logger = logging.getLogger(__name__)
 class Shamrock:
     """API integration for Trefle service."""
 
-    def __init__(self, token: str, page_size: Optional[int] = None) -> None:
+    def __init__(
+        self, token: str, page_size: Optional[int] = None, version: str = "v1"
+    ) -> None:
         """Constructs the API object.
 
         The API wrapper will be configured to try requests 5 times with a backoff factor of 0.1. It
@@ -41,8 +49,10 @@ class Shamrock:
         :type page_size: int
         """
 
-        self.url: str = "https://v0.trefle.io/api/"
-        self.headers: Dict[str, str] = {"Authorization": f"Bearer {token}"}
+        self.base_url = "https://trefle.io/"
+        self.api_url: str = f"{self.base_url}api/"
+        self.api_version_url: str = f"{self.api_url}{version}/"
+        self.query_parameters: Dict[str, Any] = {"token": token}
         self.page_size: Optional[int] = page_size
         self.result: Optional[requests.Response] = None
         self.session: requests.Session = requests.Session()
@@ -63,7 +73,6 @@ class Shamrock:
         :returns: A callable if the attr is from a list of endpoints or navigation items.
         :rtype: callable
         """
-
         if attr in ENDPOINTS:
 
             def endpoint(*args: Any, **kwargs: Any) -> Callable[[Any, Any], Any]:
@@ -90,7 +99,11 @@ class Shamrock:
         :rtype: str
         """
 
-        return f"{self.url}{endpoint}"
+        return (
+            f"{self.base_url}{endpoint[1:]}"
+            if endpoint.startswith("/")
+            else f"{self.api_version_url}{endpoint}"
+        )
 
     def _kwargs(self, endpoint: str, **query_parameters: Any) -> Dict[str, Any]:
         """Get a dict with string of keys and values that will eventually be passed to a request.
@@ -110,16 +123,13 @@ class Shamrock:
         kwargs: Dict[str, Any] = {
             "url": endpoint
             if endpoint.startswith("http")
-            else self._get_full_url(endpoint),
-            "headers": self.headers,
+            else self._get_full_url(endpoint)
         }
         if self.page_size is not None:
             kwargs["params"] = {"page_size": self.page_size}
+        kwargs["params"] = copy.deepcopy(self.query_parameters)
         if query_parameters:
-            if "params" in kwargs:
-                kwargs["params"].update(query_parameters)
-            else:
-                kwargs["params"] = query_parameters
+            kwargs["params"].update(query_parameters)
         return kwargs
 
     def _get_parametrized_url(self, kwargs: Dict[str, Any]) -> str:
@@ -152,10 +162,7 @@ class Shamrock:
 
         :param kwargs: A dict that holds options for a request that will eventually be made.
         :type kwargs: dict
-        :raises Timeout if the request times out.
-        :raises TooManyRedirects if the request has too many redirects to follow.
-        :raises ValueError if the resulting JSON response is invalid.
-        :raises HTTPError if the response status code is bad.
+        :raises ShamrockException if the request throws a request exception or response is bad.
         :returns: Any JSON that gets decoded from a successful response or None if it fails.
         :rtype: Any
         """
@@ -167,11 +174,13 @@ class Shamrock:
         try:
             response: requests.Response = self.session.get(**kwargs)
         except Timeout:
-            logger.error("The request timed out.")
-            raise
+            message = "The request timed out."
+            logger.error(message)
+            raise ShamrockException(message)
         except TooManyRedirects:
-            logger.error("The request had too many redirects.")
-            raise
+            message = "The request had too many redirects."
+            logger.error(message)
+            raise ShamrockException(message)
         finally:
             self.session.close()
 
@@ -180,22 +189,24 @@ class Shamrock:
             try:
                 response_json: Any = response.json()
             except ValueError:
-                logger.error("Invalid JSON in response.")
-                raise
+                message = "Invalid JSON in response."
+                logger.error(message)
+                raise ShamrockException(message)
             else:
                 self.result = response
                 return response_json
         except HTTPError as e:
-            logger.error(f"Unknown exception raised: {repr(e)}")
-            raise
+            message = f"Unknown exception raised: {repr(e)}"
+            logger.error(message)
+            raise ShamrockException(message)
 
     def search(self, q: str, **kwargs: Any) -> Any:
-        """Search the species and return results of the API call.
+        """Search the plant and return results of the API call.
 
-        Searches the Trefle database of any matching species of plants and returns either successful
-        results or None.
+        Searches the Trefle database of any matching plant and return either a successful result or
+        None.
 
-        :param q: A string that is used to search the species with.
+        :param q: A string that is used to search the plant with.
         :type q: str
         :param kwargs: Any query strings to add to the search object.
         :type kwargs: dict
@@ -205,7 +216,7 @@ class Shamrock:
 
         query_parameters = {"q": q}
         query_parameters.update(**kwargs)
-        kwargs = self._kwargs("species", **query_parameters)
+        kwargs = self._kwargs("plants/search", **query_parameters)
         return self._get_result(kwargs)
 
     def ENDPOINT(self, endpoint: str, pk: Optional[int] = None, **kwargs: Any) -> Any:
@@ -244,8 +255,8 @@ class Shamrock:
         :rtype: Any
         """
 
-        if self.result is not None and navigation in self.result.links:
+        if self.result is not None and navigation in self.result.json()["links"]:
             requests_kwargs: Dict[str, Any] = self._kwargs(
-                self.result.links[navigation]["url"], **kwargs
+                self.result.json()["links"][navigation], **kwargs
             )
             return self._get_result(requests_kwargs)

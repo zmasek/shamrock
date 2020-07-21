@@ -1,0 +1,2 @@
+class ShamrockException(Exception):
+    pass

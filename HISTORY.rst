@@ -11,3 +11,16 @@ History
 -------------------
 
 * Trefle.io changed so this release retains links to an old version that is to be removed.
+
+0.1.0 (22.07.2020.)
+-------------------
+
+* Trefle.io updated so these things were changed:
+    * Authorization is now handled through query parameter, copy module needed, new query_parameters property added and removed headers property.
+    * Pagination handled through links in the body and made relative instead of absolute.
+    * Gzip response needed to unwrap the JSON response now. Will remove this in the future versions.
+    * New endpoints added for division classes, division orders and distributions.
+    * Genuses endpoint renamed to genus.
+    * Versioning of the API started so the url parameter in the constructor is split to base and relative urls.
+    * Response changed to handle the added meta and links additions for the navigation.
+* Added ShamrockException wrapper for the low level library exceptions.

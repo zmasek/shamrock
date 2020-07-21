@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/v1/division_orders
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+yWO2+DMBSF/4tnJJT0MTC2HTq0UoduHSqDnXAVY1uYREJR/nvJA78IvahLpZaM
+        h3vu/XR9wNkTRhtKso89AUayRUIkrTjJyBNoQwsquCEJMWK77jTmawLkxpBsTwwXq+5hSjWku0XK
+        YAcGlPxUNeO1SQOTfVgIasw11+kBN2lF11IJUNoAo+QwtMbAr4HBMleRjGJfB3Dzr3i84rJtAtpv
+        OE+lQ86LjHHGM7tG23wDcs1U5ZU70aRNTYuSq7xznyF9R4z5HhRbzCaSxzDH5yZkSGlLF0esUaY3
+        QbsO3NLIrRDjCH7T0y8591t6RyF2YcIrp2AH0Ofbs8zpntP92+m+cf1AhuHWVsDW32fbOaZHu/Ng
+        sV76jHGktSehnMOhSJQLJWHF6/EoO7bHoNTyFZGMMcYz5yhPjfKt7ffc6ijLpVOwA+jD7Fmmpzmv
+        WyzN7o17sMWWM/ckFHQ41M/ncYmHgdAv687lttW8DrdVeBJKcVmX75m+LwH4rebO9QWGV5qAn9xn
+        gWu+zP7IF+DehZoe34myFSJKdqxjh2HjHRunZ/xf/Xn7AgAA///smMEOgjAMhl+FFyCRg1GPxOjJ
+        hMTEBxjLjCTCDIyDb6/i1m4Et12QS69NW7r26w+MeP8j7xvId2m4aBWrmiTvuKyfXCqWFB908cC9
+        8UkZ+KRS+4SGZPbAmyR+JybTfKN+Lsjaf9r94Os/Ldc+wdNG1Bn/rt1C4UdWunp0BUOwJD0AjIjv
+        NikQKdA8CrSDfEWn3r8sLt3StoWGYAB3guIZ1/splPBICH4g5JY71MscY7DgqUfHq0K2gmLOsnMb
+        14IhWITuGkbEt4xkgWRhHlnIMOGhf9xkW1Yu4MK1hiZhKB+FEeqE+uKo4w1g3qnxTQqzTKEZGMjt
+        GCKcCF+ccLyxPLF6JOR3tAx5XwAAAP//7Jo7DoMwEETPlDOkTYHiE1gmnWVHYN8fUpj9UKybyLI0
+        7aJBK+/TALN08M0kwBt4D8eb8mUXfluXGv2mKN9vF6x5NNjvSjAP5oczT1na6xN8yuq1JYqiNYfL
+        2IWqn/P5Pt2pmSWXosziy0pmI21zzjT9BzfNtvFBSbU775tWZa+8ZjbSnJWL+s8MpgpT/ZOpUs7/
+        9qmmUNXycZNVaxJXtCdlQB2oD0edcv+nj+fzU/9AIorWHGjHzlXgfEbODwAAAP//Gl7p3AgxRwNa
+        e4TWSEaIEIoBeAsZoYX45D26RoqwnaNJmmCSjuUiHKzQdAq0Ii2zqLgEtwr7gsT0VFtDoMK81AqC
+        6oxAQZVI2DwLkP9zU4HBBHRiSX5JYg6oq2peW8sFAAAA//8DAF4EpTV4MgAA
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2020 10:20:24 GMT
+      ETag:
+      - W/"b689f47ead5586f301e89b05b37c7e2d"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx/1.17.7
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 16dab1bc7a4ec6965849feac7712fe6a
+      X-Runtime:
+      - '0.145503'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

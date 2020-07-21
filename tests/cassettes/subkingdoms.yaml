@@ -11,38 +11,51 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://v0.trefle.io/api/subkingdoms
+    uri: https://trefle.io/api/v1/subkingdoms
   response:
     body:
-      string: '[{"id":1,"link":"http://trefle.io/api/subkingdoms/1","name":"Tracheobionta","slug":"tracheobionta"}]'
+      string: !!binary |
+        H4sIAAAAAAAAA4yQsQrDMAxE93yG5oDxaij9hQ7dSgelcVwT2Q6xk8X436tACSa0tOu903GnDD0m
+        BHXLYHtQsgWPToOC64yPpw6dDZ55C5EWw3I6yGT9GEFliJoG5gInK1Yp4tKN1ps+uCiON29QuXer
+        hFLxY6cLISfovY1fiL5XqENLuTd/leXswc4xfabnCY0+yW03/vLwEKe312ZIISHxkFKaFwAAAP//
+        AwBMbYT4cAEAAA==
     headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Connection:
       - keep-alive
-      Content-Length:
-      - '100'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 08:48:04 GMT
+      - Tue, 21 Jul 2020 10:20:23 GMT
+      ETag:
+      - W/"6e49051c73c505d407eca110de598158"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Server:
       - nginx/1.17.7
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
-      cache-control:
-      - max-age=0, private, must-revalidate
-      link:
-      - <https://v0.trefle.io/api/subkingdoms?page=1>; rel="first", <https://v0.trefle.io/api/subkingdoms?page=1>;
-        rel="last"
-      page-number:
-      - '1'
-      per-page:
-      - '30'
-      total:
-      - '1'
-      total-pages:
-      - '1'
-      x-request-id:
-      - fe2975b2ec50448701135409a25bb9a3
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 4407b9663bc7305b0b652b12784028a3
+      X-Runtime:
+      - '0.030581'
+      X-XSS-Protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

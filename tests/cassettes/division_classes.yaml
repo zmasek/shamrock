@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/v1/division_classes
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+yWQW8aMRCF/0rkM2hL26Qtt4JU9ZBIOaSnHqpZr2FHGHu1NpEQyn+vCWB7xyzr
+        pLcKjo9542/xm2F3rAILbPp7x7Bi08mIKVgLNmUPsFRaom4MVsBGzMjN0slrIktUK8OmO2aEXLjv
+        C2iweJ4UFT6jQa3+cAnGCFNQ46ngjCcqrrcO7iWu7uV8LU05j/IQJz3TNdqUK1TLSq+j8iCawrbA
+        a6FL5z5Axg6K+dQp9piWyH2Y/eeOWErpSyd7rF6mRwmug/A0aiNlP0LcdP8ZHdp9DO1Q0bQ0kTR0
+        Az4pseliSrhWuBBtf0oC27xT6vk4kYcY6ZnXlGSm5JNvN2u3NCVlJA3dgE9JbAr3vod7SYUDxGcP
+        cY/pZpP4nrXWcV132v+R1lvf7pfiorWA6ua74Xq95drCzXx/9+F5N6eaMfiaMT/WDN2RD9LFLpkB
+        v/PcR1phRQQKHTGbrGvLRPniUX6KBixyOm41kbNxqDET6KsH+uFGNsFZdMRsmK7t4vw3VrRY9Y9/
+        WJGPcWX4L+2qQ4jkwOvsZ87+tzBDqmoFCJoUIPLQRYQ5IsbM4E4+RES21m5NaJtCJd+8gSvx5qKF
+        334Gzorpzimpno2VOHOhwltf2N4B7+ICL+Oyf9nh5xvlPkFYBfNa6teXTS6iYDNO5GxCahwm+gsA
+        AP//7JhLDoJADIb33gbia2NcGHXjFVwQGQmJCgomuvDu1helrTPtAWb709o/M5+l5eMIR6fFfZfl
+        HL8dEe1uSFqwe35Dfc1T+GNzPhE1f7Ra7JzGzpn0xqamla3gSkTtEvBPRdKswOIotD450S6LvmZ2
+        QrKCtH4ifbCOmDfKatHXNG+kVCTVSipOp8vztWwkII7J2j10jPDEICZdsI+UsfRJYXFM1nzymhEZ
+        KzK4P6whs6hES6GqdhHYVGheuK28Y720TJhF3liIqBmk1SInVk5wf1jBqFXmTk5ve/FAuwzcN0Wq
+        8YWY4haxgaG0rnL5AYzrZlciM0gxRvtAnv7xSlk+cF3zKspGojWitwP9WH8IQIl9eWnaQMi8zgo3
+        SyDy5G56YPo6rMzwi+nrCI4OTgpstrBuHYD24eMxeAIAAP//AwCgyWYG2xoAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2020 10:20:24 GMT
+      ETag:
+      - W/"47b682ed59fac50cc02ee8f3823bf9a4"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx/1.17.7
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - b7297706a6effc7a86125fc5df747816
+      X-Runtime:
+      - '0.040466'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

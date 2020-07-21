@@ -11,19 +11,20 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://v0.trefle.io/api/divisions
+    uri: https://trefle.io/api/v1/divisions
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA8zXz2+CMBQH8P+lZzKEOXVczebFJR52M2bpoOKLtWW0LDGG/30sWPuDLVkPXbh+
-        Q/Pe+9CUsr2gAj5BAGdvOcVCEIGy7QVBgbIkQhTYEWXoIGWVxbGsyZ6SO+AxriB218UJihDDJ9It
-        eMEl4xR4JaDAXSxoU3bxyYrbqK8z9awz1XXWMCxCddbuIjXJEVhZ8BPK/jTb9Wlrpg3FTGJyK8Qa
-        StvhxIez/GliFTfvfp3oBVYzrzXOD4S/dy5mOWnF7bfwr6839WRPDQpgrnp1ixR6Gh59yRnsSe2i
-        5248HvSFJ/pCV3/u9nXusu+NUMHfh4ffSFJD4bpXTjoe9sT3jEmMQ2Z5znHhwudGqOCn4eGvvTj7
-        3Q5HxD7zZZ/p+itGpKte6kyhP4RH7zuxzUsrGxH53Jd8rus/fTQghurEihX8LDz8rR/bnrjxiPh9
-        D/jEOOFX3cKSD/a8mSr8eXj8vht329vheODTiSd8OtH11+fuG8qL4VXSzhX+Ijy+7sj2p4N8RK/A
-        94chNTkE0MGdUmeK/jE8fd+Jc7Oxsv8l330BAAD//wMAl9uYQaQNAAA=
+        H4sIAAAAAAAAA+yWzWqEMBSF932MrAWx/xVKF6V000IX3ZUuMhozl4mJNTog0ndvhkI0N7XJA8Tl
+        yT3H4/0IOJOaDpSUHzOBmpRFRiRtGSnJK+VSCVDdfjLnGdFi5EZukSxAHjQpZ6KZaMx5TjvIj0Ve
+        wxE0KKlz7NDj7gCS16pdjS+izoeeVnumdsZtDN+uA9d8d4ZtzQHJWzW335sRv6UdLU61Nju9CWoS
+        mG0jRyG2K6xDzZP9pp3btEcloWE9BlEhOQwCOxKIGBAXS9rAeqgxh85VwxiQIVGIoXC5XIepoh6E
+        yhHDDNz5hCAGwZVNe5ZswAT4WgsDcMbT/mP2f23Tnr5G0D4ChuQwBexIIGJA3CwXwfi4dxMcMQzB
+        nU8IYhDc2rSXqVKdqr3/VIH1MAjPkljEsLhb0jQI7/dorYUZOONp///u//MsYqMmuoFeD3+dPXSU
+        s/vi9NF0e+IHAAD//wKpAPohNxXoVaBFJfkliTnAWK+t5QIAAAD//wMAbjDj2zwOAAA=
     headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Connection:
       - keep-alive
       Content-Encoding:
@@ -31,7 +32,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 08:48:04 GMT
+      - Tue, 21 Jul 2020 10:20:24 GMT
+      ETag:
+      - W/"bf3f3f9a8be074e95f78bd2c99e09483"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Server:
       - nginx/1.17.7
       Strict-Transport-Security:
@@ -40,21 +45,20 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      cache-control:
-      - max-age=0, private, must-revalidate
-      link:
-      - <https://v0.trefle.io/api/divisions?page=1>; rel="first", <https://v0.trefle.io/api/divisions?page=1>;
-        rel="last"
-      page-number:
-      - '1'
-      per-page:
-      - '30'
-      total:
-      - '9'
-      total-pages:
-      - '1'
-      x-request-id:
-      - 9055857b45fe53851b6cfb153a30f099
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 7e34b5bf5b3459afed198856f33390fc
+      X-Runtime:
+      - '0.058973'
+      X-XSS-Protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

@@ -17,7 +17,7 @@ History
 
 * Trefle.io updated so these things were changed:
     * Authorization is now handled through query parameter, copy module needed, new query_parameters property added and removed headers property.
-    * Pagination handled through links in the body and made relative instead of absolute.
+    * Pagination handled through links in the body and made relative instead of absolute. No more page size.
     * Gzip response needed to unwrap the JSON response now. Will remove this in the future versions.
     * New endpoints added for division classes, division orders and distributions.
     * Genuses endpoint renamed to genus.

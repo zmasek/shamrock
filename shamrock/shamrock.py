@@ -32,9 +32,7 @@ logger: logging.Logger = logging.getLogger(__name__)
 class Shamrock:
     """API integration for Trefle service."""
 
-    def __init__(
-        self, token: str, page_size: Optional[int] = None, version: str = "v1"
-    ) -> None:
+    def __init__(self, token: str, version: str = "v1") -> None:
         """Constructs the API object.
 
         The API wrapper will be configured to try requests 5 times with a backoff factor of 0.1. It
@@ -43,17 +41,12 @@ class Shamrock:
 
         :param token: A token string that is acquired from signup.
         :type token: str
-        :param page_size: How many pages to return when calling an endpoint. If not specified, it
-            will default to whatever the API has. Currently that's 30 items.
-            (default is None)
-        :type page_size: int
         """
 
         self.base_url = "https://trefle.io/"
         self.api_url: str = f"{self.base_url}api/"
         self.api_version_url: str = f"{self.api_url}{version}/"
         self.query_parameters: Dict[str, Any] = {"token": token}
-        self.page_size: Optional[int] = page_size
         self.result: Optional[requests.Response] = None
         self.session: requests.Session = requests.Session()
         retries: Retry = Retry(
@@ -125,8 +118,6 @@ class Shamrock:
             if endpoint.startswith("http")
             else self._get_full_url(endpoint)
         }
-        if self.page_size is not None:
-            kwargs["params"] = {"page_size": self.page_size}
         kwargs["params"] = copy.deepcopy(self.query_parameters)
         if query_parameters:
             kwargs["params"].update(query_parameters)

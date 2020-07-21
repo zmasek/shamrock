@@ -1,7 +1,7 @@
 Configuration
 =============
 
-So far, only page size returned is configurable on the initial set-up. ::
+So far, only token is mandatory on the initial set-up. ::
 
     from shamrock import Shamrock
-    api = Shamrock('my_secret_token', page_size=5)
+    api = Shamrock('my_secret_token')

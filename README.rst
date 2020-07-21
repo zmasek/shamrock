@@ -46,9 +46,7 @@ Advanced Usage
 
 You can configure the API initially like this::
 
-    api = Shamrock(TOKEN, page_size=10)
-
-Currently, page_size is the only available option.
+    api = Shamrock(TOKEN)
 
 Methods that can be run with the API are::
 
@@ -83,11 +81,6 @@ It will work only if you previously made a request. For example::
 
     api.species()
     api.next()
-
-By default, the API responds with the list of whatever number is set in the Trefle. You can
-manipulate it with previously mentioned page_size::
-
-    api.species(page_size=5)
 
 You can also use the varoius query string options described on Trefle API documentation as keyword
 arguments in methods::

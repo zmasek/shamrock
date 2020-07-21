@@ -233,7 +233,7 @@ class BasicTests(unittest.TestCase):
 
     def test_config(self):
         """Test different configuration for API integration."""
-        self.api = Shamrock(TOKEN, page_size=30)
+        self.api = Shamrock(TOKEN)
         with vcr.use_cassette("species_config.yaml") as response:
             result = self.api.species()
             self.assertEqual(len(response), 1)

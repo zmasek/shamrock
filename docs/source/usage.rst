@@ -70,6 +70,7 @@ Specific Options
 ~~~~~~~~~~~~~~~~
 
 You can use the varoius query string options described on Trefle API documentation as keyword
-arguments in methods::
+arguments in methods, however, be careful when unpacking filters, so for example::
 
-    api.species(common_name="blackwood")
+    filters = {"filter[common_name]": "blackwood"}
+    api.species(**filters)

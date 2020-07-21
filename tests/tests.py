@@ -176,13 +176,15 @@ class BasicTests(unittest.TestCase):
     def test_query_parameters(self):
         """Test query parameters."""
         with vcr.use_cassette("query_parameter_example.yaml") as response:
-            result = self.api.species(common_name="blackwood")
+            filters = {"filter[common_name]": "blackwood"}
+            result = self.api.species(**filters)
             self.assertEqual(len(response), 1)
             self.assertEqual(
                 response.requests[0].uri,
-                "https://trefle.io/api/v1/species?common_name=blackwood",
+                "https://trefle.io/api/v1/species?filter%5Bcommon_name%5D=blackwood",
             )
             self.assertTrue(isinstance(result, dict))
+            self.assertEqual(result["meta"]["total"], 3)
             self.assertEqual(
                 result,
                 json.loads(gzip.decompress(response.responses[0]["body"]["string"])),

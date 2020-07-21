@@ -83,6 +83,7 @@ It will work only if you previously made a request. For example::
     api.next()
 
 You can also use the varoius query string options described on Trefle API documentation as keyword
-arguments in methods::
+arguments in methods, however, be careful when unpacking filters, for example::
 
-    api.species(common_name="blackwood")
+    filters = {"filter[common_name]" : "blackwood"}
+    api.species(**filters)

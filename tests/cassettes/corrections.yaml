@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.21.0
+    method: GET
+    uri: https://trefle.io/api/v1/corrections
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9SVS27bMBCGr0Jw4xZQDFIPS+YuKNDu2kWyaloYND2x1EqUIFJ5NMg5cqBcrCPH
+        b8kOEzQoshPI+Ycz8/2k7uhMWknFxR3NZlRwj9agyno2sbcVUEHPKlAZGLpeb6OSIIyi2KONgXqx
+        wNnIo9ey1pmeL5W6yXOPqlTqOUyMlbYxmK6GX6AszOh6a3lOU2EdgMtSKagwYjK9XSXRpcUKVhlr
+        kO22tKjymc9OWHzCgnPui5CLIBoyFnzHPE8J9+J4fM4DEYxFFAxHIWvjsCnszGalpuKOGmxW2+wy
+        UxMti7aw0ym2T2Q+lRhcyJusaIpJCtk8tZMrmTcYE/qss9XorD1YFfR+1eqyhXvvadQB45HTtDnj
+        8Ygdnzb9lIL6bYQ4WzfwFev/XNYFDqDLYTXl13BYVUk2wyLtsMjgVEFNHh8ua4BC6iwbEINfhqCQ
+        XEOek8tFPZiVfICbauEEshSRteojPUD5iR5SRnrcD49SjpCKCONh7MdOlPeL2MHWo7ig+83iKd0s
+        P++3cI9ccSc8eUe4DWhQErSBF/HeyJyAB9wReMJfAnxThTPxLYnXl2eHeezKfJxE74N5qqVNoW4K
+        bHual2UBtetF35aSldaJfhLHTvSTwJF+bykuFuhrf+GD/ozbZvDd/q4cA5n/Hszw+NC2jbwlUXLW
+        KOnkAxzPnuyoBUIR+MIfD8No/JwFmOD4UMSRiwW6VTxPv9MvntOTZ4e5/++ZfwHdmBb324AmnTbJ
+        vD2RzEo9sAR5qnS5MlgFDjyyc88X4qV6+EN/a28G2SAxpAZT5lcYbdPMbO04OSHxDzth3D4aLBL+
+        aBjHIxcn7Nf7Oh90suy4IHB3Qejogv98889sVpX17Z+yMi3AF13/Pq3TGxDxI+S33oCQjV3IHyjF
+        xQC9Ou9gxh0zhP/eDG/3JPwFAAD//9SZYW6DMAyFr8IBEAohDvBzR0mhUpFYkWiZxEl2oF1s0IBI
+        IB0vmqaO/zzL5nsxdphbgqus533BetpsDnaYv+oQlBDUIXIJbQfOpH/hEnc8yyPoasjjNAc98tKG
+        8VY0w0asp6aqaOqmhZqFIQsmHdQoMrY7L+pGITLEAI409vFvS358JraRLPDoksh5hjaHF4O/q7Ma
+        yq27svmoCnRXmFTBLNvHnrCIix/OvYFdJiD2dRYI9VW9D+ibOBbzHGUu2M6t2z9hXlbqqk1+b1XR
+        g8wXVaBlEPOUMOZpyiHmmywA5ut6R+bbOCbzhKHMiY5xMXC+FV09fPu/PofsmnosHxsIDWWwSAH2
+        cSQSbCfMOLYJODMB+LtqHz3gjmf5AL4TIJIH88Gpu13QS2DjTWkZxl9iZz9LhS9/nYUX+0kSuuJY
+        zOEFgOgYw91S76U/tVXpf/AnHUSdJHLqRcSwLdCRhhf2WRM6I1ng4ameDvLDZyn4XbV9ra5lBV4D
+        mO/K0EIGkCzGDCC9j72RipcJTF34NKJlBnjSJxm/zgzfAAAA///Umk1uwyAQhfc5RZU1ig1xa7qo
+        cpIuqEQsWoojh/woVe5ekINrJ6R+ZOe1eeOB9wnPYB6DYWfFh9Ku9U9GISgxEBjS5jkQXqE+P5pI
+        GgadityJNkCA4wgsJ4aAkZV2a52+GQQhBgDPIQAox4r/SB5J/nciEo/Vd7/AW4CXqbUAh7rRyp6k
+        2T6wB/TFEAVl286PUsDSy8B+LkkkDITkfswBEXAzwNk06oNK7P3hsfisE1C4iJ6CCmCALZ4p9ilY
+        5tjRz3USgPlXk/Wu30QZ2A3/G+RsGhVAWIFGnWoDV4LdIgUZZngxeiGkNRw867vJIsHxTkJicZzn
+        7zMy18p8tZGkXrs3ZmKjsj3N/jLzxq9Vs7Xxp6uNqOQbdYOMPP47hrkxWozEKfPCT/Fb+vt/P3Nb
+        W6EdlkVe0vN59gsAAP//AwCvhmOrGSgAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2020 20:37:08 GMT
+      ETag:
+      - W/"52ac4d0d57d37021b6361b39f8521d77"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx/1.17.7
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - cab3291f02383a63be26a95eb0aba30d
+      X-Runtime:
+      - '0.544036'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

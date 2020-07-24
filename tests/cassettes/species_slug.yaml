@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/v1/species/182512
+    uri: https://trefle.io/api/v1/species/solanum-lycopersicum
   response:
     body:
       string: !!binary |
@@ -172,7 +172,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 12:11:05 GMT
+      - Tue, 21 Jul 2020 15:22:54 GMT
       ETag:
       - W/"3ca4bd42a45d89cb01f8a85224567c38"
       Last-Modified:
@@ -196,9 +196,9 @@ interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Request-Id:
-      - 3d0cf655d5eb25479ecc0c5b2f50e99a
+      - 8e8861fce6c14032b61d9cc15cf5f973
       X-Runtime:
-      - '0.070029'
+      - '0.032082'
       X-XSS-Protection:
       - 1; mode=block
     status:

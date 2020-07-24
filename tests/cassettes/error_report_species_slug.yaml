@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: null
+    body: '{"notes": "TEST"}'
     headers:
       Accept:
       - '*/*'
@@ -8,19 +8,25 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
+      Content-Length:
+      - '42'
+      Content-Type:
+      - application/json
       User-Agent:
       - python-requests/2.21.0
-    method: GET
-    uri: https://trefle.io/api/v1/kingdoms
+    method: POST
+    uri: https://trefle.io/api/v1/species/chenopodium-album/report
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4TOsQoCMRCE4f4eY+pASBsQX8FeLBaSC8ttcoe7ZxPy7sZetJ6P4e9IZIR47+CE
-        GBwa1YyIm1AzynBQOQtiO0UchNumiB2aZZ3K08H+FfzGraS9qg8Y47H8h/N35afal+l6UMmXMIXQ
-        TzAcav7Ed9huJDN/jOUNAAD//wMAewBYztIAAAA=
+        H4sIAAAAAAAAA3yQT0/DMAzF73yKyudualK2sdwmVAHiz9DaE5cqJGZE6tIoSYWmqd8dhzK47ejn
+        37OffQItowRxAqNBLBhbshw8qt7rNh4dgoDaoTIY4E9PJGPrm4QOAf2PUJZUfUlvjd2fnR5d7yMZ
+        1ae0e2xDlHEI1HBoNXH/nV/D4CgNkiyVQhdRt+9HEHbouhxsHzF56/vN8257+5g1Vd3k2etTtamr
+        7OHuZbur5mmiR5mcMhLMC17MitWM84YtRXktOJuz9eKNuGnXBY6zVeLoZLo7mt6ek0yZw1SOORxw
+        +mAnQ2wPvTYfBvWloeN49Q0AAP//AwDmfPa7eAEAAA==
     headers:
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - max-age=604800, private
       Connection:
       - keep-alive
       Content-Encoding:
@@ -28,9 +34,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 15:22:54 GMT
+      - Wed, 22 Jul 2020 16:34:21 GMT
       ETag:
-      - W/"4e9903a1b30b559843eab0f10db2639c"
+      - W/"9d833960001c9707739551f4d84882fd"
+      Last-Modified:
+      - Wed, 22 Jul 2020 16:34:21 GMT
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Server:
@@ -50,9 +58,9 @@ interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Request-Id:
-      - 7c4285bc8d33579544238c1de8027e97
+      - 6cc47f13c8fc07d815f04f27c26da935
       X-Runtime:
-      - '0.067428'
+      - '0.040848'
       X-XSS-Protection:
       - 1; mode=block
     status:

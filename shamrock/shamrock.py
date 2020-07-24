@@ -3,7 +3,7 @@
 """Shamrock - A Trefle API Integration."""
 import copy
 import logging
-from typing import Any, Callable, Dict, Optional, Tuple
+from typing import Any, Callable, Dict, Optional, Tuple, Union
 from urllib import parse
 
 import requests
@@ -11,9 +11,11 @@ from requests.adapters import HTTPAdapter
 from requests.exceptions import HTTPError, Timeout, TooManyRedirects
 from requests.packages.urllib3.util.retry import Retry
 
+from .decorators import _check_argument_value
 from .exceptions import ShamrockException
+from .messages import INSTANCE, JSON, REDIRECTS, TIMEOUT, UNKNOWN
 
-ENDPOINTS: Tuple[str, str, str, str, str, str, str] = (
+ENDPOINTS: Tuple[str, str, str, str, str, str, str, str, str, str] = (
     "kingdoms",
     "subkingdoms",
     "divisions",
@@ -26,27 +28,31 @@ ENDPOINTS: Tuple[str, str, str, str, str, str, str] = (
     "distributions",
 )
 NAVIGATION: Tuple[str, str, str, str] = ("next", "prev", "first", "last")
+BASE_URL: str = "https://trefle.io/"
+
 logger: logging.Logger = logging.getLogger(__name__)
 
 
 class Shamrock:
     """API integration for Trefle service."""
 
-    def __init__(self, token: str, version: str = "v1") -> None:
+    def __init__(self, token: str) -> None:
         """Constructs the API object.
 
         The API wrapper will be configured to try requests 5 times with a backoff factor of 0.1. It
         will retry on errors 500, 502, 503 and 504 if anything is temporarily wrong with the
         service.
 
-        :param token: A token string that is acquired from signup.
+        :param token: A token string that is acquired from the personal profile settings.
         :type token: str
         """
 
-        self.base_url = "https://trefle.io/"
+        self.token: str = token
+        self.version: str = "v1"  # This should become a parameter when the Trefle API changes
+        self.base_url: str = BASE_URL
         self.api_url: str = f"{self.base_url}api/"
-        self.api_version_url: str = f"{self.api_url}{version}/"
-        self.query_parameters: Dict[str, Any] = {"token": token}
+        self.api_version_url: str = f"{self.api_url}{self.version}/"
+        self.default_query_parameters: Dict[str, Any] = {"token": token}
         self.result: Optional[requests.Response] = None
         self.session: requests.Session = requests.Session()
         retries: Retry = Retry(
@@ -66,6 +72,7 @@ class Shamrock:
         :returns: A callable if the attr is from a list of endpoints or navigation items.
         :rtype: callable
         """
+
         if attr in ENDPOINTS:
 
             def endpoint(*args: Any, **kwargs: Any) -> Callable[[Any, Any], Any]:
@@ -118,7 +125,7 @@ class Shamrock:
             if endpoint.startswith("http")
             else self._get_full_url(endpoint)
         }
-        kwargs["params"] = copy.deepcopy(self.query_parameters)
+        kwargs["params"] = copy.deepcopy(self.default_query_parameters)
         if query_parameters:
             kwargs["params"].update(query_parameters)
         return kwargs
@@ -141,7 +148,10 @@ class Shamrock:
         except KeyError:
             return kwargs["url"]
 
-    def _get_result(self, kwargs: Dict[str, Any]) -> Any:
+    @_check_argument_value("method", ("GET", "POST"))
+    def _get_result(
+        self, kwargs: Dict[str, Any], method: str = "GET", json: Optional[Any] = None
+    ) -> Any:
         """Get a response from a request object if it is not stored already in the class instance.
 
         If a response exists on the class instance and the URL is the same, it returns a JSON of the
@@ -149,11 +159,16 @@ class Shamrock:
         that may happen during the call. After the call is complete, it checks the status code and
         logs an error if it happens. Otherwise it will try to decode the response body as a JSON and
         return it with saving the response on the instance. Failing that, it will log an error and
-        return None.
+        raise it.
 
         :param kwargs: A dict that holds options for a request that will eventually be made.
         :type kwargs: dict
-        :raises ShamrockException if the request throws a request exception or response is bad.
+        :param method: A string specifying the HTTP method, either "GET" by default or "POST".
+        :type method: str
+        :param json: Any object that can get serialized as a JSON when submitted to an endpoint.
+        :type json: (optional) most often a dict that gets submitted as a JSON body.
+        :raises ShamrockException if the request method is illegal or the request throws an
+            exception or the response is bad.
         :returns: Any JSON that gets decoded from a successful response or None if it fails.
         :rtype: Any
         """
@@ -163,15 +178,15 @@ class Shamrock:
             if built_url == self.result.url:
                 return self.result.json()
         try:
-            response: requests.Response = self.session.get(**kwargs)
+            response: requests.Response = self.session.get(
+                **kwargs
+            ) if method == "GET" else self.session.post(json=json, **kwargs)
         except Timeout:
-            message = "The request timed out."
-            logger.error(message)
-            raise ShamrockException(message)
+            logger.error(TIMEOUT)
+            raise ShamrockException(TIMEOUT)
         except TooManyRedirects:
-            message = "The request had too many redirects."
-            logger.error(message)
-            raise ShamrockException(message)
+            logger.error(REDIRECTS)
+            raise ShamrockException(REDIRECTS)
         finally:
             self.session.close()
 
@@ -180,18 +195,18 @@ class Shamrock:
             try:
                 response_json: Any = response.json()
             except ValueError:
-                message = "Invalid JSON in response."
-                logger.error(message)
-                raise ShamrockException(message)
+                logger.error(JSON)
+                raise ShamrockException(JSON)
             else:
                 self.result = response
                 return response_json
         except HTTPError as e:
-            message = f"Unknown exception raised: {repr(e)}"
+            message = UNKNOWN.format(exception=repr(e))
             logger.error(message)
             raise ShamrockException(message)
 
-    def search(self, q: str, **kwargs: Any) -> Any:
+    @_check_argument_value("what", ("plants", "species"))
+    def search(self, q: str, what: str = "plants", **kwargs: Any) -> Any:
         """Search the plant and return results of the API call.
 
         Searches the Trefle database of any matching plant and return either a successful result or
@@ -199,18 +214,121 @@ class Shamrock:
 
         :param q: A string that is used to search the plant with.
         :type q: str
-        :param kwargs: Any query strings to add to the search object.
-        :type kwargs: dict
-        :returns: Any JSON that gets decoded from a successful response or None if it fails.
+        :param what: A string that is that is signifying what item to report an error on.
+        :type what: str (if not specified, then "plants", but can be specified as "species")
+        :param **kwargs: Any query strings to add to the search object.
+        :type **kwargs: dict
+        :raises ShamrockException if the type of query is illegal.
+        :returns: Any JSON that gets decoded from a successful response.
         :rtype: Any
         """
 
-        query_parameters = {"q": q}
-        query_parameters.update(**kwargs)
-        kwargs = self._kwargs("plants/search", **query_parameters)
-        return self._get_result(kwargs)
+        query_parameters: Dict[str, Any] = {"q": q}
+        query_parameters.update(kwargs)
+        request_kwargs: Dict[str, Any] = self._kwargs(
+            f"{what}/search", **query_parameters
+        )
+        return self._get_result(request_kwargs)
 
-    def ENDPOINT(self, endpoint: str, pk: Optional[int] = None, **kwargs: Any) -> Any:
+    @_check_argument_value("what", ("plants", "species"))
+    def report_error(
+        self,
+        identifier: Union[int, str],
+        notes: str,
+        what: str = "plants",
+        **kwargs: Any,
+    ) -> Any:
+        """Report an error in the API database by passing the notes. The error can be reported to
+        either the plants or the species. By default, to plants, providing an identifier of an item.
+
+        Returns the response of a report.
+
+        :param identifier: An identifier, either a slug or a primary key of the entry.
+        :type identifier: int or str
+        :param notes: A string that is delivered to report an error on the entry.
+        :type notes: str
+        :param what: A string that is that is signifying what item to report an error on.
+        :type what: str (if not specified, then "plants", but can be specified as "species")
+        :param kwargs: Any query strings to add to the post object.
+        :type kwargs: dict
+        :raises ShamrockException if the type of report is illegal.
+        :returns: Any JSON that gets decoded from a successful response.
+        :rtype: Any
+        """
+
+        json: Dict[str, str] = {"notes": notes}
+        request_kwargs: Dict[str, Any] = self._kwargs(f"{what}/{identifier}/report")
+        return self._get_result(request_kwargs, method="POST", json=json)
+
+    @_check_argument_value("modifier", ("distributions", "genus"))
+    def plants_by(
+        self, modifier: str, identifier: Union[int, str], **kwargs: Any
+    ) -> Any:
+        """Returns all the plants in a given distribution or genus.
+
+        :param modifier: A string that tells what to use as a lookup. Either "distributions" or
+            "genus".
+        :type modifier: str
+        :param identifier: An identifier, either a slug or a primary key of the modifier.
+        :type identifier: int or str
+        :param **kwargs: Any query string options to add to the call.
+        :type **kwargs: dict
+        :raises ShamrockException if the value of modifier is wrong.
+        :returns: Any JSON that gets decoded from a successful response.
+        :rtype: Any
+        """
+
+        request_kwargs: Dict[str, Any] = self._kwargs(
+            f"{modifier}/{identifier}/plants", **kwargs
+        )
+        return self._get_result(request_kwargs)
+
+    def corrections(
+        self,
+        identifier: Optional[Union[int, str]] = None,
+        json: Optional[Any] = None,
+        **kwargs: Any,
+    ) -> Any:
+        """Returns one correction or a list of corrections, or submit one.
+
+        :param identifier: An identifier, a primary key of the correction.
+        :type identifier: int
+        :param json: Any object that can get serialized as a JSON when submitted to an endpoint.
+        :type json: (optional) most often a dict that gets submitted as a JSON body.
+        :param **kwargs: Any query string options to add to the call.
+        :type **kwargs: dict
+        :returns: Any JSON that gets decoded from a successful response.
+        :rtype: Any
+        """
+        request_kwargs: Dict[str, Any] = {}
+        if json is None:
+            request_kwargs = self._kwargs(
+                f"corrections/{identifier}" if identifier else "corrections", **kwargs
+            )
+            return self._get_result(request_kwargs)
+        else:
+            request_kwargs = self._kwargs(f"corrections/species/{identifier}", **kwargs)
+            return self._get_result(request_kwargs, method="POST", json=json)
+
+    def auth(self, origin: str, **kwargs: Any) -> Any:
+        """Return a JWT that you can use in a browser. You need to specify where you'll be using the
+        token so it can be bound to a certain address.
+
+        :param origin: A URL that is delivered to the endpoint so the responding JWT can use it.
+        :type origin: str
+        :param **kwargs: Any query string options to add to the call.
+        :type **kwargs: dict
+        """
+        query_parameters: Dict[str, Any] = {"origin": origin}
+        query_parameters.update(kwargs)
+        request_kwargs: Dict[str, Any] = self._kwargs(
+            f"/api/auth/claim", **query_parameters
+        )
+        return self._get_result(request_kwargs, method="POST")
+
+    def ENDPOINT(
+        self, endpoint: str, identifier: Optional[Union[int, str]] = None, **kwargs: Any
+    ) -> Any:
         """Query the endpoint of the Trefle API and return results.
 
         This method is called on any endpoint defined for the API. It can return any result from
@@ -218,18 +336,18 @@ class Shamrock:
 
         :param endpoint: An endpoint where the library will make a request.
         :type endpoint: str
-        :param pk: (optional) A primary key of the element.
-        :type pk: int
-        :param kwargs: Any query strings to add to the search object.
-        :type kwargs: dict
+        :param identifier: (optional) A primary key or the slug of the element.
+        :type identifier: int, str
+        :param **kwargs: Any query strings to add to the search object.
+        :type **kwargs: dict
         :returns: Any JSON that gets decoded from a successful response or None if it fails.
         :rtype: Any
         """
 
-        requests_kwargs: Dict[str, Any] = self._kwargs(
-            f"{endpoint}/{pk:d}" if pk else endpoint, **kwargs
+        request_kwargs: Dict[str, Any] = self._kwargs(
+            f"{endpoint}/{identifier}" if identifier else endpoint, **kwargs
         )
-        return self._get_result(requests_kwargs)
+        return self._get_result(request_kwargs)
 
     def NAVIGATE(self, navigation: str, **kwargs: Any) -> Any:
         """Navigate the API if any navigation exists on the results once the first call is made and
@@ -240,14 +358,18 @@ class Shamrock:
 
         :param navigation: A navigation option where the library will make a request.
         :type navigation: str
-        :param kwargs: Any query strings to add to the search object.
-        :type kwargs: dict
+        :param **kwargs: Any query strings to add to the search object.
+        :type **kwargs: dict
         :returns: Any JSON that gets decoded from a successful response or None if it fails.
         :rtype: Any
         """
 
-        if self.result is not None and navigation in self.result.json()["links"]:
-            requests_kwargs: Dict[str, Any] = self._kwargs(
+        if self.result is not None and navigation in self.result.json().get("links"):
+            request_kwargs: Dict[str, Any] = self._kwargs(
                 self.result.json()["links"][navigation], **kwargs
             )
-            return self._get_result(requests_kwargs)
+            return self._get_result(request_kwargs)
+
+    def __str__(self) -> str:
+        """Describe the Shamrock instance."""
+        return INSTANCE.format(token=self.token, version=self.version)

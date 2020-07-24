@@ -70,6 +70,11 @@ class BasicTests(unittest.TestCase):
         """Test _get_result."""
         self.api.result = None
         kwargs = self.api._kwargs("species")
+        with self.assertRaises(ShamrockException) as e:
+            result = self.api._get_result(kwargs, method="PUT")
+        self.assertEqual(
+            "The parameter 'method' can only be 'GET' or 'POST'.", str(e.exception)
+        )
         with vcr.use_cassette("species.yaml") as response:
             result = self.api._get_result(kwargs)
             self.assertCommon(response, result, "species")
@@ -145,8 +150,8 @@ class BasicTests(unittest.TestCase):
                 self.assertCommon(response, result, endpoint)
 
     def test_valid_endpoint_one(self):
-        """Test valid endpoint with a primary key."""
-        with vcr.use_cassette("species_one.yaml") as response:
+        """Test valid endpoint with an identifier."""
+        with vcr.use_cassette("species_id.yaml") as response:
             result = self.api.species(182512)
             self.assertEqual(len(response), 1)
             self.assertEqual(
@@ -157,9 +162,21 @@ class BasicTests(unittest.TestCase):
                 result,
                 json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
             )
+        with vcr.use_cassette("species_slug.yaml") as response:
+            result = self.api.species("solanum-lycopersicum")
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/species/solanum-lycopersicum",
+            )
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
 
     def test_search(self):
-        """Test search of species."""
+        """Test search."""
         with vcr.use_cassette("search.yaml") as response:
             result = self.api.search("tomato")
             self.assertEqual(len(response), 1)
@@ -171,6 +188,189 @@ class BasicTests(unittest.TestCase):
             self.assertEqual(
                 result,
                 json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+        with vcr.use_cassette("search_species.yaml") as response:
+            result = self.api.search("tomato", what="species")
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/species/search?q=tomato",
+            )
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+        with self.assertRaises(ShamrockException) as e:
+            self.api.search("tomato", what="illegal")
+        self.assertEqual(
+            "The parameter 'what' can only be 'plants' or 'species'.", str(e.exception)
+        )
+
+    def test_report_error(self):
+        """Test report_error."""
+        with self.assertRaises(ShamrockException) as e:
+            self.api.report_error("", 1, what="illegal")
+        self.assertEqual(
+            "The parameter 'what' can only be 'plants' or 'species'.", str(e.exception)
+        )
+
+        with vcr.use_cassette("error_report_plant_id.yaml") as response:
+            result = self.api.report_error(122263, "TEST")
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/plants/122263/report",
+            )
+            self.assertEqual(result["data"]["record_type"], "Species")
+            self.assertEqual(result["data"]["record_id"], 122263)
+        with vcr.use_cassette("error_report_plant_slug.yaml") as response:
+            result = self.api.report_error("cocos-nucifera", "TEST")
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/plants/cocos-nucifera/report",
+            )
+            self.assertEqual(result["data"]["record_type"], "Species")
+            self.assertEqual(result["data"]["record_id"], 122263)
+        with vcr.use_cassette("error_report_species_id.yaml") as response:
+            result = self.api.report_error(119861, "TEST", what="species")
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/species/119861/report",
+            )
+            self.assertEqual(result["data"]["record_type"], "Species")
+            self.assertEqual(result["data"]["record_id"], 119861)
+        with vcr.use_cassette("error_report_species_slug.yaml") as response:
+            result = self.api.report_error("chenopodium-album", "TEST", what="species")
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/species/chenopodium-album/report",
+            )
+            self.assertEqual(result["data"]["record_type"], "Species")
+            self.assertEqual(result["data"]["record_id"], 119861)
+
+    def test_plants_by(self):
+        """Test plants_by."""
+        with self.assertRaises(ShamrockException) as e:
+            self.api.plants_by("illegal", 1)
+        self.assertEqual(
+            "The parameter 'modifier' can only be 'distributions' or 'genus'.",
+            str(e.exception),
+        )
+
+        with vcr.use_cassette("plants_by_distributions_id.yaml") as response:
+            result = self.api.plants_by("distributions", 286)
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/distributions/286/plants",
+            )
+        with vcr.use_cassette("plants_by_distributions_slug.yaml") as response:
+            result = self.api.plants_by("distributions", "france")
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/distributions/france/plants",
+            )
+        with vcr.use_cassette("plants_by_genus_id.yaml") as response:
+            result = self.api.plants_by("genus", 15849)
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri, "https://trefle.io/api/v1/genus/15849/plants"
+            )
+        with vcr.use_cassette("plants_by_genus_slug.yaml") as response:
+            result = self.api.plants_by("genus", "aalius")
+            self.assertEqual(len(response), 1)
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                response.requests[0].uri, "https://trefle.io/api/v1/genus/aalius/plants"
+            )
+
+    def test_corrections(self):
+        """Test corrections."""
+        with vcr.use_cassette("corrections.yaml") as response:
+            result = self.api.corrections()
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri, "https://trefle.io/api/v1/corrections"
+            )
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+        with vcr.use_cassette("corrections_id.yaml") as response:
+            result = self.api.corrections(1)
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri, "https://trefle.io/api/v1/corrections/1"
+            )
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+        with vcr.use_cassette("corrections_post_slug.yaml") as response:
+            json_body = {
+                "notes": "TEST",
+                "source_type": "external",
+                "source_reference": "https://conifersociety.org/conifers/abies-alba/",
+                "correction": {
+                    "maximum_height_value": 6800,
+                    "maximum_height_unit": "cm",
+                },
+            }
+            result = self.api.corrections("abies-alba", json_body)
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/corrections/species/abies-alba",
+            )
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+        with vcr.use_cassette("corrections_post_id.yaml") as response:
+            json_body = {
+                "notes": "TEST",
+                "source_type": "external",
+                "source_reference": "https://conifersociety.org/conifers/abies-alba/",
+                "correction": {
+                    "maximum_height_value": 6800,
+                    "maximum_height_unit": "cm",
+                },
+            }
+            result = self.api.corrections(1164724, json_body)
+            self.assertEqual(len(response), 1)
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/v1/corrections/species/1164724",
+            )
+            self.assertTrue(isinstance(result, dict))
+            self.assertEqual(
+                result,
+                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
+            )
+
+    def test_auth(self):
+        """Test auth."""
+        with vcr.use_cassette("auth.yaml") as response:
+            result = self.api.auth(origin="https://example.com", ip="0.0.0.0")
+            self.assertTrue("token" in result)
+            self.assertEqual(
+                response.requests[0].uri,
+                "https://trefle.io/api/auth/claim?ip=0.0.0.0&origin=https%3A%2F%2Fexample.com",
             )
 
     def test_query_parameters(self):
@@ -233,29 +433,9 @@ class BasicTests(unittest.TestCase):
             self.assertIsNotNone(self.api.last())
             self.assertIsNone(self.api.next())
 
-    def test_config(self):
-        """Test different configuration for API integration."""
-        self.api = Shamrock(TOKEN)
-        with vcr.use_cassette("species_config.yaml") as response:
-            result = self.api.species()
-            self.assertEqual(len(response), 1)
-            self.assertEqual(
-                response.requests[0].uri, "https://trefle.io/api/v1/species"
-            )
-            self.assertTrue(isinstance(result, dict))
-            self.assertEqual(
-                result,
-                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
-            )
-        with vcr.use_cassette("search_config.yaml") as response:
-            result = self.api.search("tomato")
-            self.assertEqual(len(response), 1)
-            self.assertEqual(
-                response.requests[0].uri,
-                "https://trefle.io/api/v1/plants/search?q=tomato",
-            )
-            self.assertTrue(isinstance(result, dict))
-            self.assertEqual(
-                result,
-                json.loads(gzip.decompress(response.responses[0]["body"]["string"])),
-            )
+    def test___str__(self):
+        """Test string response magic method of the library instance."""
+        self.assertEqual(
+            self.api.__str__(),
+            f"An instance of Shamrock API integration for Trefle service with token id: '{TOKEN}', querying version: '{self.api.version}'",
+        )

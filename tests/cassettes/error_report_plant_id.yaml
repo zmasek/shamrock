@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: null
+    body: '{"notes": "TEST"}'
     headers:
       Accept:
       - '*/*'
@@ -8,19 +8,25 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
+      Content-Length:
+      - '42'
+      Content-Type:
+      - application/json
       User-Agent:
       - python-requests/2.21.0
-    method: GET
-    uri: https://trefle.io/api/v1/kingdoms
+    method: POST
+    uri: https://trefle.io/api/v1/plants/122263/report
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4TOsQoCMRCE4f4eY+pASBsQX8FeLBaSC8ttcoe7ZxPy7sZetJ6P4e9IZIR47+CE
-        GBwa1YyIm1AzynBQOQtiO0UchNumiB2aZZ3K08H+FfzGraS9qg8Y47H8h/N35afal+l6UMmXMIXQ
-        TzAcav7Ed9huJDN/jOUNAAD//wMAewBYztIAAAA=
+        H4sIAAAAAAAAA3yQT0/DMAzF73yKyudsahJWpNwmVAHiz9DaE5cqS8yI1CVRkgpNU7876crgtqOf
+        f89+9gm0TBLECYwGsaK0KgkEVC7oLh09goDGozIY4U+fSMoYqziBIWI4C5xTAt8yWGP3F2dA70LK
+        RvUl7R67mGQaYm54tDpz/51fw+BzGsyyVAp9Qt3tjiDs0PcErEs4eZvH9et2c/9ctHXTkuL9pV43
+        dfH08LbZ1stpYkA5OWXKMCtZuSjvFoy1tBL8VrByuWLsI3PzrmscP3P55Hx3Ms5eksyZ41yOBA44
+        f7CXMXUHp82nQX1t6Dje/AAAAP//AwAhhLU1eAEAAA==
     headers:
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - max-age=604800, private
       Connection:
       - keep-alive
       Content-Encoding:
@@ -28,9 +34,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 15:22:54 GMT
+      - Wed, 22 Jul 2020 16:34:20 GMT
       ETag:
-      - W/"4e9903a1b30b559843eab0f10db2639c"
+      - W/"c648c4138425414b2642c478a35e95a5"
+      Last-Modified:
+      - Wed, 22 Jul 2020 16:34:20 GMT
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Server:
@@ -50,9 +58,9 @@ interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Request-Id:
-      - 7c4285bc8d33579544238c1de8027e97
+      - 1942f0cb2cf4d1aba600f399bdf2515c
       X-Runtime:
-      - '0.067428'
+      - '0.107966'
       X-XSS-Protection:
       - 1; mode=block
     status:

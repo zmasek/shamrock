@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"notes": "TEST", "source_type": "external", "source_reference": "https://conifersociety.org/conifers/abies-alba/",
+      "correction": {"maximum_height_value": 6800, "maximum_height_unit": "cm"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '190'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.21.0
+    method: POST
+    uri: https://trefle.io/api/v1/corrections/species/1164724
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4SRzU7DMBCE7zwF2nOKnLRukW898ATtCYSsjb00lmInim2gqvLurOnPASG4zs58
+        61mfwGJCUCdwFpSUKyErmMgMk9XpOBIo2I1kHEW46cVZ1+vVpllVkCNN38pyWVfwgVNw4XCJhtz3
+        FZgOw4F0TJhyZN5IwbIHbpPLnjzyU4hlNIbGRFa3xysjDIlKdv+025fgRFgMmFhrRCMWYrNolvta
+        qrpRcvPQ1PKZfWfk/z6uxd2SG0K5hMdP57PXHblDl/Q79pnft34Uovo5y8EVtPEMiXylkNybMzqg
+        L422Ld/tHvsWYb62jb9s4Lh6kYL5ZcnrzGZP51/pMSbtB8tYsn+VmOe7LwAAAP//AwAYFVmwzAEA
+        AA==
+    headers:
+      Cache-Control:
+      - max-age=604800, private
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 23 Jul 2020 15:12:57 GMT
+      ETag:
+      - W/"4c0469f0ab0ba628089b0cb286dab441"
+      Last-Modified:
+      - Thu, 23 Jul 2020 15:12:57 GMT
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx/1.17.7
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - f35b2f939c4481f5edb9be5aff6102df
+      X-Runtime:
+      - '0.074307'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

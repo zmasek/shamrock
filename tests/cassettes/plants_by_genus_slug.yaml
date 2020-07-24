@@ -11,13 +11,13 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/v1/kingdoms
+    uri: https://trefle.io/api/v1/genus/aalius/plants
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4TOsQoCMRCE4f4eY+pASBsQX8FeLBaSC8ttcoe7ZxPy7sZetJ6P4e9IZIR47+CE
-        GBwa1YyIm1AzynBQOQtiO0UchNumiB2aZZ3K08H+FfzGraS9qg8Y47H8h/N35afal+l6UMmXMIXQ
-        TzAcav7Ed9huJDN/jOUNAAD//wMAewBYztIAAAA=
+        H4sIAAAAAAAAA5TOQQrCMBBG4X2P8a8DSV24CBQPoiIDTcvQMQZn0k3I3dUTSPfvg9cwkxHi9T44
+        COdNERs0yYIIT4X9PvoilE0va8pVHzxPRMJV4bDwW+1veKshnM6F1jSNXyR01HSHZ/pdNtjLSBBD
+        78MHAAD//wMAMLj2HrsAAAA=
     headers:
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -28,9 +28,9 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 15:22:54 GMT
+      - Wed, 22 Jul 2020 17:49:28 GMT
       ETag:
-      - W/"4e9903a1b30b559843eab0f10db2639c"
+      - W/"9ffe2a8cf2935a6ad802100028e8bc35"
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Server:
@@ -50,9 +50,9 @@ interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Request-Id:
-      - 7c4285bc8d33579544238c1de8027e97
+      - 64120235d5aa603ea9ef138b046921c6
       X-Runtime:
-      - '0.067428'
+      - '0.069843'
       X-XSS-Protection:
       - 1; mode=block
     status:

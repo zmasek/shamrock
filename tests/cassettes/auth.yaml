@@ -8,16 +8,20 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
+      Content-Length:
+      - '0'
       User-Agent:
       - python-requests/2.21.0
-    method: GET
-    uri: https://trefle.io/api/v1/kingdoms
+    method: POST
+    uri: https://trefle.io/api/auth/claim?ip=0.0.0.0&origin=https%3A%2F%2Fexample.com
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4TOsQoCMRCE4f4eY+pASBsQX8FeLBaSC8ttcoe7ZxPy7sZetJ6P4e9IZIR47+CE
-        GBwa1YyIm1AzynBQOQtiO0UchNumiB2aZZ3K08H+FfzGraS9qg8Y47H8h/N35afal+l6UMmXMIXQ
-        TzAcav7Ed9huJDN/jOUNAAD//wMAewBYztIAAAA=
+        H4sIAAAAAAAAAxSPTU+DQBRF/4phLc0wQKXdDR+2j0CRCpV0Vyg6bwAhgsJg/O/C4m5Obu7J/VWG
+        tio/lb1SSp/nhwIj9CGdQTuhv9ssUCvoRWa0rkC0czh7PTQ7eXu7dznCFhpO7kd7jtD6uWac55nd
+        X19NkVOCgeN3hbN0BPsOHWMMBFtZXR7trmjSRQQydGEMEqYHCRBwPRmJlESCUXD6MXTZCDjisjsu
+        7umUVNqaUMT0Pd6cdX526pdJHyD6cC95XZiO5H1SWswrrfj5wNVtH7sdIlEelXLq8Os2YLteJU8q
+        NVRKKHnQ6N40lL9/AAAA//8DAO19RFYHAQAA
     headers:
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -28,9 +32,9 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 15:22:54 GMT
+      - Thu, 23 Jul 2020 12:54:06 GMT
       ETag:
-      - W/"4e9903a1b30b559843eab0f10db2639c"
+      - W/"57693ca30412a888b0aa7180cc61f2e7"
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Server:
@@ -50,9 +54,9 @@ interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Request-Id:
-      - 7c4285bc8d33579544238c1de8027e97
+      - 4c562c82ab3332939405ec206fab5bd2
       X-Runtime:
-      - '0.067428'
+      - '0.009272'
       X-XSS-Protection:
       - 1; mode=block
     status:

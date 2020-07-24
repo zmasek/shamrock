@@ -11,13 +11,17 @@ interactions:
       User-Agent:
       - python-requests/2.21.0
     method: GET
-    uri: https://trefle.io/api/v1/kingdoms
+    uri: https://trefle.io/api/v1/genus/15849/plants
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4TOsQoCMRCE4f4eY+pASBsQX8FeLBaSC8ttcoe7ZxPy7sZetJ6P4e9IZIR47+CE
-        GBwa1YyIm1AzynBQOQtiO0UchNumiB2aZZ3K08H+FfzGraS9qg8Y47H8h/N35afal+l6UMmXMIXQ
-        TzAcav7Ed9huJDN/jOUNAAD//wMAewBYztIAAAA=
+        H4sIAAAAAAAAA5SSTWvCQBCG7/6KMCeFaEyqUgNSemrpSXq1EsbNmgzZj5DsFoLkv3fXj9JaPfS2
+        O/PMzvu+7AFyNAjp5gCUQ7qcT+PFQwhMS6lVplBySJUVIoRW2AJSQKwIx8byhlUlJ0kErseIK0N7
+        YucRePZYcIV1HBtIk2k8C2FHO0G6aLAuO8evy85oxW2jVeCBcZKkQRIM/XnkRtGaUrthGL4iqyaj
+        4G3yPnlpUOXc7zdobOvVMcZrw3NXc73KVdqaO3GtK+xRkuiyG9YKrmybef/x/HG2DIEkFjyzjfg2
+        3ymtOulWbGCNipiVv81tz69crH/v8940Mo5epyBVOeQALRd714mwpugzjs4io5vh1gKV+QEf73fY
+        i4YLe7yfUOj77eC+hNOrT5coVsckvAtq2r/br7gPO50mi9qFtoq9TfznSB+C5P4bHsBogy72uO8H
+        XwAAAP//AwDtkv98nAIAAA==
     headers:
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -28,9 +32,9 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Jul 2020 15:22:54 GMT
+      - Wed, 22 Jul 2020 17:49:27 GMT
       ETag:
-      - W/"4e9903a1b30b559843eab0f10db2639c"
+      - W/"25ef96191fa6d1bc12512b60d0d541f0"
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Server:
@@ -50,9 +54,9 @@ interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Request-Id:
-      - 7c4285bc8d33579544238c1de8027e97
+      - dcb819b58b4812815d4be9a7b0b1325e
       X-Runtime:
-      - '0.067428'
+      - '0.147773'
       X-XSS-Protection:
       - 1; mode=block
     status:

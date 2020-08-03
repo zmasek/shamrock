@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Shamrock - A Trefle API Integration."""
 from .shamrock import ENDPOINTS, NAVIGATION, Shamrock
 

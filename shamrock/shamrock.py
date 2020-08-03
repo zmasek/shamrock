@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Shamrock - A Trefle API Integration."""
 import copy
 import logging
@@ -13,9 +11,15 @@ from requests.packages.urllib3.util.retry import Retry
 
 from .decorators import _check_argument_value
 from .exceptions import ShamrockException
-from .messages import INSTANCE, JSON, REDIRECTS, TIMEOUT, UNKNOWN
+from .messages import (
+    EXCEPTION_JSON,
+    EXCEPTION_REDIRECTS,
+    EXCEPTION_TIMEOUT,
+    EXCEPTION_UNKNOWN,
+    INSTANCE,
+)
 
-ENDPOINTS: Tuple[str, str, str, str, str, str, str, str, str, str] = (
+ENDPOINTS: Tuple[str, ...] = (
     "kingdoms",
     "subkingdoms",
     "divisions",
@@ -27,7 +31,7 @@ ENDPOINTS: Tuple[str, str, str, str, str, str, str, str, str, str] = (
     "species",
     "distributions",
 )
-NAVIGATION: Tuple[str, str, str, str] = ("next", "prev", "first", "last")
+NAVIGATION: Tuple[str, ...] = ("next", "prev", "first", "last")
 BASE_URL: str = "https://trefle.io/"
 
 logger: logging.Logger = logging.getLogger(__name__)
@@ -182,11 +186,11 @@ class Shamrock:
                 **kwargs
             ) if method == "GET" else self.session.post(json=json, **kwargs)
         except Timeout:
-            logger.error(TIMEOUT)
-            raise ShamrockException(TIMEOUT)
+            logger.error(EXCEPTION_TIMEOUT)
+            raise ShamrockException(EXCEPTION_TIMEOUT)
         except TooManyRedirects:
-            logger.error(REDIRECTS)
-            raise ShamrockException(REDIRECTS)
+            logger.error(EXCEPTION_REDIRECTS)
+            raise ShamrockException(EXCEPTION_REDIRECTS)
         finally:
             self.session.close()
 
@@ -195,13 +199,13 @@ class Shamrock:
             try:
                 response_json: Any = response.json()
             except ValueError:
-                logger.error(JSON)
-                raise ShamrockException(JSON)
+                logger.error(EXCEPTION_JSON)
+                raise ShamrockException(EXCEPTION_JSON)
             else:
                 self.result = response
                 return response_json
         except HTTPError as e:
-            message = UNKNOWN.format(exception=repr(e))
+            message = EXCEPTION_UNKNOWN.format(exception=repr(e))
             logger.error(message)
             raise ShamrockException(message)
 

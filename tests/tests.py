@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Tests for `Shamrock` package."""
 import gzip
 import json

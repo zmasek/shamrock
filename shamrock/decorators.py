@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 """Global Shamrock decorators """
 import functools
 import logging
 from typing import Callable, Optional, Tuple
 
 from .exceptions import ShamrockException
-from .messages import ARGUMENT_VALUE
+from .messages import EXCEPTION_ARGUMENT_VALUE
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -24,7 +22,9 @@ def _check_argument_value(parameter: str, allowed_values: Tuple[str, ...]) -> Ca
                 values: str = " or ".join(
                     [f"'{allowed_value}'" for allowed_value in allowed_values]
                 )
-                message: str = ARGUMENT_VALUE.format(parameter=parameter, values=values)
+                message: str = EXCEPTION_ARGUMENT_VALUE.format(
+                    parameter=parameter, values=values
+                )
                 logger.error(message)
                 raise ShamrockException(message)
             return func(*args, **kwargs)

@@ -71,7 +71,7 @@ Reporting an error is done through a report_error method that requires two posit
 
 The first argument is describing what is wrong, the second argument is either a slug or an id of the
 entry in question. By default, it is reporting a plant entry, but can be overriden to report an
-error of the species as well like so::
+error of the species as well, like so::
 
     api.report_error("chenopodium-album", "A sentence of what is wrong", what="species")
 
@@ -146,7 +146,8 @@ Client Authentication
 ~~~~~~~~~~~~~~~~~~~~~
 
 While it's easy to obtain a token from Trefle and use the library on the server, it becomes tricky
-when one wants to use it on the browser side. This is achieved by periodically obtaining JWT token.
+when one wants to use it on the browser side. This is achieved by periodically obtaining a JWT
+token.
 
 It is still a server call because the common token needs to be provided. Once the Shamrock is
 initialized, using a normal token, this is called to obtain a JWT::

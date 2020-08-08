@@ -218,7 +218,7 @@ class Shamrock:
 
         :param q: A string that is used to search the plant with.
         :type q: str
-        :param what: A string that is that is signifying what item to report an error on.
+        :param what: A string that is signifying what item to report an error on.
         :type what: str (if not specified, then "plants", but can be specified as "species")
         :param **kwargs: Any query strings to add to the search object.
         :type **kwargs: dict
@@ -251,7 +251,7 @@ class Shamrock:
         :type identifier: int or str
         :param notes: A string that is delivered to report an error on the entry.
         :type notes: str
-        :param what: A string that is that is signifying what item to report an error on.
+        :param what: A string that is signifying what item to report an error on.
         :type what: str (if not specified, then "plants", but can be specified as "species")
         :param kwargs: Any query strings to add to the post object.
         :type kwargs: dict
@@ -293,7 +293,7 @@ class Shamrock:
         json: Optional[Any] = None,
         **kwargs: Any,
     ) -> Any:
-        """Returns one correction or a list of corrections, or submit one.
+        """Returns one correction or a list of corrections, or submits one.
 
         :param identifier: An identifier, a primary key of the correction.
         :type identifier: int
@@ -315,8 +315,8 @@ class Shamrock:
             return self._get_result(request_kwargs, method="POST", json=json)
 
     def auth(self, origin: str, **kwargs: Any) -> Any:
-        """Return a JWT that you can use in a browser. You need to specify where you'll be using the
-        token so it can be bound to a certain address.
+        """Returns a JWT that you can use in a browser. You need to specify where you'll be using
+        the token so it can be bound to a certain address.
 
         :param origin: A URL that is delivered to the endpoint so the responding JWT can use it.
         :type origin: str

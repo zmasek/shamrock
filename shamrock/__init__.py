@@ -1,4 +1,5 @@
 """Shamrock - A Trefle API Integration."""
+from .exceptions import ShamrockException
 from .shamrock import ENDPOINTS, NAVIGATION, Shamrock
 
 __author__ = "Zlatko Mašek"

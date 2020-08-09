@@ -9,8 +9,7 @@ import vcr as main_vcr
 from requests.exceptions import HTTPError, Timeout, TooManyRedirects
 
 import shamrock
-from shamrock import ENDPOINTS, NAVIGATION, Shamrock
-from shamrock.exceptions import ShamrockException
+from shamrock import ENDPOINTS, NAVIGATION, Shamrock, ShamrockException
 
 TOKEN = os.environ.get("TREFLE_TOKEN")
 

@@ -8,9 +8,8 @@ Shamrock relies on Python 3.6 and above, and `Requests III <https://3.python-req
 library. Requests will get installed automatically, but you need to make sure to meet the other
 requirements.
 
-To start interacting with the API, you'll need a token from them. Obtaining it is not a big deal.
-Make sure to sign up on the `Trefle <https://trefle.io/>`_ page and obtain token there. You'll need it when using the
-library.
+To start interacting with the API, you'll need a token. Obtaining it is not a big deal if you know where to look.
+Make sure to sign up where you need to and obtain token. You'll need it when using the library.
 
 Installation
 ------------
@@ -29,4 +28,4 @@ Basic Usage
 ::
 
     from shamrock import Shamrock
-    api = Shamrock('my_secret_token')
+    api = Shamrock('my_secret_token', 'trefle_replacement_url')

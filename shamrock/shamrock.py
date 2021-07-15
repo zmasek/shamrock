@@ -40,7 +40,7 @@ logger: logging.Logger = logging.getLogger(__name__)
 class Shamrock:
     """API integration for Trefle service."""
 
-    def __init__(self, token: str) -> None:
+    def __init__(self, token: str, base_url: str = BASE_URL) -> None:
         """Constructs the API object.
 
         The API wrapper will be configured to try requests 5 times with a backoff factor of 0.1. It
@@ -49,11 +49,16 @@ class Shamrock:
 
         :param token: A token string that is acquired from the personal profile settings.
         :type token: str
+        :param base_url: A URL string that is used to make requests against.
+        :type base_url: (optional) str of URL with protocol, domain and the appending slash,
+            otherwise Trefle (defunct) default.
         """
 
         self.token: str = token
-        self.version: str = "v1"  # This should become a parameter when the Trefle API changes
-        self.base_url: str = BASE_URL
+        self.version: str = (
+            "v1"  # This should become a parameter when the Trefle API changes
+        )
+        self.base_url: str = base_url
         self.api_url: str = f"{self.base_url}api/"
         self.api_version_url: str = f"{self.api_url}{self.version}/"
         self.default_query_parameters: Dict[str, Any] = {"token": token}
@@ -182,9 +187,11 @@ class Shamrock:
             if built_url == self.result.url:
                 return self.result.json()
         try:
-            response: requests.Response = self.session.get(
-                **kwargs
-            ) if method == "GET" else self.session.post(json=json, **kwargs)
+            response: requests.Response = (
+                self.session.get(**kwargs)
+                if method == "GET"
+                else self.session.post(json=json, **kwargs)
+            )
         except Timeout:
             logger.error(EXCEPTION_TIMEOUT)
             raise ShamrockException(EXCEPTION_TIMEOUT)

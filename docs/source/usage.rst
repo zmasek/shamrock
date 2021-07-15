@@ -6,7 +6,7 @@ Basic
 ::
 
     from shamrock import Shamrock
-    api = Shamrock('my_secret_token')
+    api = Shamrock('my_secret_token', 'trefle_replacement_url')
     plants = api.plants()
     print(plants)
 
@@ -18,7 +18,7 @@ Setting Up
 ::
 
     from shamrock import Shamrock
-    api = Shamrock('my_secret_token')
+    api = Shamrock('my_secret_token', 'trefle_replacement_url')
 
 Methods
 ~~~~~~~
@@ -36,7 +36,7 @@ Basic methods that can be run with the API are::
     api.species()
     api.distributions()
 
-They correspond to the Trefle API endpoints.
+They correspond to the Trefle API endpoints (or the future drop-in).
 
 Advanced methods exist and are explained below.
 
@@ -93,9 +93,7 @@ are providing an id of the correction, not of the species.::
     api.corrections()
     api.corrections(1)
 
-For the instructions on
-`how to submit a correction <https://docs.trefle.io/docs/advanced/complete-data>`_ check out the
-Trefle section on it.
+For the instructions on how to submit a correction, consult your drop-in API section on it.
 
 Retrieving plants by distribution or genus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +124,7 @@ It will work only if you previously made a request. For example::
 Specific Options
 ~~~~~~~~~~~~~~~~
 
-You can use the varoius query string options described on Trefle API documentation as keyword
+You can use the varoius query string options described on Trefle compatible API documentation as keyword
 arguments in methods, however, be careful when unpacking filters because they come with brackets, so
 for example::
 
@@ -145,7 +143,7 @@ To order, do it like this::
 Client Authentication
 ~~~~~~~~~~~~~~~~~~~~~
 
-While it's easy to obtain a token from Trefle and use the library on the server, it becomes tricky
+While it is easy to obtain a token and use the library on the server, it is tricky
 when one wants to use it on the browser side. This is achieved by periodically obtaining a JWT
 token.
 

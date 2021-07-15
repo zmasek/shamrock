@@ -25,3 +25,8 @@ History
     * Versioning of the API started so the url parameter in the constructor is split to base and relative urls.
     * Response changed to handle the added meta and links additions for the navigation.
 * Added ShamrockException wrapper for the low level library exceptions.
+
+0.2.0 (15.07.2021.)
+-------------------
+
+* Trefle.io got deprecated so base_url parameter is now available when initiating Shamrock for drop-in replacements.
